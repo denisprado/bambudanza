@@ -1,12 +1,12 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import Link from '../components/Link'
+import Link from './Link'
 import { Card, Flex, Text } from 'theme-ui'
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
-const BlogRoll = ({ data }) => {
+const ProgramasRoll = ({ data }) => {
 
   const { edges: posts } = data.allMarkdownRemark
 
@@ -45,7 +45,7 @@ const BlogRoll = ({ data }) => {
 }
 
 
-BlogRoll.propTypes = {
+ProgramasRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -56,10 +56,10 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query ProgramasRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "programa-post" } } }
         ) {
           edges {
             node {
@@ -85,6 +85,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <ProgramasRoll data={data} count={count} />}
   />
 )
