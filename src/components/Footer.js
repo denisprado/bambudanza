@@ -8,7 +8,7 @@ import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
 const Footer = () => (
-  <Flex as='footer' >
+  <Flex as='footer' mt={4} >
     <Box>
       <img
         src={logo}
