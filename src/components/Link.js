@@ -8,6 +8,7 @@ const Link = (props) => {
         <Styled.a as={GatsbyLink}
             {...props}
             activeClassName={'active'}
+
         >
             {children}
         </Styled.a>

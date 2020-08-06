@@ -1,5 +1,5 @@
 ---
-templateKey: programa-post
+templateKey: profesora-post
 title: Poliana Lima
 date: 2020-08-06T19:03:13.343Z
 description: Poliana Lima (Brasil, 1983) es coreógrafa, bailarina y docente,
@@ -9,6 +9,7 @@ featuredimage: /img/poliana-lima.jpg
 tags:
   - Danza Contemporânea
 ---
+
 Poliana Lima (Brasil, 1983) es coreógrafa, bailarina y docente, afincada en Madrid.
 Desde niña siempre quiso dedicarse a la danza y a la edad de 20 años la asumió como una parte esencial de su vida y como herramienta para hablar de la condición humana y lo misterioso de nuestra existencia. Es licenciada en Ciencias Sociales por la Universidad Estadual de Campinas y formada en ballet clásico y danza contemporánea en So Paulo.
 

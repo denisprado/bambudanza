@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './Link'
 import logo from '../img/logo.jpg'
 import { FiSearch } from 'react-icons/fi'
-import { Flex, Box } from 'theme-ui'
+import { Flex, Box, jsx } from 'theme-ui'
 
 const Navbar = () => {
   return (
@@ -11,7 +11,8 @@ const Navbar = () => {
       role="navigation"
       aria-label="main-navigation"
       sx={{
-        justifyContent: "center"
+
+        alignItems: "center"
       }}
     >
       <Box>
@@ -21,11 +22,13 @@ const Navbar = () => {
       </Box>
 
       <Box sx={{
-        flex: '1 1 auto',
+        flex: '1',
+        marginLeft: 'auto',
         'a': {
-          padding: '1rem',
+          padding: '1rem'
         }
-      }}>
+      }}
+      >
         <Link to="/escuela">
           Escuela
               </Link>

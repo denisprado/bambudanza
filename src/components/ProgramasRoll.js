@@ -15,9 +15,9 @@ const ProgramasRoll = ({ data }) => {
       {posts &&
         posts.map(({ node: post }) => (
           <Card as='article'
-            /*sx={{
-              maxWidth: 256,
-            }}*/
+            sx={{
+              maxWidth: 500,
+            }}
             key={post.id}>
             <Link
               to={post.fields.slug}
