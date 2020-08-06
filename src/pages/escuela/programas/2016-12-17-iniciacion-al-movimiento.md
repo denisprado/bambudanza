@@ -2,9 +2,9 @@
 templateKey: programa-post
 title: Iniciación al Movimiento
 date: 2016-12-17T15:04:10.000Z
-featuredpost: false
-featuredimage: /img/programas/iniciacion-al-movimiento.jpg
 description: Una clase desde la base de la danza contemporánea.
+featuredpost: false
+featuredimage: /img/iniciacion-al-movimiento.jpg
 tags:
   - Danza contemporánea
 ---
