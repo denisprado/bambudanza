@@ -137,11 +137,11 @@ export const bambudanza = {
             "lineHeight": "body"
         },
         a: {
-            color: 'primary',
+            color: 'text',
             textDecoration: 'none',
             ':hover': {
-                "color": 'secondary',
-                "textDecoration": 'underline',
+                "color": 'primary',
+                "textDecoration": 'bold',
             },
         },
         "pre": {

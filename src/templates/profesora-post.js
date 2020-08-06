@@ -27,7 +27,6 @@ export const ProfesoraPostTemplate = ({
           flexGrow: 1,
           flexBasis: 'sidebar',
         }}>
-
           <PreviewCompatibleImage
             imageInfo={{
               image: featuredimage,
