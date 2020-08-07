@@ -76,9 +76,9 @@ collections:
           widget: "relation",
           multiple: true,
           collection: "horarios",
-          valueField: "title",
-          searchFields: ["title"],
-          displayFields: ["title"],
+          valueField: "dias",
+          searchFields: ["dias", "hora"],
+          displayFields: ["dias", "hora"],
         }
 
   - name: "profesoras"
@@ -129,7 +129,8 @@ collections:
           widget: "hidden",
           default: "horario-post",
         }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Dias", name: "dias", widget: "string" }
+      - { label: "Hora", name: "hora", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
   - name: "pages"

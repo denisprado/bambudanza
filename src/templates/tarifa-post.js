@@ -20,7 +20,6 @@ export const TarifaPostTemplate = ({
     <Escuela>
       {helmet || ''}
       <Flex>
-
         <Box as='main'>
           <Heading>{title}</Heading>
           <Text>{price}</Text>
