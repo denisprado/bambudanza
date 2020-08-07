@@ -60,7 +60,6 @@ export const bambudanza = {
         primary: {
             padding: 2,
             borderRadius: 4,
-            boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
         },
         compact: {
             padding: 1,
@@ -140,6 +139,8 @@ export const bambudanza = {
             color: 'text',
             textDecoration: 'none',
             ':hover': {
+                borderBottom: `2px solid`,
+                borderColor: 'primary',
                 "color": 'primary',
                 "textDecoration": 'bold',
             },

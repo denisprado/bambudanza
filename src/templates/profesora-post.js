@@ -23,9 +23,10 @@ export const ProfesoraPostTemplate = ({
     <Escuela>
       {helmet || ''}
       <Flex>
-        <Box as='aside' sx={{
+        <Box p={4} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
+          minWidth: '300px'
         }}>
           <PreviewCompatibleImage
             imageInfo={{
@@ -35,6 +36,7 @@ export const ProfesoraPostTemplate = ({
           />
         </Box>
         <Box as='main'>
+
           <Heading>{title}</Heading>
           <Text>{description}</Text>
           <PostContent content={content} />
@@ -61,6 +63,7 @@ const ProfesoraPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
+      featuredimage={post.frontmatter.featuredimage}
       helmet={
         <Helmet titleTemplate="%s | Profesora">
           <title>{`${post.frontmatter.title}`}</title>

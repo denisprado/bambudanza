@@ -51,6 +51,14 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Profesora del Programa",
+          name: "profesora",
+          widget: "relation",
+          collection: "profesora",
+          valueField: "title",
+          displayFields: "title",
+        }
 
   - name: "profesoras"
     label: "Profesoras"

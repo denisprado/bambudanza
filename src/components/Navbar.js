@@ -11,12 +11,11 @@ const Navbar = () => {
       role="navigation"
       aria-label="main-navigation"
       sx={{
-
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
-      <Box>
-        <Link to="/" title="Logo" px={4}>
+      <Box px={4}>
+        <Link to="/" title="Logo">
           <img src={logo} alt="Bambudanza" style={{ width: '164px' }} />
         </Link>
       </Box>
@@ -24,6 +23,8 @@ const Navbar = () => {
       <Box sx={{
         flex: '1',
         marginLeft: 'auto',
+        textAlign: 'right',
+        maxWidth: '680px',
         'a': {
           padding: '1rem'
         }
@@ -32,21 +33,17 @@ const Navbar = () => {
         <Link to="/escuela">
           Escuela
               </Link>
-        <Link to="/products">
-          Products
+        <Link to="/alquiler">
+          Alquiler
               </Link>
         <Link to="/blog">
           Blog
               </Link>
         <Link to="/contact">
-          Contact
-              </Link>
-        <Link to="/contact/examples">
-          Form Examples
+          Sobre nosotros
               </Link>
       </Box>
-      <Box>
-
+      <Box p={4}>
         <Link to="/contact/examples">
           <FiSearch />
         </Link>
@@ -56,4 +53,4 @@ const Navbar = () => {
 }
 
 
-export default Navbar
+export default Navbar;

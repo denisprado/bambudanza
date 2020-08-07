@@ -22,9 +22,10 @@ export const ProgramaPostTemplate = ({
     <Escuela>
       {helmet || ''}
       <Flex>
-        <Box as='aside' sx={{
+        <Box p={2} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
+          minWidth: '300px'
         }}>
           <Heading as='h4'>Tags</Heading>
           <ul>

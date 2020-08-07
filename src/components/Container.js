@@ -6,6 +6,7 @@ const Container = (props) =>
         sx={{
             flex: '1 1 auto',
             variant: 'layout.main',
+            minHeight: '500px'
         }}>
         <Container>
             {props.children}
