@@ -47,13 +47,11 @@ const TarifaPost = ({ data }) => {
     <TarifaPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
-      price={post.frontmatter.price}
       helmet={
         <Helmet titleTemplate="%s | Tarifa">
           <title>{`${post.frontmatter.title}`}</title>
           <meta
             name="description"
-            content={`${post.frontmatter.price}`}
           />
         </Helmet>
       }
@@ -78,7 +76,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        price
       }
     }
   }
