@@ -62,9 +62,20 @@ collections:
         }
       - {
           label: "Tarifa",
-          name: "tarifa",
+          name: "tarifas",
           widget: "relation",
+          multiple: true,
           collection: "tarifas",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title", "price"],
+        }
+      - {
+          label: "Horarios",
+          name: "horarios",
+          widget: "relation",
+          multiple: true,
+          collection: "horarios",
           valueField: "title",
           searchFields: ["title"],
           displayFields: ["title"],
@@ -101,6 +112,22 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "tarifa-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+  - name: "horarios"
+    label: "Horarios"
+    folder: "src/pages/escuela/horarios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "horarios-post",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
