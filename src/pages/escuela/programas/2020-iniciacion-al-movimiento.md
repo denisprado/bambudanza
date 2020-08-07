@@ -7,6 +7,8 @@ featuredpost: false
 featuredimage: /img/iniciacion-al-movimiento.jpg
 tags:
   - Danza contemporánea
+profesora: Lucyanna Pettengill
+tarifa: 2x a La Semana  80€
 ---
 
 Vamos a trabajar los mecanismos más básicos del cuerpo de una forma específica de pensar las articulaciones y los engranajes anatómicos, llevando en cuenta las posibilidades y las organizaciones de nuestra estructura física siempre con mucho respecto a los límites de cada cuerpo.
