@@ -62,7 +62,7 @@ collections:
         }
       - {
           label: "Tarifa",
-          name: "tarifas",
+          name: "tarifa",
           widget: "relation",
           multiple: true,
           collection: "tarifas",
