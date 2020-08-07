@@ -9,6 +9,8 @@ featuredpost: false
 featuredimage: /img/impulso-y-energia.jpg
 tags:
   - Danza contemporánea
+profesora: Poliana Lima
+tarifa: 1 CURSO 1 X A LA SEMANA (2H)
 ---
 En este curso nuestro objetivo es trabajar elementos técnicos de la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya iniciado. 
 A través de secuencias coreográficas, estudiaremos los nuevos elementos técnicos además de estimular la expresión de cada alumno dentro del marco de la coreografía. Propondremos pensar diversas posibilidades de cómo abordar un movimiento y apoyaremos  a cada alumno en su momento del aprendizaje. 
