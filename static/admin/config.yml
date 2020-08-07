@@ -57,7 +57,8 @@ collections:
           widget: "relation",
           collection: "profesora",
           valueField: "title",
-          displayFields: "title",
+          searcField: ["title"],
+          displayFields: ["title"],
         }
 
   - name: "profesoras"
