@@ -23,12 +23,16 @@ const ProgramasRoll = ({ data }) => {
     prog.frontmatter.nivel
   ), _.isEqual)
 
+  const clearFilters = () => {
+    setFilterNivel(null);
+    setFilterTipo(null);
+  }
 
 
   return (
     <Flex mt={4} sx={{ minHeight: '50vh' }}>
       <Box mt={2} sx={{ minWidth: '20vh' }}>
-        <Box >
+        <Box>
           <Heading as={'h3'}>Tipos</Heading>
 
           {(tipos.map(t => <Box><Link onClick={() => setFilterTipo(t)}>{t}</Link></Box>))}
@@ -36,68 +40,50 @@ const ProgramasRoll = ({ data }) => {
 
         <Box mt={3}>
           <Heading as={'h3'}>Nivel</Heading>
-
           {(niveis.map(nivel => <Box><Link onClick={() => setFilterNivel(nivel)}>{nivel}</Link></Box>))}
         </Box>
       </Box>
+
+
       {
+        (filterNivel || filterNivel) &&
+        <Flex>
+          {filterNivel && <Badge p={2} mr={2} bg={'muted'} color={'primary'}>{filterNivel}</Badge>}
+          {filterTipo && <Badge p={2} bg={'muted'} color={'primary'}>{filterTipo}</Badge>}
+          {(filterNivel || filterTipo) && <Link onClick={() => clearFilters()}><FiXCircle /></Link>}
+        </Flex>
+      }{
         programas &&
         programas.map(({ node: programa }) => (
           (filterTipo === null || filterTipo === programa.frontmatter.tipo) &&
           (filterNivel === null || filterNivel === programa.frontmatter.nivel) &&
-
-          <Box>
-            <Box>
-
-              {filterNivel &&
-                <>
-                  <Badge bg={'muted'} color={'primary'}>{filterNivel}</Badge>
-                  <Link onClick={() => setFilterNivel(null)}><FiXCircle /></Link>
-                </>
-              }
-              {filterTipo &&
-                <>
-                  <Badge bg={'muted'} color={'primary'}>{filterTipo}</Badge>
-                  <Link onClick={() => setFilterTipo(null)}><FiXCircle /></Link>
-                </>
-              }
-            </Box>
-
-
-            <Card as='article'
-              sx={{
-                minWidth: '584px'
-              }}
-              key={programa.id}>
-              <Link
-                to={programa.fields.slug}
-              >
-                <AspectRatio ratio={16 / 9}>
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: programa.frontmatter.featuredimage,
-                      alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
-                    }}
-                  />
-                </AspectRatio>
+          <Card as='article'
+            sx={{
+              minWidth: '584px'
+            }}
+            key={programa.id}>
+            <Link
+              to={programa.fields.slug}
+            >
+              <AspectRatio ratio={16 / 9}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: programa.frontmatter.featuredimage,
+                    alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
+                  }}
+                />
+              </AspectRatio>
+            </Link>
+            <Flex>
+              <Heading to={programa.fields.slug}>
+                <Text>{programa.frontmatter.title}</Text>
+              </Heading>
+              <Link sx={{ marginLeft: 'auto' }}>
+                <Badge>{programa.frontmatter.tipo}</Badge>
               </Link>
-              <Flex>
+            </Flex>
+          </Card>
 
-                <Heading
-                  to={programa.fields.slug}
-                >
-                  <Text>
-                    {programa.frontmatter.title}
-
-                  </Text>
-                </Heading>
-                <Link sx={{ marginLeft: 'auto' }}>
-                  <Badge>{programa.frontmatter.tipo}</Badge>
-                </Link>
-              </Flex>
-
-            </Card>
-          </Box>
         ))
       }
     </Flex >

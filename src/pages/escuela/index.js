@@ -3,9 +3,10 @@ import { Box, Flex, Image, jsx } from 'theme-ui'
 import Link from '../../components/Link'
 import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
+import { Container } from '../../components/Container'
 
 const Escuela = ({ children }) => (
-    <Layout >
+    <Layout>
         <Image src={escuelaHeader} width={'100%'}></Image>
 
         <Flex as='nav' pl={4} mb={2} sx={{
@@ -17,10 +18,11 @@ const Escuela = ({ children }) => (
             <Link p={4} to='/escuela/programas'>Programas</Link>
             <Link p={4} to='/escuela/profesoras'>Profesoras</Link>
             <Link p={4} to='/escuela/tarifas'>Tarifas</Link >
-        </Flex >
+        </Flex>
         <Box p={4}>
             {children}
         </Box>
+
 
     </Layout >
 )

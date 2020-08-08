@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const Container = (props) =>
+export const Container = (props) =>
     <main
         sx={{
             flex: '1 1 auto',
@@ -12,3 +12,4 @@ const Container = (props) =>
             {props.children}
         </Container>
     </main>
+
