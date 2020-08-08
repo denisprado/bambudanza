@@ -15,12 +15,15 @@ tarifa:
   - 2x a La Semana  80€
 horarios:
   - Lunes Y Miercoles
-tipo: Clases Regulares
+tipo:
+  - Clases Regulares
 estilo:
   - Afrocontempoerâneo
-nivel: Iniciación
+nivel:
+  - Iniciación
 ---
+
 El lenguaje Afrocontemporáneo une los ritmos y movimientos afros con las técnicas de danza moderna como Limón, Graham, Horton, Release, entre otros. Es el punto de encuentro entre lo étnico de la cultura africana y brasileña con la dinámica, fuerza y expresividad de los recursos contemporáneos.
-A través del entrenamiento físico que incluye el fortalecimiento de la musculatura corporal, la conciencia del peso, del eje y de la relación con el suelo y el espacio. Se define por la enriquecedora experiencia de la fusión, dónde cada recurso técnico es debidamente valorado, potenciado e integrado al trabajo corporal de forma viva y plural. 
+A través del entrenamiento físico que incluye el fortalecimiento de la musculatura corporal, la conciencia del peso, del eje y de la relación con el suelo y el espacio. Se define por la enriquecedora experiencia de la fusión, dónde cada recurso técnico es debidamente valorado, potenciado e integrado al trabajo corporal de forma viva y plural.
 
 Fuerza…Técnica…Movimiento…Organicidad…Placer…

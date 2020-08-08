@@ -83,9 +83,8 @@ description: >
   Se mantiene en constante evolución. Haciéndose preguntas, valorando respuestas.
 featuredpost: false
 featuredimage: /img/iris-muñoz.jpg
-tags:
-  - Danza contemporânea
 ---
+
 Formada en danza clásica y contemporánea. Ha bailado con Rayo Malayo (Francesc Bravo)
 Michelle Man and Friends, Aracaladanza (Enrique Cabrera), Teresa Nieto en Compañía,
 Transit (María Rovira), Larumbe Danza (Juan Torres/ Daniela Merlo), Morocha Mordaz
