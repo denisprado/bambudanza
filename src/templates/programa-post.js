@@ -28,7 +28,7 @@ export const ProgramaPostTemplate = ({
         <Box p={2} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
-          minWidth: '300px'
+          minWidth: '400px'
         }}>
 
           <Heading as='h4' pt={4}>Profesora</Heading>

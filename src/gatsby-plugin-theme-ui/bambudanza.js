@@ -138,7 +138,7 @@ export const bambudanza = {
         a: {
             color: 'secondary',
             textDecoration: 'none',
-
+            cursor: 'pointer',
             ':hover': {
                 borderBottom: `2px solid`,
                 borderColor: 'primary',

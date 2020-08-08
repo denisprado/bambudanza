@@ -9,7 +9,6 @@ const Escuela = ({ children }) => (
         <Image src={escuelaHeader} width={'100%'}></Image>
         <Container>
             <Flex as='nav' mb={2} sx={{
-
                 'a': {
                     padding: '3',
                 }

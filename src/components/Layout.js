@@ -1,11 +1,10 @@
+import { withPrefix } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Box, jsx } from 'theme-ui'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
 import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
-import { Box } from 'theme-ui'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -50,7 +49,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <Box>{children}</Box>
+      <Box sx={{ minHeight: '100hv' }}>{children}</Box>
       <Footer />
     </div>
   )
