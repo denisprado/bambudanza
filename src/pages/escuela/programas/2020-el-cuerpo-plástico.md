@@ -18,7 +18,7 @@ featuredpost: false
 featuredimage: /img/iris-muñoz.jpg
 tags:
   - Danza contemporânea
-profesora: Poliana Lima
+profesora: Iris Muñoz
 tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
 horarios:
