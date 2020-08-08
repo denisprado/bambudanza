@@ -80,6 +80,27 @@ collections:
           searchFields: ["dias", "hora"],
           displayFields: ["dias", "hora"],
         }
+      - {
+          label: "Tipo de Programa",
+          name: "tipo",
+          widget: "select",
+          options:
+            [
+              "Clases Regulares",
+              "Escuela Online",
+              "Training Escuela",
+              "Cursos de Verano",
+              "Talleres",
+              "Proyetos",
+            ],
+        }
+      - { label: "Estilo", name: "estilo", widget: "list" }
+      - {
+          label: "Nível del Programa",
+          name: "nivel",
+          widget: "select",
+          options: ["Iniciación", "Intermedio", "Avanzado"],
+        }
 
   - name: "profesoras"
     label: "Profesoras"

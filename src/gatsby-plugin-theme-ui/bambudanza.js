@@ -39,7 +39,7 @@ export const bambudanza = {
         text: "#404A3C",
         background: "#fff",
         primary: "#61B74A",
-        secondary: "#9999CC",
+        secondary: "#A3AF9E",
         highlight: "#2E4F24",
         muted: "#F3FCEF",
         gray: "#A3AF9E",
@@ -136,14 +136,22 @@ export const bambudanza = {
             "lineHeight": "body"
         },
         a: {
-            color: 'text',
+            color: 'secondary',
             textDecoration: 'none',
+
             ':hover': {
                 borderBottom: `2px solid`,
                 borderColor: 'primary',
                 "color": 'primary',
                 "textDecoration": 'bold',
+                backgroundColor: 'muted',
             },
+            '&.active': {
+                color: "primary",
+                fontWeight: '600',
+                borderBottom: '2px solid',
+                borderColor: 'primary',
+            }
         },
         "pre": {
             "fontFamily": "monospace",

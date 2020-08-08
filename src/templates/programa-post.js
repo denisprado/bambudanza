@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-
+import { graphql } from 'gatsby'
+import Link from '../components/Link'
 import Content, { HTMLContent } from '../components/Content'
 import Escuela from '../pages/escuela'
 import { Flex, Box, Heading, Text } from 'theme-ui'
@@ -13,6 +13,9 @@ export const ProgramaPostTemplate = ({
   contentComponent,
   description,
   tags,
+  profesora,
+  tarifa,
+  horarios,
   title,
   helmet,
 }) => {
@@ -27,18 +30,35 @@ export const ProgramaPostTemplate = ({
           flexBasis: 'sidebar',
           minWidth: '300px'
         }}>
-          <Heading as='h4'>Tags</Heading>
-          <ul>
-            {tags && tags.length ? (
 
-              tags.map((tag) => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+          <Heading as='h4' pt={4}>Profesora</Heading>
+          <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
+
+          <Heading as='h4' pt={4}>Horário</Heading>
+          <ul>
+            {horarios && horarios.length ? (
+              horarios.map((horarios) => (
+                <li key={horarios + `horarios`}>
+                  <Text>{horarios}</Text>
                 </li>
               ))
             )
               : null}
           </ul>
+
+          <Heading as='h4' pt={4}>Tarifa</Heading>
+          <ul>
+
+            {tarifa && tarifa.length ? (
+              tarifa.map((t) => (
+                <li key={t + `tarifa`}>
+                  <Link to="/escuela/tarifas">{t}</Link>
+                </li>
+              ))
+            )
+              : null}
+          </ul>
+
         </Box>
         <Box as='main'>
           <Heading>{title}</Heading>
@@ -78,6 +98,9 @@ const ProgramaPost = ({ data }) => {
       }
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
+      profesora={post.frontmatter.profesora}
+      tarifa={post.frontmatter.tarifa}
+      horarios={post.frontmatter.horarios}
     />
   )
 }
@@ -100,6 +123,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+        profesora
+        tarifa
+        horarios
       }
     }
   }

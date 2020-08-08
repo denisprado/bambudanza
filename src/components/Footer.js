@@ -1,4 +1,4 @@
-import { Box, Flex, NavLink } from 'theme-ui'
+import { Box, Flex, NavLink, Styled } from 'theme-ui'
 import React from 'react'
 import Link from '../components/Link'
 import logo from '../img/logo.jpg'
@@ -8,7 +8,10 @@ import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
 
 const Footer = () => (
-  <Flex as='footer' mt={4} >
+  <Flex mt={4} bg="primary" color="muted" >
+
+
+
     <Box>
       <img
         src={logo}
@@ -46,6 +49,7 @@ const Footer = () => (
 
     </Box>
     <Box>
+
       <a title="facebook" href="https://facebook.com">
         <img
           src={facebook}

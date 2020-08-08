@@ -5,12 +5,13 @@ import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
 
 const Escuela = ({ children }) => (
-    <Layout>
+    <Layout bg={'muted'}>
         <Image src={escuelaHeader} width={'100%'}></Image>
         <Container>
-            <Flex as='nav' sx={{
+            <Flex as='nav' mb={2} sx={{
+
                 'a': {
-                    padding: '1rem',
+                    padding: '3',
                 }
             }}>
                 <Link p={4} to='/escuela/programas'>Programas</Link>

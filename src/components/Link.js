@@ -1,5 +1,5 @@
 import React from 'react'
-import { Styled } from 'theme-ui'
+import { Styled, jsx } from 'theme-ui'
 import { Link as GatsbyLink } from 'gatsby'
 
 const Link = (props) => {
@@ -8,7 +8,6 @@ const Link = (props) => {
         <Styled.a as={GatsbyLink}
             {...props}
             activeClassName={'active'}
-
         >
             {children}
         </Styled.a>
