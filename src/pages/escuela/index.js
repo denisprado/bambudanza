@@ -7,18 +7,18 @@ import escuelaHeader from '../../img/escuela-header.jpg'
 const Escuela = ({ children }) => (
     <Layout bg={'muted'}>
         <Image src={escuelaHeader} width={'100%'}></Image>
-        <Container>
-            <Flex as='nav' mb={2} sx={{
-                'a': {
-                    padding: '3',
-                }
-            }}>
-                <Link p={4} to='/escuela/programas'>Programas</Link>
-                <Link p={4} to='/escuela/profesoras'>Profesoras</Link>
-                <Link p={4} to='/escuela/tarifas'>Tarifas</Link >
-            </Flex >
-            {children}
-        </Container>
+
+        <Flex as='nav' mb={2} sx={{
+            'a': {
+                padding: '3',
+            }
+        }}>
+            <Link p={4} to='/escuela/programas'>Programas</Link>
+            <Link p={4} to='/escuela/profesoras'>Profesoras</Link>
+            <Link p={4} to='/escuela/tarifas'>Tarifas</Link >
+        </Flex >
+        {children}
+
     </Layout >
 )
 
