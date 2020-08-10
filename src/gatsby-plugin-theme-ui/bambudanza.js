@@ -69,7 +69,7 @@ export const bambudanza = {
         },
     },
     sizes: {
-        container: 1260,
+        container: 1440,
         sidebar: 256,
     },
     layout: {
@@ -140,8 +140,6 @@ export const bambudanza = {
             textDecoration: 'none',
             cursor: 'pointer',
             ':hover': {
-                borderBottom: `2px solid`,
-                borderColor: 'primary',
                 "color": 'primary',
                 "textDecoration": 'bold',
                 backgroundColor: 'muted',

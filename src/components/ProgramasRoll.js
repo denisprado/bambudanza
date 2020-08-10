@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { FiXCircle, FiCircle } from 'react-icons/fi'
+import { FiXCircle } from 'react-icons/fi'
 import _ from 'lodash'
 import { Card, Flex, Text, AspectRatio, Box, Heading, Badge, Link, Container } from 'theme-ui'
 // @jsx jsx
@@ -92,7 +92,7 @@ const ProgramasRoll = ({ data }) => {
                   }}
                   key={programa.id}>
                   <AspectRatio ratio={16 / 9}>
-                    <Link to={programa.fields.slug}>
+                    <Link href={programa.fields.slug}>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: programa.frontmatter.featuredimage,
@@ -102,13 +102,15 @@ const ProgramasRoll = ({ data }) => {
                     </Link>
                   </AspectRatio>
                   <Flex>
-                    <Heading to={programa.fields.slug} sx={{ maxWidth: '60%' }}>
-                      <Text>{programa.frontmatter.title}</Text>
-                    </Heading>
-                    <Link sx={{ marginLeft: 'auto' }} onClick={() => addFilter(programa.frontmatter.tipo)}>
+                    <Link href={programa.fields.slug}>
+                      <Heading sx={{ maxWidth: '60%' }}>
+                        <Text>{programa.frontmatter.title}</Text>
+                      </Heading>
+                    </Link>
+                    <Link mr={3} sx={{ marginLeft: 'auto' }} >
                       <Badge>{programa.frontmatter.tipo}</Badge>
                     </Link>
-                    <Link sx={{ marginLeft: 'auto' }} onClick={() => addFilter(programa.frontmatter.nivel)}>
+                    <Link sx={{ marginLeft: 'auto' }} >
                       <Badge>{programa.frontmatter.nivel[0]}</Badge>
                     </Link>
                   </Flex>
