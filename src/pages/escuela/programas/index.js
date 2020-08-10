@@ -3,7 +3,7 @@ import Escuela from '../../escuela/index'
 import ProgramasRoll from '../../../components/ProgramasRoll'
 
 const ProgramasIndexPage = () =>
-    <Escuela>
+    <Escuela showImage={false}>
         <ProgramasRoll />
     </Escuela>
 

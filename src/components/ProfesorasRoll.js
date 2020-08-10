@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Link from './Link'
-import { Card, Flex, Text } from 'theme-ui'
+import { Card, Flex, Text, AspectRatio, Container } from 'theme-ui'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
@@ -11,36 +11,36 @@ const ProfesorasRoll = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <Flex>
-      {posts &&
-        posts.map(({ node: post }) => (
-          <Card as='article'
-            /*sx={{
-              maxWidth: 256,
-            }}*/
-            key={post.id}>
-            <Link
-              to={post.fields.slug}
-            >
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: post.frontmatter.featuredimage,
-                  alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                }}
-              />
-            </Link>
-            <Text>
+    <Container>
+      <Flex>
+        {posts &&
+          posts.map(({ node: post }) => (
+            <Card as='article'
+              key={post.id}>
               <Link
                 to={post.fields.slug}
-              >
-                {post.frontmatter.title}
+              ><AspectRatio ratio={16 / 9}>
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: post.frontmatter.featuredimage,
+                      alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    }}
+                  />
+                </AspectRatio>
               </Link>
+              <Text>
+                <Link
+                  to={post.fields.slug}
+                >
+                  {post.frontmatter.title}
+                </Link>
 
-            </Text>
+              </Text>
 
-          </Card>
-        ))}
-    </Flex>
+            </Card>
+          ))}
+      </Flex>
+    </Container>
   )
 }
 

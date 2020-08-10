@@ -5,15 +5,18 @@ import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
 import { Container } from '../../components/Container'
 
-const Escuela = ({ children }) => (
+const Escuela = ({ children, showImage = true }) => (
     <Layout>
-        <Image src={escuelaHeader} width={'100%'}></Image>
+        {showImage && <Image src={escuelaHeader} width={'100%'} sx={{ lineHeight: 0 }}></Image>}
 
-        <Flex as='nav' pl={4} mb={2} sx={{
+        <Flex as='nav' bg={'muted'} sx={{
             'a': {
                 padding: '3',
+                color: 'primary'
             },
-            borderBottom: '1px solid muted'
+            borderBottom: '1px solid "muted"',
+            lineHeight: .9,
+            justifyContent: 'center'
         }}>
             <Link p={4} to='/escuela/programas'>Programas</Link>
             <Link p={4} to='/escuela/profesoras'>Profesoras</Link>

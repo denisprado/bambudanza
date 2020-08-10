@@ -49,7 +49,10 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <Box sx={{ minHeight: '100hv' }}>{children}</Box>
+      <Box sx={{
+        width: '100%',
+        flex: '1 1 auto',
+      }}>{children}</Box>
       <Footer />
     </div>
   )

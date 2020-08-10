@@ -20,7 +20,7 @@ const Navbar = () => {
         </Link>
       </Box>
 
-      <Box sx={{
+      <Box mx={'auto'} sx={{
         flex: '1',
         marginLeft: 'auto',
         textAlign: 'right',

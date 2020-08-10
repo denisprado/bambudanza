@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { FiXCircle } from 'react-icons/fi'
+import { FiXCircle, FiCircle } from 'react-icons/fi'
 import _ from 'lodash'
-import { Card, Flex, Text, AspectRatio, Box, Heading, Badge, Link } from 'theme-ui'
+import { Card, Flex, Text, AspectRatio, Box, Heading, Badge, Link, Container } from 'theme-ui'
 // @jsx jsx
 import { jsx } from 'theme-ui'
 
 const ProgramasRoll = ({ data }) => {
 
-  const [filterTipo, setFilterTipo] = useState(null)
-  const [filterNivel, setFilterNivel] = useState(null)
-
   const { edges: programas } = data.allMarkdownRemark;
+
+  const [filters, setFilters] = useState([])
 
   const tipos = _.uniqWith(programas.map(({ node: prog }) =>
     prog.frontmatter.tipo
@@ -23,70 +22,105 @@ const ProgramasRoll = ({ data }) => {
     prog.frontmatter.nivel
   ), _.isEqual)
 
-  const clearFilters = () => {
-    setFilterNivel(null);
-    setFilterTipo(null);
+  const clearFilters = () => setFilters([]);
+
+  const clearFilter = (filter) => {
+    let newFilters = filters;
+    newFilters = newFilters.filter(f => f !== filter);
+    setFilters(newFilters && newFilters);
+  }
+
+  const addFilter = (newFilter) => {
+    const filtersIsEmpty = filters && filters.length === 0;
+    const filterExist = filters && !filtersIsEmpty && filters.filter(f => f === newFilter).length > 0 && true
+    !filterExist && setFilters([...filters, newFilter]);
   }
 
 
   return (
-    <Flex mt={4} sx={{ minHeight: '50vh' }}>
-      <Box mt={2} sx={{ minWidth: '20vh' }}>
+    <Container>
+      <Flex mt={4} sx={{ minHeight: '50vh' }}>
+
+        {/* Seletor de filtros */}
+        <Box mt={2} sx={{ minWidth: '20vh' }}>
+          <Box>
+            {tipos && tipos.map(t => <Box key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
+          </Box>
+          <Box mt={3}>
+            {niveis && niveis.map(nivel => <Box key={nivel}><Link onClick={() => addFilter(nivel[0])}>{nivel[0]}</Link></Box>)}
+          </Box>
+        </Box>
+
+        {/* Filtros atuais */}
         <Box>
-          <Heading as={'h3'}>Tipos</Heading>
+          {
+            filters && filters.length > 0 &&
+            <Box bx={'muted'} sx={{ width: '100%' }}>
+              <Flex sx={{ alignItems: 'center' }}>
+                {filters.map(filter =>
+                  <Badge key={filter} p={2} mr={2} bg={'muted'} color={'primary'}>{filter}
+                    <Link onClick={() => clearFilter(filter)}>
+                      <span sx={{ paddingX: 1 }}><FiXCircle /></span>
+                    </Link>
+                  </Badge>)
+                }
+                <Badge p={2} mr={2} bg={'muted'} color={'primary'}>Limpar Filtros
+                  <Link onClick={() => clearFilters()}>
+                    <span sx={{ paddingX: 1 }}><FiXCircle /></span>
+                  </Link>
+                </Badge>
+              </Flex>
+            </Box>
+          }
 
-          {(tipos.map(t => <Box><Link onClick={() => setFilterTipo(t)}>{t}</Link></Box>))}
-        </Box>
-
-        <Box mt={3}>
-          <Heading as={'h3'}>Nivel</Heading>
-          {(niveis.map(nivel => <Box><Link onClick={() => setFilterNivel(nivel)}>{nivel}</Link></Box>))}
-        </Box>
-      </Box>
-
-
-      {
-        (filterNivel || filterNivel) &&
-        <Flex>
-          {filterNivel && <Badge p={2} mr={2} bg={'muted'} color={'primary'}>{filterNivel}</Badge>}
-          {filterTipo && <Badge p={2} bg={'muted'} color={'primary'}>{filterTipo}</Badge>}
-          {(filterNivel || filterTipo) && <Link onClick={() => clearFilters()}><FiXCircle /></Link>}
-        </Flex>
-      }{
-        programas &&
-        programas.map(({ node: programa }) => (
-          (filterTipo === null || filterTipo === programa.frontmatter.tipo) &&
-          (filterNivel === null || filterNivel === programa.frontmatter.nivel) &&
-          <Card as='article'
-            sx={{
-              minWidth: '584px'
-            }}
-            key={programa.id}>
-            <Link
-              to={programa.fields.slug}
-            >
-              <AspectRatio ratio={16 / 9}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: programa.frontmatter.featuredimage,
-                    alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
+          {/* Listagem de programas */}
+          <Flex sx={{
+            flexWrap: 'wrap',
+            alignContent: 'flex-start'
+          }}>
+            {
+              programas && programas.map(({ node: programa }) =>
+                ((filters && filters.length === 0) ||
+                  (filters && filters.length > 0 &&
+                    filters && filters.filter(f => f === programa.frontmatter.tipo[0]).length > 0 ||
+                    filters && filters.filter(n => n === programa.frontmatter.nivel[0]).length > 0)) &&
+                <Card as='article'
+                  sx={{
+                    flex: '1 1 33%',
+                    maxWidth: '33%',
+                    minmaxWidth: '33%',
                   }}
-                />
-              </AspectRatio>
-            </Link>
-            <Flex>
-              <Heading to={programa.fields.slug}>
-                <Text>{programa.frontmatter.title}</Text>
-              </Heading>
-              <Link sx={{ marginLeft: 'auto' }}>
-                <Badge>{programa.frontmatter.tipo}</Badge>
-              </Link>
-            </Flex>
-          </Card>
+                  key={programa.id}>
+                  <AspectRatio ratio={16 / 9}>
+                    <Link to={programa.fields.slug}>
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: programa.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
+                        }}
+                      />
+                    </Link>
+                  </AspectRatio>
+                  <Flex>
+                    <Heading to={programa.fields.slug} sx={{ maxWidth: '60%' }}>
+                      <Text>{programa.frontmatter.title}</Text>
+                    </Heading>
+                    <Link sx={{ marginLeft: 'auto' }} onClick={() => addFilter(programa.frontmatter.tipo)}>
+                      <Badge>{programa.frontmatter.tipo}</Badge>
+                    </Link>
+                    <Link sx={{ marginLeft: 'auto' }} onClick={() => addFilter(programa.frontmatter.nivel)}>
+                      <Badge>{programa.frontmatter.nivel[0]}</Badge>
+                    </Link>
+                  </Flex>
+                </Card>
+              )
+            }
+          </Flex>
 
-        ))
-      }
-    </Flex >
+        </Box>
+
+      </Flex >
+    </Container >
   )
 }
 
