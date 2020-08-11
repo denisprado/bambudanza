@@ -11,10 +11,7 @@ tags:
   - Danza contemporánea
 profesora: Poliana Lima
 tarifa:
-  - 1 CURSO 1 X A LA SEMANA (2H)
-  - 2x a La Semana  80€
-horarios:
-  - Lunes y Miércoles
+  - 2x a La Semana
 tipo:
   - Proyetos
 nivel:

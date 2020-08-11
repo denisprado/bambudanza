@@ -18,8 +18,6 @@ tags:
 profesora: Iris Muñoz
 tarifa:
   - 2x a La Semana
-horarios:
-  - Martes y Viernes
 tipo:
   - Escuela Online
 estilo:
@@ -29,8 +27,9 @@ nivel:
   - Intermedio
   - Avanzado
 ---
+
 Comienza un nuevo curso. Hora de arrancar motores. De traer al cuerpo todas las herramientas que tiene para bailar, sentir, gozar, estirar, colocarse. Para volver a escuchar los silencios y para rencontrarnos con energías altas. Vuelve la hora de tomar conciencia y escuchar dentro.
-En las clases trabajaremos: improvisaciones guiadas para conectar con diferentes mecanismos, calidades e imágenes desde lo que nos es más cercano y natural y ejercicios técnicos para colocar el cuerpo y ampliar nuestro lenguaje. 
+En las clases trabajaremos: improvisaciones guiadas para conectar con diferentes mecanismos, calidades e imágenes desde lo que nos es más cercano y natural y ejercicios técnicos para colocar el cuerpo y ampliar nuestro lenguaje.
 Pongamos el cuerpo en danza!
 
 **Pensado para espacios reducidos**

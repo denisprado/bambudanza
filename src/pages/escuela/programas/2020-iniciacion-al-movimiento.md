@@ -10,9 +10,7 @@ tags:
 profesora: Lucyanna Pettengill
 tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
-  - 2x a La Semana  80€
-horarios:
-  - Lunes y Miércoles
+  - 2x a La Semana
 tipo:
   - Clases Regulares
 nivel:

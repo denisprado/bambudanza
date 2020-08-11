@@ -76,9 +76,19 @@ collections:
           widget: "relation",
           multiple: true,
           collection: "horarios",
-          valueField: ["dias", "hora"],
-          searchFields: ["dias", "hora"],
-          displayFields: ["dias", "hora"],
+          valueField: "title",
+          searchFields: "title",
+          displayFields: "title",
+        }
+      - {
+          label: "Dias",
+          name: "dias",
+          widget: "relation",
+          multiple: true,
+          collection: "dias",
+          valueField: "title",
+          searchFields: "title",
+          displayFields: "title",
         }
       - {
           label: "Tipo de Programa",
@@ -151,8 +161,22 @@ collections:
           widget: "hidden",
           default: "horario-post",
         }
-      - { label: "Dias", name: "dias", widget: "string" }
-      - { label: "Hora", name: "hora", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+  - name: "dias"
+    label: "Dias"
+    folder: "src/pages/escuela/dias"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "dias-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
   - name: "pages"
