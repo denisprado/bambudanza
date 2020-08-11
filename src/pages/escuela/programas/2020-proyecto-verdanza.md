@@ -31,6 +31,7 @@ nivel:
   - Intermedio
   - Avanzado
 ---
+
 Este proyecto propone ofrecer al alumnado un acercamiento al universo creativo y a práctica de movimiento de algunos de los principales y renombrados coreógrafos de la actualidad.
 
 Serán tres encuentros que desarrollarán cada coreógrafo durante el curso.

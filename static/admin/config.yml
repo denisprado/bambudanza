@@ -76,7 +76,7 @@ collections:
           widget: "relation",
           multiple: true,
           collection: "horarios",
-          valueField: "dias",
+          valueField: ["dias", "hora"],
           searchFields: ["dias", "hora"],
           displayFields: ["dias", "hora"],
         }

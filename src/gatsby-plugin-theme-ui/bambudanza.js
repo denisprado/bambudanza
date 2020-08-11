@@ -136,19 +136,30 @@ export const bambudanza = {
             "lineHeight": "body"
         },
         a: {
-            color: 'secondary',
+            color: 'text',
             textDecoration: 'none',
             cursor: 'pointer',
             ':hover': {
                 "color": 'primary',
                 "textDecoration": 'bold',
-                backgroundColor: 'muted',
             },
             '&.active': {
                 color: "primary",
                 fontWeight: '600',
                 borderBottom: '2px solid',
                 borderColor: 'primary',
+
+            },
+            '&.activeMenu': {
+                color: "primary",
+                fontWeight: '600',
+                borderBottom: '4px solid',
+                borderColor: 'primary',
+                width: 0,
+                height: 0,
+                borderLeft: '20px solid transparent',
+                borderRight: '20px solid transparent',
+                borderTop: '20px solid #f00',
             }
         },
         "pre": {

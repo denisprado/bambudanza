@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { jsx, Image } from 'theme-ui'
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { backgroundPosition: 'center' }
+  const imageStyle = { backgroundPosition: 'center', filter: 'grayscale(100%)' }
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {

@@ -103,24 +103,21 @@ const ProgramasRoll = ({ data }) => {
                   </AspectRatio>
                   <Flex>
                     <Link href={programa.fields.slug}>
-                      <Heading sx={{ maxWidth: '60%' }}>
+                      <Heading as={'h3'} sx={{ maxWidth: '50%' }}>
                         <Text>{programa.frontmatter.title}</Text>
                       </Heading>
                     </Link>
-                    <Link mr={3} sx={{ marginLeft: 'auto' }} >
+                    <Box>
                       <Badge>{programa.frontmatter.tipo}</Badge>
-                    </Link>
-                    <Link sx={{ marginLeft: 'auto' }} >
-                      <Badge>{programa.frontmatter.nivel[0]}</Badge>
-                    </Link>
+                      <Badge>{programa.frontmatter.horarios}</Badge>
+                      <Badge sx={{ marginLeft: 'auto' }}>{programa.frontmatter.nivel[0]}</Badge>
+                    </Box>
                   </Flex>
                 </Card>
               )
             }
           </Flex>
-
         </Box>
-
       </Flex >
     </Container >
   )

@@ -16,7 +16,10 @@ const TarifasRoll = ({ data }) => {
     <table sx={{
       marginTop: 4,
       'th': {
-        textAlign: 'left'
+        textAlign: 'left',
+        '&:nth-child(even)': {
+          backgroundColor: 'muted',
+        }
       },
 
     }}>
