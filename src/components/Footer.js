@@ -1,6 +1,6 @@
-import { Box, Flex, NavLink, Styled } from 'theme-ui'
+import { Box, Flex, NavLink, Styled, Link } from 'theme-ui'
 import React from 'react'
-import Link from '../components/Link'
+
 import logo from '../img/logo-footer.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
@@ -20,14 +20,14 @@ const Footer = () => (
       />
     </Box>
     <Box>
-      <Link to="/" className="navbar-item">
+      <Link href="/">
         Home
                       </Link>
-      <Link className="navbar-item" to="/about">
+      <Link href="/about">
         About
                       </Link>
       <NavLink
-        className="navbar-item"
+
         href="/admin/"
         target="_blank"
         rel="noopener noreferrer"
@@ -39,11 +39,11 @@ const Footer = () => (
     </Box>
     <Box>
 
-      <Link className="navbar-item" to="/blog">
+      <Link href="/blog">
         Latest Stories
                       </Link>
 
-      <Link className="navbar-item" to="/contact">
+      <Link href="/contact">
         Contact
                       </Link>
 

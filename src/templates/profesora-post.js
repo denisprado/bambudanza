@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby'
 
 import Content, { HTMLContent } from '../components/Content'
 import Escuela from '../pages/escuela'
-import { Flex, Box, Heading, Text } from 'theme-ui'
+import { Flex, Box, Heading, Text, Container } from 'theme-ui'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const ProfesoraPostTemplate = ({
@@ -20,28 +20,30 @@ export const ProfesoraPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <Escuela>
+    <Escuela showImage={false}>
       {helmet || ''}
-      <Flex>
-        <Box p={4} as='aside' sx={{
-          flexGrow: 1,
-          flexBasis: 'sidebar',
-          minWidth: '300px'
-        }}>
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: featuredimage,
-              alt: `featured image thumbnail for post ${title}`,
-            }}
-          />
-        </Box>
-        <Box as='main'>
+      <Container>
+        <Flex>
+          <Box p={4} as='aside' sx={{
+            flexGrow: 1,
+            flexBasis: 'sidebar',
+            minWidth: '300px'
+          }}>
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: featuredimage,
+                alt: `featured image thumbnail for post ${title}`,
+              }}
+            />
+          </Box>
+          <Box as='main'>
 
-          <Heading>{title}</Heading>
-          <Text>{description}</Text>
-          <PostContent content={content} />
-        </Box>
-      </Flex>
+            <Heading>{title}</Heading>
+            <Text>{description}</Text>
+            <PostContent content={content} />
+          </Box>
+        </Flex>
+      </Container>
     </Escuela >
   )
 }
