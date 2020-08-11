@@ -25,6 +25,8 @@ tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
 horarios:
   - Lunes Y Miercoles
+dias:
+  - Martes
 tipo:
   - Clases Regulares
 estilo:
