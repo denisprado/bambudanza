@@ -19,7 +19,9 @@ profesora: Iris Muñoz
 tarifa:
   - 2x a La Semana
 horarios:
-  - Martes y Viernes
+  - 10h a 11h30
+dias:
+  - Martes y Jueves
 tipo:
   - Escuela Online
 estilo:
