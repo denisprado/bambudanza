@@ -30,7 +30,9 @@ const Escuela = ({ children, showImage = true }) => {
             </Box>
             {showImage && <Image src={escuelaHeader} width={'100%'} sx={{ lineHeight: 0 }}></Image>}
             <Container>
-                {children}
+                <Box>
+                    {children}
+                </Box>
             </Container>
         </Layout >
     )

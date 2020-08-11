@@ -45,6 +45,9 @@ export const bambudanza = {
         gray: "#A3AF9E",
         accent: "#08658C",
         darken: "#2E4F24",
+        iniciacion: 'primary',
+        medio: 'accent',
+        avanzado: 'red',
         modes: {
             dark: {
                 text: "#A3AF9E",
