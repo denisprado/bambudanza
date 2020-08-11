@@ -22,28 +22,26 @@ export const ProfesoraPostTemplate = ({
   return (
     <Escuela showImage={false}>
       {helmet || ''}
-      <Container>
-        <Flex>
-          <Box p={4} as='aside' sx={{
-            flexGrow: 1,
-            flexBasis: 'sidebar',
-            minWidth: '300px'
-          }}>
-            <PreviewCompatibleImage
-              imageInfo={{
-                image: featuredimage,
-                alt: `featured image thumbnail for post ${title}`,
-              }}
-            />
-          </Box>
-          <Box as='main'>
+      <Flex>
+        <Box p={4} as='aside' sx={{
+          flexGrow: 1,
+          flexBasis: 'sidebar',
+          minWidth: '300px'
+        }}>
+          <PreviewCompatibleImage
+            imageInfo={{
+              image: featuredimage,
+              alt: `featured image thumbnail for post ${title}`,
+            }}
+          />
+        </Box>
+        <Box as='main'>
 
-            <Heading>{title}</Heading>
-            <Text>{description}</Text>
-            <PostContent content={content} />
-          </Box>
-        </Flex>
-      </Container>
+          <Heading>{title}</Heading>
+          <Text>{description}</Text>
+          <PostContent content={content} />
+        </Box>
+      </Flex>
     </Escuela >
   )
 }

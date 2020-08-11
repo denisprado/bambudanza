@@ -19,13 +19,13 @@ export const TarifaPostTemplate = ({
   return (
     <Escuela>
       {helmet || ''}
-      <Flex>
-        <Box as='main'>
-          <Heading>{title}</Heading>
-          <Text>{price}</Text>
-          <PostContent content={content} />
-        </Box>
-      </Flex>
+      <Box as='main'>
+
+        <Heading>{title}</Heading>
+        <Text>{price}</Text>
+        <PostContent content={content} />
+
+      </Box>
     </Escuela >
   )
 }

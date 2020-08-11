@@ -23,53 +23,49 @@ export const ProgramaPostTemplate = ({
 
   return (
     <Escuela showImage={false}>
-      <Container>
+      {helmet || ''}
+      <Flex>
+        <Box p={2} as='aside' sx={{
+          flexGrow: 1,
+          flexBasis: 'sidebar',
+          minWidth: '400px'
+        }}>
 
+          <Heading as='h4' pt={4}>Profesora</Heading>
+          <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
 
-        {helmet || ''}
-        <Flex>
-          <Box p={2} as='aside' sx={{
-            flexGrow: 1,
-            flexBasis: 'sidebar',
-            minWidth: '400px'
-          }}>
+          <Heading as='h4' pt={4}>Horário</Heading>
+          <ul>
+            {horarios && horarios.length ? (
+              horarios.map((horarios) => (
+                <li key={horarios + `horarios`}>
+                  <Text>{horarios}</Text>
+                </li>
+              ))
+            )
+              : null}
+          </ul>
 
-            <Heading as='h4' pt={4}>Profesora</Heading>
-            <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
+          <Heading as='h4' pt={4}>Tarifa</Heading>
+          <ul>
 
-            <Heading as='h4' pt={4}>Horário</Heading>
-            <ul>
-              {horarios && horarios.length ? (
-                horarios.map((horarios) => (
-                  <li key={horarios + `horarios`}>
-                    <Text>{horarios}</Text>
-                  </li>
-                ))
-              )
-                : null}
-            </ul>
+            {tarifa && tarifa.length ? (
+              tarifa.map((t) => (
+                <li key={t + `tarifa`}>
+                  <Link to="/escuela/tarifas">{t}</Link>
+                </li>
+              ))
+            )
+              : null}
+          </ul>
 
-            <Heading as='h4' pt={4}>Tarifa</Heading>
-            <ul>
-
-              {tarifa && tarifa.length ? (
-                tarifa.map((t) => (
-                  <li key={t + `tarifa`}>
-                    <Link to="/escuela/tarifas">{t}</Link>
-                  </li>
-                ))
-              )
-                : null}
-            </ul>
-
-          </Box>
-          <Box as='main'>
-            <Heading>{title}</Heading>
-            <Text>{description}</Text>
-            <PostContent content={content} />
-          </Box>
-        </Flex>
-      </Container>
+        </Box>
+        <Box as='main'>
+          <Heading>{title}</Heading>
+          <Text>{description}</Text>
+          <PostContent content={content} />
+        </Box>
+      </Flex>
     </Escuela >
   )
 }

@@ -10,83 +10,34 @@ import { jsx } from 'theme-ui'
 
 const TarifasRoll = ({ data }) => {
 
-  const [filterTipo, setFilterTipo] = useState(null)
-  const [filterNivel, setFilterNivel] = useState(null)
-
-  const { edges: programas } = data.allMarkdownRemark;
-
-  const tipos = _.uniqWith(programas.map(({ node: prog }) =>
-    prog.frontmatter.tipo
-  ), _.isEqual)
-
-  const niveis = _.uniqWith(programas.map(({ node: prog }) =>
-    prog.frontmatter.nivel
-  ), _.isEqual)
-
-  const clearFilters = () => {
-    setFilterNivel(null);
-    setFilterTipo(null);
-  }
-
+  const { edges: tarifas } = data.allMarkdownRemark;
 
   return (
-    <Flex mt={4} sx={{ minHeight: '50vh' }}>
-      <Box mt={2} sx={{ minWidth: '20vh' }}>
-        <Box>
-          <Heading as={'h3'}>Tipos</Heading>
+    <table sx={{
+      marginTop: 4,
+      'th': {
+        textAlign: 'left'
+      },
 
-          {(tipos.map(t => <Box><Link onClick={() => setFilterTipo(t)}>{t}</Link></Box>))}
-        </Box>
-
-        <Box mt={3}>
-          <Heading as={'h3'}>Nivel</Heading>
-          {(niveis.map(nivel => <Box><Link onClick={() => setFilterNivel(nivel)}>{nivel}</Link></Box>))}
-        </Box>
-      </Box>
-
-
+    }}>
+      <tr>
+        <th>Tipo</th>
+        <th>Precio</th>
+      </tr>
       {
-        (filterNivel || filterNivel) &&
-        <Flex>
-          {filterNivel && <Badge p={2} mr={2} bg={'muted'} color={'primary'}>{filterNivel}</Badge>}
-          {filterTipo && <Badge p={2} bg={'muted'} color={'primary'}>{filterTipo}</Badge>}
-          {(filterNivel || filterTipo) && <Link onClick={() => clearFilters()}><FiXCircle /></Link>}
-        </Flex>
-      }{
-        programas &&
-        programas.map(({ node: programa }) => (
-          (filterTipo === null || filterTipo === programa.frontmatter.tipo) &&
-          (filterNivel === null || filterNivel === programa.frontmatter.nivel) &&
-          <Card as='article'
-            sx={{
-              minWidth: '584px'
-            }}
-            key={programa.id}>
-            <Link
-              to={programa.fields.slug}
-            >
-              <AspectRatio ratio={16 / 9}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: programa.frontmatter.featuredimage,
-                    alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
-                  }}
-                />
-              </AspectRatio>
-            </Link>
-            <Flex>
-              <Heading to={programa.fields.slug}>
-                <Text>{programa.frontmatter.title}</Text>
-              </Heading>
-              <Link sx={{ marginLeft: 'auto' }}>
-                <Badge>{programa.frontmatter.tipo}</Badge>
-              </Link>
-            </Flex>
-          </Card>
-
+        tarifas &&
+        tarifas.map(({ node: tarifa }) => (
+          <tr>
+            <td>
+              <Text py={1}>{tarifa.frontmatter.title}</Text>
+            </td>
+            <td>
+              <Text p={1} sx={{ textAlign: 'right' }}>{tarifa.frontmatter.price}€</Text>
+            </td>
+          </tr>
         ))
       }
-    </Flex >
+    </table>
   )
 }
 
@@ -116,19 +67,7 @@ export default () => (
               }
               frontmatter {
                 title
-                tipo
-                nivel
-                estilo
-                horarios
-                templateKey
-                featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 640, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
+                price
               }
             }
           }

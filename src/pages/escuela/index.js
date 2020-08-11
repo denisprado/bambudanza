@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Flex, Image, jsx } from 'theme-ui'
+import { Box, Flex, Image, jsx, Container } from 'theme-ui'
 import Link from '../../components/Link'
 import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
-import { Container } from '../../components/Container'
+
 
 const Escuela = ({ children, showImage = true }) => (
     <Layout>
@@ -24,9 +24,9 @@ const Escuela = ({ children, showImage = true }) => (
             </Flex>
         </Box>
         {showImage && <Image src={escuelaHeader} width={'100%'} sx={{ lineHeight: 0 }}></Image>}
-        <Box p={4}>
+        <Container>
             {children}
-        </Box>
+        </Container>
     </Layout >
 )
 
