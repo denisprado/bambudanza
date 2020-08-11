@@ -22,13 +22,15 @@ profesora: Iris Muñoz
 tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
 horarios:
-  - Lunes Y Miercoles
+  - 20h a 22h
+dias:
+  - Martes y Jueves
 tipo:
   - Clases Regulares
 estilo:
   - Danza contemporânea
 nivel:
-  - Avanzado
+  - Intermedio
 ---
 
 Las clases se desarrollan desde tres visiones y con tres objetivos:
