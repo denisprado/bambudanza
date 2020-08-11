@@ -1,7 +1,7 @@
 import { Box, Flex, NavLink, Styled } from 'theme-ui'
 import React from 'react'
 import Link from '../components/Link'
-import logo from '../img/logo.jpg'
+import logo from '../img/logo-footer.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
@@ -12,7 +12,7 @@ const Footer = () => (
 
 
 
-    <Box>
+    <Box mx={4}>
       <img
         src={logo}
         alt="Bambudanza"

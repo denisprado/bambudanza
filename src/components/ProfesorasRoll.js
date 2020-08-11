@@ -16,12 +16,19 @@ const ProfesorasRoll = ({ data }) => {
         {posts &&
           posts.map(({ node: post }) => (
             <Card as='article'
+              sx={{
+                flex: '1 1 33%',
+                maxWidth: '33%',
+                minmaxWidth: '33%',
+              }}
               key={post.id}>
+
               <Link
                 to={post.fields.slug}
               ><AspectRatio ratio={16 / 9}>
                   <PreviewCompatibleImage
                     imageInfo={{
+                      objectPosition: 'center',
                       image: post.frontmatter.featuredimage,
                       alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                     }}
