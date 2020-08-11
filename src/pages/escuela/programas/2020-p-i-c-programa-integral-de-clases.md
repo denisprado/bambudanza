@@ -11,7 +11,7 @@ description: >
 
   El programa está dirigido a todo tipo de público no teniendo limitación de edad  ni nivel técnico.
 featuredpost: true
-featuredimage: /img/picimage19.jpg
+featuredimage: /img/logo.svg
 tags:
   - Proyeto
 profesora: Lucyanna Pettengill
