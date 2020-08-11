@@ -1,19 +1,19 @@
 ---
 templateKey: programa-post
-title: MARATÓN BAMBÚDANZA
+title: CICLO CREATIVO Laboratorio de técnica y creación
 date: 2020-08-11T14:36:10.264Z
 description: >
-  El nuevo curso trae nuevas propuestas…
+  Este proyecto propone ofrecer al alumnado un acercamiento al universo creativo
+  y a práctica de movimiento de algunos de los principales y renombrados
+  coreógrafos de la actualidad.
 
-  TRAINING ESCUELA es un proyecto pensado para profesionales o alumn@s avanzados. Tiene como objetivo el entrenamiento diario con un grupo de 5 profesor@s  que alternarán durante el mes. Eventualmente tendremos invitados especiales.
 
-  Las clases serán de lunes a viernes de 10.00 a 12.00 horas.
+  Serán tres encuentros que desarrollarán cada coreógrafo durante el curso.
 
-  El aforo es limitado.
 
-  En breve la programación detallada.
+  Los talleres podrán seguir de manera completa o independiente, ya que los ejes temáticos de cada uno de ellos será diferente.
 featuredpost: true
-featuredimage: /img/iniciacion-al-movimiento.jpg
+featuredimage: /img/logo.svg
 tags:
   - Proyeto
 profesora: Lucyanna Pettengill
@@ -31,8 +31,8 @@ nivel:
   - Intermedio
   - Avanzado
 ---
-El nuevo curso trae nuevas propuestas…
-TRAINING ESCUELA es un proyecto pensado para profesionales o alumn@s avanzados. Tiene como objetivo el entrenamiento diario con un grupo de 5 profesor@s  que alternarán durante el mes. Eventualmente tendremos invitados especiales.
-Las clases serán de lunes a viernes de 10.00 a 12.00 horas.
-El aforo es limitado.
-En breve la programación detallada.
+Este proyecto propone ofrecer al alumnado un acercamiento al universo creativo y a práctica de movimiento de algunos de los principales y renombrados coreógrafos de la actualidad.
+
+Serán tres encuentros que desarrollarán cada coreógrafo durante el curso.
+
+Los talleres podrán seguir de manera completa o independiente, ya que los ejes temáticos de cada uno de ellos será diferente.
