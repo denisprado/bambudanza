@@ -25,16 +25,18 @@ tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
 horarios:
   - Lunes Y Miercoles
-tipo: Clases Regulares
+tipo:
+  - Clases Regulares
 estilo:
   - Danza
   - movimiento e improvisación
 nivel:
   - Iniciación
 ---
-En este curso trabajaremos los elementos técnicos base de la danza contemporánea y la improvisación, sumados con recursos lúdicos  como objetos, dibujos, poesía y todo elemento que nos pueda servir como  un impulso para generar movimiento. 
-Ampliaremos nuestro vocabulario corporal, liberando  la expresión individual y promoviendo la interacción con los demás . Vamos a disfrutar del movimiento y dar alas a nuestra imaginación. Estaremos muy conectados con los estímulos sonoros, que serán muchas veces pautas para el desarrollo del movimiento o acción.
-La práctica de la Danza Improvisación nos brinda la oportunidad de ser conscientes del momento presente, tomar decisiones y actuar. 
-Un espacio para desarrollar nuestra propia manera de expresar a través del movimiento y compartirla con los demás. 
- Por un lado la toma de consciencia y  la práctica de  los aspectos físicos  que nos ayudan a potenciar nuestra danza, y por otro adquirir herramientas para reconocer y gestionar lo que ocurre en una improvisación colectiva. 
- Potenciaremos conjuntamente nuestro lado como intérpretes y nuestro lado como creadores. No necesita experiencia previa.
+
+En este curso trabajaremos los elementos técnicos base de la danza contemporánea y la improvisación, sumados con recursos lúdicos como objetos, dibujos, poesía y todo elemento que nos pueda servir como un impulso para generar movimiento.
+Ampliaremos nuestro vocabulario corporal, liberando la expresión individual y promoviendo la interacción con los demás . Vamos a disfrutar del movimiento y dar alas a nuestra imaginación. Estaremos muy conectados con los estímulos sonoros, que serán muchas veces pautas para el desarrollo del movimiento o acción.
+La práctica de la Danza Improvisación nos brinda la oportunidad de ser conscientes del momento presente, tomar decisiones y actuar.
+Un espacio para desarrollar nuestra propia manera de expresar a través del movimiento y compartirla con los demás.
+Por un lado la toma de consciencia y la práctica de los aspectos físicos que nos ayudan a potenciar nuestra danza, y por otro adquirir herramientas para reconocer y gestionar lo que ocurre en una improvisación colectiva.
+Potenciaremos conjuntamente nuestro lado como intérpretes y nuestro lado como creadores. No necesita experiencia previa.

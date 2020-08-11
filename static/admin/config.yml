@@ -83,6 +83,7 @@ collections:
       - {
           label: "Tipo de Programa",
           name: "tipo",
+          multiple: true,
           widget: "select",
           options:
             [
