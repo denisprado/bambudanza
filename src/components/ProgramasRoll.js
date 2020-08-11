@@ -102,7 +102,7 @@ const ProgramasRoll = ({ data }) => {
               <Card as='article'
                 sx={{
                   flex: '1 1 30%',
-                  maxWidth: '33%',
+                  maxWidth: '30%',
 
                 }}
                 key={programa.id}>

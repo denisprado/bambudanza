@@ -61,7 +61,7 @@ export const bambudanza = {
     },
     cards: {
         primary: {
-            padding: 2,
+            padding: 3,
             borderRadius: 4,
         },
         compact: {

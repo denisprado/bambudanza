@@ -77,8 +77,8 @@ collections:
           multiple: true,
           collection: "horarios",
           valueField: "title",
-          searchFields: "title",
-          displayFields: "title",
+          searchFields: ["title"],
+          displayFields: ["title"],
         }
       - {
           label: "Dias",
@@ -87,8 +87,8 @@ collections:
           multiple: true,
           collection: "dias",
           valueField: "title",
-          searchFields: "title",
-          displayFields: "title",
+          searchFields: ["title"],
+          displayFields: ["title"],
         }
       - {
           label: "Tipo de Programa",
