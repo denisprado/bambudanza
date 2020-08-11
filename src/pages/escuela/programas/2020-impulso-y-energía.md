@@ -14,7 +14,7 @@ tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
   - 2x a La Semana  80€
 horarios:
-  - Lunes y Miércoles 18:00 A 19:30 HORAS
+  - Lunes y Miércoles
 tipo:
   - Proyetos
 nivel:

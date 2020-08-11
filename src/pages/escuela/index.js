@@ -1,5 +1,6 @@
-import React from 'react'
+/** @jsx jsx */
 import { Box, Flex, Image, jsx, Container } from 'theme-ui'
+import React from 'react'
 import Link from '../../components/Link'
 import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
@@ -18,7 +19,7 @@ const Escuela = ({ children, showImage = true }) => {
                         padding: '4',
                         color: 'primary'
                     },
-                    borderBottom: '1px solid "muted"',
+                    borderBottom: '2px solid "muted"',
                     lineHeight: .9,
                     justifyContent: 'flex-start',
                     marginLeft: '218px'
@@ -29,12 +30,12 @@ const Escuela = ({ children, showImage = true }) => {
                 </Flex>
             </Box>
             {showImage && <Image src={escuelaHeader} width={'100%'} sx={{ lineHeight: 0 }}></Image>}
-            <Container>
+            <Container mt={4}>
                 <Box>
                     {children}
                 </Box>
             </Container>
-        </Layout >
+        </Layout>
     )
 }
 

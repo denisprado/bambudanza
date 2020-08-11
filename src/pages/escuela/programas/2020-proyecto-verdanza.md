@@ -13,7 +13,7 @@ description: >
 
   Los talleres podrán seguir de manera completa o independiente, ya que los ejes temáticos de cada uno de ellos será diferente.
 featuredpost: true
-featuredimage: /img/logo.svg
+featuredimage: /img/default-image.png
 tags:
   - Proyeto
 profesora: Lucyanna Pettengill

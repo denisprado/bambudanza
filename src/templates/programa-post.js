@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import Link from '../components/Link'
+import { kebabCase } from 'lodash'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+/** @jsx jsx */
+import { Box, Flex, Heading, Text, jsx } from 'theme-ui'
 import Content, { HTMLContent } from '../components/Content'
+import Link from '../components/Link'
 import Escuela from '../pages/escuela'
-import { Container, Flex, Box, Heading, Text } from 'theme-ui'
 
 export const ProgramaPostTemplate = ({
   content,

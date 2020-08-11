@@ -2,6 +2,7 @@ import React from 'react'
 import Link from './Link'
 import logo from '../img/logo.svg'
 import { FiSearch } from 'react-icons/fi'
+/** @jsx jsx */
 import { Flex, Box, jsx, Container } from 'theme-ui'
 
 const Navbar = () => {

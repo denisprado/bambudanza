@@ -14,7 +14,7 @@ import { jsx } from 'theme-ui'
 export const IconsNivel = (props) => {
   const { nivel, sx } = props;
   const niveis = ["Iniciación", "Intermedio", "Avanzado"]
-  const colors = ["#DFF8D5", "#5E8052", '#2E4F24'];
+  const colors = ["#21618C", "#6C3483", '#943126'];
   return (<BsFillCircleFill {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 
@@ -46,18 +46,19 @@ const ProgramasRoll = ({ data }) => {
 
   return (
 
-    <Flex mt={4} sx={{ minHeight: '50vh', width: '100%' }}>
-
+    <Flex sx={{ width: '100%' }}>
       {/* Seletor de filtros */}
-      <Box mt={2} sx={{ minWidth: '20vh' }}>
+      <Box mt={3} sx={{ minWidth: '20vh' }}>
         <Box>
-          {tipos && tipos.map(t => <Box key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
+          {tipos && tipos.map(t => <Box py={2} key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
         </Box>
         <Box mt={3}>
           {niveis && niveis.map(nivel =>
-            <Box key={nivel}>
+            <Box py={1} key={nivel}>
               <Link onClick={() => addFilter(nivel)}>
-                <IconsNivel sx={{ mr: 1 }} nivel={nivel} />{nivel}
+                <Flex sx={{ alignItems: 'center' }}>
+                  <IconsNivel sx={{ mr: 2 }} nivel={nivel} />{nivel}
+                </Flex>
               </Link>
             </Box>)
           }
@@ -79,7 +80,7 @@ const ProgramasRoll = ({ data }) => {
               }
               <Badge p={2} mr={2} bg={'transparent'} color={'primary'}>Limpar Filtros
                   <Link onClick={() => clearFilters()}>
-                  <span sx={{ paddingX: 1 }}><FiXCircle /></span>
+
                 </Link>
               </Badge>
             </Flex>
@@ -90,7 +91,7 @@ const ProgramasRoll = ({ data }) => {
         <Flex sx={{
           flexWrap: 'wrap',
           alignContent: 'flex-start',
-          minWidth: '100%'
+
         }} >
           {
             programas && programas.map(({ node: programa }) =>
@@ -100,12 +101,12 @@ const ProgramasRoll = ({ data }) => {
                   filters && filters.filter(n => n === programa.frontmatter.nivel[0]).length > 0)) &&
               <Card as='article'
                 sx={{
-                  flex: '1 1 33%',
+                  flex: '1 1 30%',
                   maxWidth: '33%',
-                  minmaxWidth: '33%',
+
                 }}
                 key={programa.id}>
-                <AspectRatio ratio={16 / 9}>
+                <AspectRatio ratio={4 / 3}>
                   <Link href={programa.fields.slug}>
                     <PreviewCompatibleImage
                       imageInfo={{
@@ -115,23 +116,27 @@ const ProgramasRoll = ({ data }) => {
                     />
                   </Link>
                 </AspectRatio>
-                <Flex>
-                  <Box>
+                <Box>
 
+                  <Flex sx={{ justifyContent: "space-between", alignItems: 'center' }}>
                     <Link href={programa.fields.slug}>
                       <Heading as={'h3'} sx={{ maxWidth: '60%' }}>
-                        <Text>{programa.frontmatter.title}</Text>
+                        {programa.frontmatter.title}
                       </Heading>
                     </Link>
-                    <Flex mt={1}>
-                      {programa.frontmatter.nivel.map(n => <Box key={n} sx={{ marginRight: '1' }}><IconsNivel nivel={n} /></Box>)}
+                    <Badge px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
+                  </Flex>
+                  <Flex mt={1} sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Flex >
+                      {programa.frontmatter.nivel.map(n =>
+                        <IconsNivel key={n} sx={{ marginRight: 1 }} nivel={n} />
+                      )
+                      }
                     </Flex>
-                  </Box>
-                  <Box sx={{ maxWidth: '35%' }}>
-                    <Badge>{programa.frontmatter.tipo}</Badge>
-                    <Badge>{programa.frontmatter.horarios}</Badge>
-                  </Box>
-                </Flex>
+                    <Text sx={{ marginLeft: 'auto' }}>{programa.frontmatter.horarios}</Text>
+                  </Flex>
+
+                </Box>
               </Card>
             )
           }

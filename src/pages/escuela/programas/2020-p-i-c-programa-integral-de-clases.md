@@ -11,7 +11,7 @@ description: >
 
   El programa está dirigido a todo tipo de público no teniendo limitación de edad  ni nivel técnico.
 featuredpost: true
-featuredimage: /img/logo.svg
+featuredimage: /img/default-image.png
 tags:
   - Proyeto
 profesora: Lucyanna Pettengill
@@ -27,6 +27,7 @@ estilo:
 nivel:
   - Iniciación
 ---
+
 Con ciclos trimestrales, el programa dará la oportunidad para que el alumno combine 3 cursos de nuestra programación regular diseñando su propio plan de clases.
 
 Con una tarifa reducida el alumno podrá tomar diferentes actividades integrando y ampliando su vocabulario corporal de acuerdo a su interés, teniendo acceso a diferentes lenguajes.
