@@ -20,6 +20,8 @@ profesora: Lucyanna Pettengill
 tarifa:
   - 1 CURSO  2 X A LA SEMANA
   - 1 CURSO 1  X A LA SEMANA (1H30)
+horarios:
+  - Martes y Viernes
 tipo:
   - Proyetos
 estilo:
