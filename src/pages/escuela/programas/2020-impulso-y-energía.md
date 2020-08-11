@@ -14,13 +14,15 @@ tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
   - 2x a La Semana  80€
 horarios:
+  - 19h a 20h30
+dias:
   - Lunes y Miércoles
 tipo:
-  - Proyetos
-nivel:
-  - Avanzado
+  - Clases Regulares
 estilo:
-  - danza Contemporânea
+  - Danza Contemporânea
+nivel:
+  - Intermedio
 ---
 
 En este curso nuestro objetivo es trabajar elementos técnicos de la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya iniciado.
