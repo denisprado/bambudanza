@@ -23,7 +23,6 @@ tarifa:
   - 2x a La Semana
   - 1X A LA SEMANA
 horarios:
-  - 20h a 22h
   - 20h30 a 22h
 dias:
   - Martes y Jueves

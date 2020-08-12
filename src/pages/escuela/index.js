@@ -16,24 +16,31 @@ const Escuela = ({ children, showImage = true }) => {
             <Box bg={'muted'}>
                 <Flex as='nav' sx={{
                     'a': {
-                        padding: '4',
+                        marginTop: '3',
+                        padding: '3',
+                        paddingX: '4',
+                        borderTopLeftRadius: '2',
+                        borderTopRightRadius: '2',
                         color: 'primary'
                     },
-                    borderBottom: '2px solid "muted"',
+                    'a.active': {
+                        border: '1px solid "primary"',
+                        borderBottom: '2px solid white',
+                        backgroundColor: 'white'
+                    },
+                    borderBottom: '1px solid "primary"',
                     lineHeight: .9,
                     justifyContent: 'flex-start',
                     marginLeft: '218px'
                 }}>
-                    <Link activeClassName={'activeMenu'} p={4} to='/escuela/programas'>Programas</Link>
+                    <Link p={4} to='/escuela/programas'>Programas</Link>
                     <Link p={4} to='/escuela/profesoras'>Profesoras</Link>
                     <Link p={4} to='/escuela/tarifas'>Tarifas</Link >
                 </Flex>
             </Box>
             {showImage && <Image src={escuelaHeader} width={'100%'} sx={{ lineHeight: 0 }}></Image>}
-            <Container mt={4}>
-                <Box>
-                    {children}
-                </Box>
+            <Container p={4}>
+                {children}
             </Container>
         </Layout>
     )

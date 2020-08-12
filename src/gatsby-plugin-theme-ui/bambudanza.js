@@ -1,4 +1,5 @@
 export const bambudanza = {
+    breakpoints: ['40em', '52em', '64em'],
     space: [
         0,
         4,
@@ -72,7 +73,7 @@ export const bambudanza = {
         },
     },
     sizes: {
-        container: 1440,
+        container: [860, 1024, 1260],
         sidebar: 256,
     },
     layout: {
@@ -147,7 +148,7 @@ export const bambudanza = {
                 "textDecoration": 'bold',
             },
             '&.active': {
-                color: "primary",
+                color: "text",
                 fontWeight: '600',
                 borderBottom: '2px solid',
                 borderColor: 'primary',

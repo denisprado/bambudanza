@@ -3,15 +3,17 @@ import { kebabCase } from 'lodash'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 /** @jsx jsx */
-import { Box, Flex, Heading, Text, jsx } from 'theme-ui'
+import { Box, Flex, Heading, Text, jsx, AspectRatio } from 'theme-ui'
 import Content, { HTMLContent } from '../components/Content'
 import Link from '../components/Link'
 import Escuela from '../pages/escuela'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProgramaPostTemplate = ({
   content,
   contentComponent,
   description,
+  featuredimage,
   tags,
   profesora,
   tarifa,
@@ -25,11 +27,23 @@ export const ProgramaPostTemplate = ({
     <Escuela showImage={false}>
       {helmet || ''}
       <Flex>
-        <Box p={2} as='aside' sx={{
+        <Box px={4} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
           minWidth: '400px'
         }}>
+          <AspectRatio ratio={4 / 3}>
+
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: featuredimage,
+                alt: `featured image thumbnail for programas ${title}`,
+                styles: { width: '100%' }
+              }}
+            />
+
+          </AspectRatio>
+
 
           <Heading as='h4' pt={4}>Profesora</Heading>
           <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
@@ -101,6 +115,7 @@ const ProgramaPost = ({ data }) => {
       profesora={post.frontmatter.profesora}
       tarifa={post.frontmatter.tarifa}
       horarios={post.frontmatter.horarios}
+      featuredimage={post.frontmatter.featuredimage}
     />
   )
 }
@@ -126,6 +141,13 @@ export const pageQuery = graphql`
         profesora
         tarifa
         horarios
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 640, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

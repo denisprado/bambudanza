@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { AspectImage } from 'theme-ui'
+import { Image, AspectRatio } from 'theme-ui'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -37,7 +37,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <AspectImage src={IndexImage} ratio={16 / 9} />
+      <AspectRatio ratio={8 / 5} >
+
+        <Image src={IndexImage} sx={{ width: '100%' }} />
+      </AspectRatio>
     </Layout>
   )
 }

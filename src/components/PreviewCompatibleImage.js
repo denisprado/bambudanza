@@ -2,13 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { jsx, Image } from 'theme-ui'
+import _ from 'lodash'
+
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { backgroundPosition: 'center', filter: 'grayscale(100%)' }
+  const { styles } = imageInfo;
+
+  let imageStyle = { backgroundPosition: 'center', filter: 'grayscale(100%)' }
+
+
   const { alt = '', childImageSharp, image } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Image style={imageStyle} sx={{ objectFit: "cover" }} src={image.childImageSharp.fluid.src} alt={alt} />
+      <Image style={_.assign(imageStyle, styles)} sx={{ objectFit: "cover" }} src={image.childImageSharp.fluid.src} alt={alt} />
     )
   }
 

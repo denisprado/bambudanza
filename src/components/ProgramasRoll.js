@@ -5,7 +5,7 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import { FiXCircle, FiCircle } from 'react-icons/fi'
 import { BsFillCircleFill } from 'react-icons/bs'
 import _ from 'lodash'
-import { Card, Flex, Text, AspectRatio, Box, Heading, Badge, Link, Container } from 'theme-ui'
+import { Alert, Card, Flex, Close, Text, AspectRatio, Box, Heading, Badge, Link, Container } from 'theme-ui'
 import { lightness } from '@theme-ui/color';
 
 // @jsx jsx
@@ -44,11 +44,13 @@ const ProgramasRoll = ({ data }) => {
     !filterExist && setFilters([...filters, newFilter]);
   }
 
+
+
   return (
 
     <Flex sx={{ width: '100%' }}>
       {/* Seletor de filtros */}
-      <Box mt={3} sx={{ minWidth: '20vh' }}>
+      <Box mt={3} sx={{ minWidth: '150px' }}>
         <Box>
           {tipos && tipos.map(t => <Box py={2} key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
         </Box>
@@ -72,17 +74,18 @@ const ProgramasRoll = ({ data }) => {
           <Box bx={'muted'} mb={2} sx={{ width: '100%' }}>
             <Flex sx={{ alignItems: 'center' }}>
               {filters.map(filter =>
-                <Badge key={filter} p={2} mr={2} bg={'muted'} color={'primary'}>{filter}
+                <Alert variant='highlight' key={filter} p={2} mx={2} bg={'muted'} color={'primary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box>{filter}</Box>
                   <Link onClick={() => clearFilter(filter)}>
-                    <span sx={{ paddingX: 1 }}><FiXCircle /></span>
+                      <Close px={2} sx={{ width: '1' }} color={'primary'} />
                   </Link>
-                </Badge>)
+                </Alert>)
               }
-              <Badge p={2} mr={2} bg={'transparent'} color={'primary'}>Limpar Filtros
-                  <Link onClick={() => clearFilters()}>
-
+              <Alert variant='highlight' p={2} mr={2} bg={'transparent'} color={'primary'}>
+                <Link onClick={() => clearFilters()}>
+                  Limpar Filtros
                 </Link>
-              </Badge>
+              </Alert>
             </Flex>
           </Box>
         }
@@ -91,9 +94,9 @@ const ProgramasRoll = ({ data }) => {
         <Flex sx={{
           flexWrap: 'wrap',
           alignContent: 'flex-start',
-
         }} >
           {
+
             programas && programas.map(({ node: programa }) =>
               ((filters && filters.length === 0) ||
                 (filters && filters.length > 0 &&
@@ -101,7 +104,7 @@ const ProgramasRoll = ({ data }) => {
                   filters && filters.filter(n => n === programa.frontmatter.nivel[0]).length > 0)) &&
               <Card as='article'
                 sx={{
-                  flex: '1 1 30%',
+                  flex: '1 1 auto',
                   maxWidth: '30%',
 
                 }}
@@ -133,6 +136,7 @@ const ProgramasRoll = ({ data }) => {
                       )
                       }
                     </Flex>
+                    <Text sx={{ marginLeft: 'auto' }}>{programa.frontmatter.dias}</Text>
                     <Text sx={{ marginLeft: 'auto' }}>{programa.frontmatter.horarios}</Text>
                   </Flex>
 

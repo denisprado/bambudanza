@@ -13,34 +13,40 @@ const TarifasRoll = ({ data }) => {
   const { edges: tarifas } = data.allMarkdownRemark;
 
   return (
-    <table sx={{
-      marginTop: 4,
-      'th': {
-        textAlign: 'left',
-        '&:nth-child(even)': {
-          backgroundColor: 'muted',
-        }
-      },
+    <Flex>
+      <aside sx={{ maxWidth: '250px', paddingr: '4' }}>El aforo es limitado.
+      Para participar es necesario reservar plaza con antelación.
+      Más información en infobambudanza@gmail.com
+    </aside>
+      <table sx={{
+        marginTop: 4,
+        'th': {
+          textAlign: 'left',
+          '&:nth-child(even)': {
+            backgroundColor: 'muted',
+          }
+        },
 
-    }}>
-      <tr>
-        <th>Tipo</th>
-        <th>Precio</th>
-      </tr>
-      {
-        tarifas &&
-        tarifas.map(({ node: tarifa }) => (
-          <tr>
-            <td>
-              <Text py={1}>{tarifa.frontmatter.title}</Text>
-            </td>
-            <td>
-              <Text p={1} sx={{ textAlign: 'right' }}>{tarifa.frontmatter.price}€</Text>
-            </td>
-          </tr>
-        ))
-      }
-    </table>
+      }}>
+        <tr>
+          <th>Tipo</th>
+          <th>Precio</th>
+        </tr>
+        {
+          tarifas &&
+          tarifas.map(({ node: tarifa }) => (
+            <tr>
+              <td>
+                <Text py={1}>{tarifa.frontmatter.title}</Text>
+              </td>
+              <td>
+                <Text p={1} sx={{ textAlign: 'right' }}>{tarifa.frontmatter.price}€</Text>
+              </td>
+            </tr>
+          ))
+        }
+      </table>
+    </Flex>
   )
 }
 
