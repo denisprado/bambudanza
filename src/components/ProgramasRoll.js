@@ -77,7 +77,7 @@ const ProgramasRoll = ({ data }) => {
                 <Alert variant='highlight' key={filter} p={2} mx={2} bg={'muted'} color={'primary'} sx={{ display: 'flex', alignItems: 'center' }}>
                   <Box>{filter}</Box>
                   <Link onClick={() => clearFilter(filter)}>
-                      <Close px={2} sx={{ width: '1' }} color={'primary'} />
+                    <Close px={2} sx={{ width: '1' }} color={'primary'} />
                   </Link>
                 </Alert>)
               }
@@ -123,12 +123,13 @@ const ProgramasRoll = ({ data }) => {
 
                   <Flex sx={{ justifyContent: "space-between", alignItems: 'center' }}>
                     <Link href={programa.fields.slug}>
-                      <Heading as={'h3'} sx={{ maxWidth: '60%' }}>
+                      <Heading as={'h3'} pr={2}>
                         {programa.frontmatter.title}
                       </Heading>
                     </Link>
                     <Badge px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
                   </Flex>
+
                   <Flex mt={1} sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
                     <Flex >
                       {programa.frontmatter.nivel.map(n =>
@@ -136,8 +137,8 @@ const ProgramasRoll = ({ data }) => {
                       )
                       }
                     </Flex>
-                    <Text sx={{ marginLeft: 'auto' }}>{programa.frontmatter.dias}</Text>
-                    <Text sx={{ marginLeft: 'auto' }}>{programa.frontmatter.horarios}</Text>
+                    <Text>{programa.frontmatter.dias}</Text>
+                    <Text>{programa.frontmatter.horarios}</Text>
                   </Flex>
 
                 </Box>
@@ -181,6 +182,7 @@ export default () => (
                 nivel
                 estilo
                 horarios
+                dias
                 templateKey
                 featuredpost
                 featuredimage {

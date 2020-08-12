@@ -12,6 +12,7 @@ const Footer = () => (
 
   <footer mt={4}
     sx={{
+      width: '100%',
       backgroundColor: 'primary',
       'a': {
         padding: '2',
@@ -19,7 +20,7 @@ const Footer = () => (
         '&:hover': { color: 'muted' }
       },
     }}>
-    <Grid>
+    <Flex p={4} sx={{ flex: 1, minWidth: '33%' }}>
       <Box>
         <Link href="/">
           <img
@@ -30,46 +31,48 @@ const Footer = () => (
         </Link>
       </Box>
       <Box>
-        <Link href="/about">About</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Box><Link href="/about">About</Link></Box>
+        <Box><Link href="/blog">Blog</Link></Box>
+        <Box><Link href="/contact">Contact</Link></Box>
       </Box>
       <Box>
-        <a title="facebook" href="https://facebook.com">
-          <img
-            src={facebook}
-            alt="Facebook"
-            style={{ width: '1em', height: '1em' }}
-          />
-        </a>
-        <a title="twitter" href="https://twitter.com">
-          <img
-            className="fas fa-lg"
-            src={twitter}
-            alt="Twitter"
-            style={{ width: '1em', height: '1em', color: 'white' }}
-          />
-        </a>
-        <a title="instagram" href="https://instagram.com">
-          <img
-            src={instagram}
-            alt="Instagram"
-            style={{ width: '1em', height: '1em' }}
-          />
-        </a>
-        <a title="vimeo" href="https://vimeo.com">
-          <img
-            src={vimeo}
-            alt="Vimeo"
-            style={{ width: '1em', height: '1em' }}
-          />
-        </a>
+        <Box>
+          <a title="facebook" href="https://facebook.com">
+            <img
+              src={facebook}
+              alt="Facebook"
+              style={{ width: '1em', height: '1em' }}
+            />
+          </a>
+          <a title="twitter" href="https://twitter.com">
+            <img
+              className="fas fa-lg"
+              src={twitter}
+              alt="Twitter"
+              style={{ width: '1em', height: '1em', color: 'white' }}
+            />
+          </a>
+          <a title="instagram" href="https://instagram.com">
+            <img
+              src={instagram}
+              alt="Instagram"
+              style={{ width: '1em', height: '1em' }}
+            />
+          </a>
+          <a title="vimeo" href="https://vimeo.com">
+            <img
+              src={vimeo}
+              alt="Vimeo"
+              style={{ width: '1em', height: '1em' }}
+            />
+          </a>
+        </Box>
         <Link href="/admin/"
           target="_blank"
           rel="noopener noreferrer"
         >Admin</Link>
       </Box>
-    </Grid>
+    </Flex>
   </footer>
 )
 

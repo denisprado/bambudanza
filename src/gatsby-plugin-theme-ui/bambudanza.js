@@ -73,7 +73,7 @@ export const bambudanza = {
         },
     },
     sizes: {
-        container: [860, 1024, 1260],
+        container: 1260,
         sidebar: 256,
     },
     layout: {

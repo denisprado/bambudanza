@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Box, Flex, Image, jsx, Container } from 'theme-ui'
-import React from 'react'
 import Link from '../../components/Link'
 import Layout from '../../components/Layout'
 import escuelaHeader from '../../img/escuela-header.jpg'
@@ -30,8 +29,7 @@ const Escuela = ({ children, showImage = true }) => {
                     },
                     borderBottom: '1px solid "primary"',
                     lineHeight: .9,
-                    justifyContent: 'flex-start',
-                    marginLeft: '218px'
+                    justifyContent: 'center',
                 }}>
                     <Link p={4} to='/escuela/programas'>Programas</Link>
                     <Link p={4} to='/escuela/profesoras'>Profesoras</Link>

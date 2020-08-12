@@ -1,11 +1,32 @@
 import React from 'react'
-import Link from './Link'
 import logo from '../img/logo.svg'
 import { FiSearch } from 'react-icons/fi'
 /** @jsx jsx */
 import { Flex, Box, jsx, Container } from 'theme-ui'
+import { Link } from 'gatsby';
 
 const Navbar = () => {
+  const partlyActive = (className) => ({ isPartiallyCurrent }) => ({
+    className: className && className + (isPartiallyCurrent ? ` active` : ``),
+  })
+
+  const PartlyActiveLink = ({ className, ...rest }) => (
+    <Link sx={{
+      'a': {
+        marginTop: '3',
+        padding: '3',
+        paddingX: '4',
+      },
+      'a.active': {
+        borderTopLeftRadius: '2',
+        borderTopRightRadius: '2',
+        color: 'primary',
+        backgroundColor: 'muted'
+      }
+    }}
+      getProps={partlyActive(className)} {...rest} />
+  )
+
   return (
     <Flex as="nav"
       role="navigation"
@@ -17,9 +38,9 @@ const Navbar = () => {
       }}
     >
       <Box px={4}>
-        <Link to="/" title="Logo">
+        <PartlyActiveLink to="/" title="Logo">
           <img src={logo} alt="Bambudanza" style={{ width: '164px' }} />
-        </Link>
+        </PartlyActiveLink>
       </Box>
 
       <Box sx={{
@@ -29,12 +50,12 @@ const Navbar = () => {
         }
       }}
       >
-        <Link to="/escuela">
+        <PartlyActiveLink to="/escuela">
           Escuela
-              </Link>
-        <Link to="/alquiler">
+              </PartlyActiveLink>
+        <PartlyActiveLink to="/alquiler">
           Alquiler
-              </Link>
+              </PartlyActiveLink>
 
       </Box>
       <Box sx={{
@@ -45,12 +66,12 @@ const Navbar = () => {
           padding: '2rem'
         }
       }}>
-        <Link to="/blog">
+        <PartlyActiveLink to="/blog">
           Blog
-              </Link>
-        <Link to="/contact">
+              </PartlyActiveLink>
+        <PartlyActiveLink to="/about" >
           Sobre nosotros
-              </Link>
+              </PartlyActiveLink>
         <Link to="/contact/examples">
           <FiSearch />
         </Link>

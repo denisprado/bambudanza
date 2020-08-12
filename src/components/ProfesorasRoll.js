@@ -12,7 +12,10 @@ const ProfesorasRoll = ({ data }) => {
 
   return (
     <Container>
-      <Flex>
+      <Flex sx={{
+        flexWrap: 'wrap',
+        alignContent: 'flex-start',
+      }}>
         {posts &&
           posts.map(({ node: post }) => (
             <Card as='article'
