@@ -3,80 +3,79 @@ import logo from '../img/logo.svg'
 import { FiSearch } from 'react-icons/fi'
 /** @jsx jsx */
 import { Flex, Box, jsx, Container } from 'theme-ui'
-import { Link } from 'gatsby';
+import Link from '../components/Link'
 
 const Navbar = () => {
-  const partlyActive = (className) => ({ isPartiallyCurrent }) => ({
-    className: className && className + (isPartiallyCurrent ? ` active` : ``),
-  })
 
-  const PartlyActiveLink = ({ className, ...rest }) => (
-    <Link sx={{
-      'a': {
-        marginTop: '3',
-        padding: '3',
-        paddingX: '4',
-      },
-      'a.active': {
-        borderTopLeftRadius: '2',
-        borderTopRightRadius: '2',
-        color: 'primary',
-        backgroundColor: 'muted'
-      }
-    }}
-      getProps={partlyActive(className)} {...rest} />
-  )
 
   return (
-    <Flex as="nav"
-      role="navigation"
-      aria-label="main-navigation"
-      sx={{
-        alignItems: "center",
-        justifyContent: "flex-start"
+    <Container>
+      <Flex as="nav"
+        role="navigation"
+        aria-label="main-navigation"
+        m={3}
+        ml={0}
+        mb={3}
+        sx={{
+          alignItems: "center",
+          justifyContent: "flex-start",
+          'a': {
+            paddingY: '3',
+            paddingX: '4',
+            borderTopLeftRadius: '2',
+            borderTopRightRadius: '2',
+            color: 'text'
+          },
+          'a.active': {
+            backgroundColor: 'muted',
+            color: "text"
 
-      }}
-    >
-      <Box px={4}>
-        <PartlyActiveLink to="/" title="Logo">
-          <img src={logo} alt="Bambudanza" style={{ width: '164px' }} />
-        </PartlyActiveLink>
-      </Box>
+          },
 
-      <Box sx={{
-        flex: '1',
-        'a': {
-          padding: '2rem'
-        }
-      }}
+        }}
       >
-        <PartlyActiveLink to="/escuela">
-          Escuela
-              </PartlyActiveLink>
-        <PartlyActiveLink to="/alquiler">
-          Alquiler
-              </PartlyActiveLink>
 
-      </Box>
-      <Box sx={{
-        flex: '1',
-        marginLeft: 'auto',
-        textAlign: 'right',
-        'a': {
-          padding: '2rem'
-        }
-      }}>
-        <PartlyActiveLink to="/blog">
-          Blog
-              </PartlyActiveLink>
-        <PartlyActiveLink to="/about" >
-          Sobre nosotros
-              </PartlyActiveLink>
-        <Link to="/contact/examples">
+        {/* Logo */}
+        <Box mr={3} mt={2}>
+          <Link to="/" title="Logo">
+            <img src={logo} alt="Bambudanza" style={{ width: '200px' }} />
+          </Link>
+        </Box>
+
+        {/* Menu Principal */}
+        <Flex mt={4} sx={{
+          flex: '1',
+        }}
+        >
+          <Link
+            partiallyActive={true}
+            to="/escuela">
+            Escuela
+              </Link>
+          <Link partiallyActive={true} to="/alquiler">
+            Alquiler
+              </Link>
+        </Flex>
+
+        {/* Menu direita */}
+        <Box sx={{
+          flex: '1',
+          marginLeft: 'auto',
+          textAlign: 'right',
+        }}>
+          <Link partiallyActive={true} to="/blog">Blog</Link>
+          <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
+        </Box>
+
+        {/* Busca */}
+        <Box sx={{
+          flex: '1',
+        }}
+        >
           <FiSearch />
-        </Link>
-      </Box>
-    </Flex >
+        </Box>
+      </Flex >
+    </Container>
   )
 }
 

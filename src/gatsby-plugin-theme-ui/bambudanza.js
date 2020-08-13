@@ -1,3 +1,5 @@
+import { lightness, lighten, shade } from '@theme-ui/color'
+
 export const bambudanza = {
     breakpoints: ['40em', '52em', '64em'],
     space: [
@@ -42,7 +44,7 @@ export const bambudanza = {
         primary: "#61B74A",
         secondary: "#A3AF9E",
         highlight: "#2E4F24",
-        muted: "#F3FCEF",
+        muted: "#F4F7F3",
         gray: "#A3AF9E",
         accent: "#08658C",
         darken: "#2E4F24",
@@ -148,22 +150,8 @@ export const bambudanza = {
                 "textDecoration": 'bold',
             },
             '&.active': {
-                color: "text",
+                color: "Primary",
                 fontWeight: '600',
-                borderBottom: '2px solid',
-                borderColor: 'primary',
-
-            },
-            '&.activeMenu': {
-                color: "primary",
-                fontWeight: '600',
-                borderBottom: '4px solid',
-                borderColor: 'primary',
-                width: 0,
-                height: 0,
-                borderLeft: '20px solid transparent',
-                borderRight: '20px solid transparent',
-                borderTop: '20px solid #f00',
             }
         },
         "pre": {

@@ -51,10 +51,10 @@
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
-    "start": "npm run develop",
-    "serve": "npm run serve",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "start": "yarn develop",
+    "serve": "yarn serve",
+    "build": "yarn clean && gatsby build",
+    "develop": "yarn clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
