@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Flex, Image, jsx, Box } from 'theme-ui'
-import Link from '../../components/Link'
+import { Container } from 'theme-ui'
 import Layout from '../../components/Layout'
+import Link from '../../components/Link'
 import SubNavbar from '../../components/SubNavbar'
 import escuelaHeader from '../../img/escuela-header.jpg'
 

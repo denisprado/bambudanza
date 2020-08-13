@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Flex, Image } from 'theme-ui'
-import Layout from '../../components/Layout'
 
 const SubNavbar = ({ children, image, showImage = true }) => (
     <>
@@ -10,6 +9,7 @@ const SubNavbar = ({ children, image, showImage = true }) => (
                     marginTop: '3',
                     padding: '3',
                     paddingX: '4',
+                    paddingBottom: '3',
                     borderTopLeftRadius: '2',
                     borderTopRightRadius: '2',
                     color: 'primary'

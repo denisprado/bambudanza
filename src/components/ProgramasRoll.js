@@ -130,7 +130,7 @@ const ProgramasRoll = ({ data }) => {
                     <Badge px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
                   </Flex>
 
-                  <Flex mt={1} sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                  <Flex mt={1} sx={{ justifyContent: 'flex-start', alignItems: 'center' }}>
                     <Flex >
                       {programa.frontmatter.nivel.map(n =>
                         <IconsNivel key={n} sx={{ marginRight: 1 }} nivel={n} />

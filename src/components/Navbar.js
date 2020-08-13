@@ -9,16 +9,13 @@ const Navbar = () => {
 
 
   return (
-    <Container>
+    <Container >
       <Flex as="nav"
         role="navigation"
         aria-label="main-navigation"
-        m={3}
-        ml={0}
-        mb={3}
         sx={{
           alignItems: "center",
-          justifyContent: "flex-start",
+          justifyContent: "space-between",
           'a': {
             paddingY: '3',
             paddingX: '4',
@@ -28,8 +25,7 @@ const Navbar = () => {
           },
           'a.active': {
             backgroundColor: 'muted',
-            color: "text"
-
+            color: "primary"
           },
 
         }}
@@ -43,8 +39,10 @@ const Navbar = () => {
         </Box>
 
         {/* Menu Principal */}
-        <Flex mt={4} sx={{
+        <Flex sx={{
           flex: '1',
+          justifyContent: 'center',
+          alignSelf: 'flex-end'
         }}
         >
           <Link
@@ -57,23 +55,17 @@ const Navbar = () => {
               </Link>
         </Flex>
 
-        {/* Menu direita */}
-        <Box sx={{
-          flex: '1',
+        {/* Busca */}
+        <Flex sx={{
           marginLeft: 'auto',
           textAlign: 'right',
-        }}>
-          <Link partiallyActive={true} to="/blog">Blog</Link>
-          <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
-        </Box>
-
-        {/* Busca */}
-        <Box sx={{
-          flex: '1',
+          alignSelf: 'flex-end'
         }}
         >
+          <Link partiallyActive={true} to="/blog">Blog</Link>
+          <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
           <FiSearch />
-        </Box>
+        </Flex>
       </Flex >
     </Container>
   )
