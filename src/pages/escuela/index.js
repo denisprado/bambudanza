@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { Box, Flex, Image, jsx, Container } from 'theme-ui'
-import Link from '../../components/Link'
+import { Container, jsx } from 'theme-ui'
 import Layout from '../../components/Layout'
+import Link from '../../components/Link'
 import SubNavbar from '../../components/SubNavbar'
 import escuelaHeader from '../../img/escuela-header.jpg'
 

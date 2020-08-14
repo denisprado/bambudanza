@@ -1,7 +1,7 @@
 import { withPrefix } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Box, jsx } from 'theme-ui'
+import { Box, jsx, Flex } from 'theme-ui'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
@@ -48,13 +48,16 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <Box sx={{
-        width: '100%',
-        flex: '1 1 auto',
-      }}>{children}</Box>
-      <Footer />
-    </div>
+      <Flex sx={{ flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
+
+        <Navbar />
+        <Box sx={{
+          width: '100%',
+          flex: '1 1 auto',
+        }}>{children}</Box>
+        <Footer sx={{ marginBottom: 'auto', flex: 1 }} />
+      </Flex>
+    </div >
   )
 }
 

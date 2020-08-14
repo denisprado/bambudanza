@@ -35,9 +35,7 @@ const SalasRoll = ({ data }) => {
               >
                 {post.frontmatter.title}
               </Link>
-
             </Text>
-
           </Card>
         ))}
     </Flex>
