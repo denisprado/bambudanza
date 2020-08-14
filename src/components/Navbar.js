@@ -32,8 +32,14 @@ const Navbar = () => {
       >
 
         {/* Logo */}
-        <Box mr={3} mt={2}>
-          <Link to="/" title="Logo">
+        <Box
+          mr={3} mt={2} sx={{
+            'a.active': {
+              backgroundColor: 'transparent',
+            },
+          }}>
+          <Link to="/" title="Logo"
+          >
             <img src={logo} alt="Bambudanza" style={{ width: '200px' }} />
           </Link>
         </Box>

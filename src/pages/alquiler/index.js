@@ -5,9 +5,9 @@ import Link from '../../components/Link'
 import SubNavbar from '../../components/SubNavbar'
 import escuelaHeader from '../../img/escuela-header.jpg'
 
-const Alquiler = ({ children }) => (
+const Alquiler = ({ children, showImage }) => (
     <Layout>
-        <SubNavbar image={escuelaHeader}>
+        <SubNavbar image={escuelaHeader} showImage={showImage}>
             <Link p={4} to='/alquiler/salas'>Salas</Link>
             <Link p={4} to='/alquiler/condiciones'>Condiciones</Link>
             <Link p={4} to='/alquiler/normas'>Normas</Link>

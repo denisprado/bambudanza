@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { FiXCircle, FiCircle } from 'react-icons/fi'
-import { BsFillCircleFill } from 'react-icons/bs'
 import _ from 'lodash'
-import { Alert, Card, Flex, Close, Text, AspectRatio, Box, Heading, Badge, Link, Container } from 'theme-ui'
-import { lightness } from '@theme-ui/color';
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import { BsFillCircleFill } from 'react-icons/bs'
+import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text } from 'theme-ui'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-// @jsx jsx
-import { jsx } from 'theme-ui'
 
 export const IconsNivel = (props) => {
-  const { nivel, sx } = props;
+  const { nivel } = props;
   const niveis = ["Iniciación", "Intermedio", "Avanzado"]
   const colors = ["#21618C", "#6C3483", '#943126'];
   return (<BsFillCircleFill {...props} color={colors[niveis.indexOf(nivel)]} />);
@@ -123,9 +119,13 @@ const ProgramasRoll = ({ data }) => {
 
                   <Flex sx={{ justifyContent: "space-between", alignItems: 'center' }}>
                     <Link href={programa.fields.slug}>
-                      <Heading as={'h3'} pr={2}>
+                      <Heading as={'h3'} pr={2} mt={2}>
                         {programa.frontmatter.title}
                       </Heading>
+                      <Text sx={{
+                        fontSize: 1,
+                        fontStyle: 'italic',
+                      }}>{programa.frontmatter.estilo}</Text>
                     </Link>
                     <Badge px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
                   </Flex>
@@ -137,8 +137,8 @@ const ProgramasRoll = ({ data }) => {
                       )
                       }
                     </Flex>
-                    <Text>{programa.frontmatter.dias}</Text>
-                    <Text>{programa.frontmatter.horarios}</Text>
+                    <Text> » {programa.frontmatter.dias}</Text>
+                    <Text> » {programa.frontmatter.horarios}</Text>
                   </Flex>
 
                 </Box>
