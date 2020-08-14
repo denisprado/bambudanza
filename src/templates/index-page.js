@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <AspectRatio ratio={8 / 5} >
+      <AspectRatio ratio={16 / 9} >
 
         <Image src={IndexImage} sx={{ width: '100%' }} />
       </AspectRatio>

@@ -4,50 +4,50 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const SalasPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-
+    <section>
       <PageContent className="content" content={content} />
-
     </section>
   )
 }
 
-AboutPageTemplate.propTypes = {
+SalasPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const SalasPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <SalasPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
+        sidebar={post.frontmatter.sidebar}
+        description={post.frontmatter.description}
         content={post.html}
       />
     </Layout>
   )
 }
 
-AboutPage.propTypes = {
+SalasPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default SalasPage
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+  query SalasPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        sidebar
+        description
       }
     }
   }
