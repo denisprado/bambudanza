@@ -28,6 +28,9 @@ const ProgramasRoll = ({ data }) => {
   const horas = _.uniqWith(programas.map(({ node: prog }) =>
     prog.frontmatter.horarios
   ), _.isEqual)
+  const dias = _.uniqWith(programas.map(({ node: prog }) =>
+    prog.frontmatter.dias
+  ), _.isEqual)
 
   const clearFilters = () => setFilters([]);
 
@@ -63,6 +66,10 @@ const ProgramasRoll = ({ data }) => {
               </Link>
             </Box>)
           }
+        </Box>
+        <Box mt={3}>
+          <Heading as={'h4'} >Dias</Heading>
+          {dias && dias.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
         <Box mt={3}>
           <Heading as={'h4'} >Horarios</Heading>
@@ -105,6 +112,7 @@ const ProgramasRoll = ({ data }) => {
                 (filters && filters.length > 0 &&
                   filters && filters.filter(f => f === programa.frontmatter.tipo[0]).length > 0 ||
                   filters && filters.filter(f => f === programa.frontmatter.horarios).length > 0 ||
+                  filters && filters.filter(f => f === programa.frontmatter.dias).length > 0 ||
                   filters && filters.filter(n => n === programa.frontmatter.nivel[0]).length > 0)) &&
               <Card as='article'
                 sx={{

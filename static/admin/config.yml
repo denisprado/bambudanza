@@ -322,15 +322,3 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - file: "src/pages/alquiler/salas/index.md"
-        label: "Sala Page"
-        name: "salas-page"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "salas-page",
-            }
-          - { label: Sidebar, name: sidebar, widget: text }
-          - { label: Description, name: description, widget: text }

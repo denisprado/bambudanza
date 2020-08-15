@@ -44,7 +44,7 @@ export const bambudanza = {
         primary: "#61B74A",
         secondary: "#A3AF9E",
         highlight: "#2E4F24",
-        muted: "#F4F7F3",
+        muted: "rgb(247,250,252)",
         gray: "#A3AF9E",
         accent: "#08658C",
         darken: "#2E4F24",
