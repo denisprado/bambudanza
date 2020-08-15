@@ -1,53 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import { Image, AspectRatio } from 'theme-ui'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Features from '../components/Features'
+import BlogRoll from '../components/BlogRoll'
 
-export const SalasPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+import SalasImage from '../img/index-image.jpeg'
 
-  return (
-    <section>
-      <PageContent className="content" content={content} />
-    </section>
-  )
-}
+export const SalasPageTemplate = ({
+    sidebar,
+    description,
+}) => (
+        <></>
+    )
 
 SalasPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+    sidebar: PropTypes.string,
+    description: PropTypes.string,
 }
 
 const SalasPage = ({ data }) => {
-  const { markdownRemark: post } = data
+    const { frontmatter } = data.markdownRemark
 
-  return (
-    <Layout>
-      <SalasPageTemplate
-        contentComponent={HTMLContent}
-        sidebar={post.frontmatter.sidebar}
-        description={post.frontmatter.description}
-        content={post.html}
-      />
-    </Layout>
-  )
+    return (
+        <Layout>
+            <SalasPageTemplate
+                sidebar={frontmatter.sidebar}
+                description={frontmatter.description}
+            />
+        </Layout>
+    )
 }
 
 SalasPage.propTypes = {
-  data: PropTypes.object.isRequired,
+    data: PropTypes.shape({
+        markdownRemark: PropTypes.shape({
+            frontmatter: PropTypes.object,
+        }),
+    }),
 }
 
 export default SalasPage
 
-export const aboutPageQuery = graphql`
-  query SalasPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+export const pageQuery = graphql`
+  query SalasPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "salas-page" } }) {
       frontmatter {
-        sidebar
         description
+        sidebar
       }
     }
   }

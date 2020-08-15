@@ -3,7 +3,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { BsFillCircleFill } from 'react-icons/bs'
-import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text } from 'theme-ui'
+import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text, jsx } from 'theme-ui'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
@@ -11,7 +11,7 @@ export const IconsNivel = (props) => {
   const { nivel } = props;
   const niveis = ["Iniciación", "Intermedio", "Avanzado"]
   const colors = ["#21618C", "#6C3483", '#943126'];
-  return (<BsFillCircleFill {...props} color={colors[niveis.indexOf(nivel)]} />);
+  return (<BsFillCircleFill mr={1} {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 
 const ProgramasRoll = ({ data }) => {
@@ -24,7 +24,10 @@ const ProgramasRoll = ({ data }) => {
     prog.frontmatter.tipo
   ), _.isEqual)
 
-  const niveis = ["Iniciación", "Intermedio", "Avanzado"]
+  const niveis = ["Iniciación", "Intermedio", "Avanzado"];
+  const horas = _.uniqWith(programas.map(({ node: prog }) =>
+    prog.frontmatter.horarios
+  ), _.isEqual)
 
   const clearFilters = () => setFilters([]);
 
@@ -55,11 +58,15 @@ const ProgramasRoll = ({ data }) => {
             <Box py={1} key={nivel}>
               <Link onClick={() => addFilter(nivel)}>
                 <Flex sx={{ alignItems: 'center' }}>
-                  <IconsNivel sx={{ mr: 2 }} nivel={nivel} />{nivel}
+                  <IconsNivel sx={{ marginRight: 2 }} nivel={nivel} />{nivel}
                 </Flex>
               </Link>
             </Box>)
           }
+        </Box>
+        <Box mt={3}>
+          <Heading as={'h4'} >Horarios</Heading>
+          {horas && horas.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
       </Box>
 
@@ -97,6 +104,7 @@ const ProgramasRoll = ({ data }) => {
               ((filters && filters.length === 0) ||
                 (filters && filters.length > 0 &&
                   filters && filters.filter(f => f === programa.frontmatter.tipo[0]).length > 0 ||
+                  filters && filters.filter(f => f === programa.frontmatter.horarios).length > 0 ||
                   filters && filters.filter(n => n === programa.frontmatter.nivel[0]).length > 0)) &&
               <Card as='article'
                 sx={{
@@ -133,12 +141,12 @@ const ProgramasRoll = ({ data }) => {
                   <Flex mt={1} sx={{ justifyContent: 'flex-start', alignItems: 'center' }}>
                     <Flex >
                       {programa.frontmatter.nivel.map(n =>
-                        <IconsNivel key={n} sx={{ marginRight: 1 }} nivel={n} />
+                        <IconsNivel key={n} mr={1} nivel={n} />
                       )
                       }
                     </Flex>
-                    <Text> » {programa.frontmatter.dias}</Text>
-                    <Text> » {programa.frontmatter.horarios}</Text>
+                    <Text mx={2}>{programa.frontmatter.dias}</Text>
+                    <Text mr={2}>»</Text><Text>{programa.frontmatter.horarios}</Text>
                   </Flex>
 
                 </Box>

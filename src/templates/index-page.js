@@ -7,6 +7,7 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 import IndexImage from '../img/index-image.jpeg'
+import { grayscale } from '@theme-ui/color'
 
 export const IndexPageTemplate = ({
   image,
@@ -37,11 +38,19 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <AspectRatio ratio={16 / 9} >
-
-        <Image src={IndexImage} sx={{ width: '100%' }} />
-      </AspectRatio>
-    </Layout>
+      <AspectRatio ratio={21 / 9} sx={{
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        objectFit: 'cover',
+        alignItems: 'center',
+        backgroundImage: `url(${IndexImage})`,
+        backgroundPosition: '50% center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        filter: 'grayscale(100%)'
+      }} />
+    </Layout >
   )
 }
 

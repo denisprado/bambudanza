@@ -49,7 +49,6 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Flex sx={{ flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
-
         <Navbar />
         <Box sx={{
           width: '100%',

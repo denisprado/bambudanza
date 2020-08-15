@@ -32,11 +32,11 @@ const Footer = () => (
             />
           </Link>
         </Flex>
-        <Flex sx={{ flex: 1, justifyContent: `space-around`, alignItems: 'flex-start', 'a': { padding: 4 } }}>
+        <Flex sx={{ flex: 1, justifyContent: `space-around`, alignItems: 'flex-start' }}>
           <Box>
-            <Box><Link href="/about">About</Link></Box>
-            <Box><Link href="/blog">Blog</Link></Box>
-            <Box><Link href="/contact">Contact</Link></Box>
+            <Box><Link py={3} href="/about">About</Link></Box>
+            <Box><Link py={3} href="/blog">Blog</Link></Box>
+            <Box><Link py={3} href="/contact">Contact</Link></Box>
           </Box>
           <Box>
             <Flex>

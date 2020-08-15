@@ -7,7 +7,7 @@ import escuelaHeader from '../../img/escuela-header.jpg'
 
 const Alquiler = ({ children, showImage }) => (
     <Layout>
-        <SubNavbar image={escuelaHeader} showImage={showImage}>
+        <SubNavbar image={escuelaHeader} showImage={showImage} title={'Alquileres de Sala'}>
             <Link p={4} to='/alquiler/salas'>Salas</Link>
             <Link p={4} to='/alquiler/condiciones'>Condiciones</Link>
             <Link p={4} to='/alquiler/normas'>Normas</Link>

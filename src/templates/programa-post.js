@@ -14,7 +14,7 @@ export const ProgramaPostTemplate = ({
   contentComponent,
   description,
   featuredimage,
-  tags,
+  dias,
   profesora,
   tarifa,
   horarios,
@@ -54,6 +54,14 @@ export const ProgramaPostTemplate = ({
               horarios.map((horarios) => (
                 <li key={horarios + `horarios`}>
                   <Text>{horarios}</Text>
+                </li>
+              ))
+            )
+              : null}
+            {dias && dias.length ? (
+              dias.map((dia) => (
+                <li key={dia + `dia`}>
+                  <Text>{dia}</Text>
                 </li>
               ))
             )
@@ -115,6 +123,7 @@ const ProgramaPost = ({ data }) => {
       profesora={post.frontmatter.profesora}
       tarifa={post.frontmatter.tarifa}
       horarios={post.frontmatter.horarios}
+      dias={post.frontmatter.dias}
       featuredimage={post.frontmatter.featuredimage}
     />
   )
@@ -141,6 +150,7 @@ export const pageQuery = graphql`
         profesora
         tarifa
         horarios
+        dias
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 640, quality: 100) {

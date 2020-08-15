@@ -47,7 +47,7 @@ const Navbar = () => {
         {/* Menu Principal */}
         <Flex sx={{
           flex: '1',
-          justifyContent: 'center',
+          justifyContent: 'flex-end',
           alignSelf: 'flex-end'
         }}
         >
@@ -70,7 +70,8 @@ const Navbar = () => {
         >
           <Link partiallyActive={true} to="/blog">Blog</Link>
           <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
-          <FiSearch />
+
+          <Link partiallyActive={true} to="/about" ><FiSearch /></Link>
         </Flex>
       </Flex >
     </Container>
