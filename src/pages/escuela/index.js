@@ -12,6 +12,7 @@ const Escuela = ({ children, showImage }) => {
                 <Link partiallyActive={true} to='/escuela/programas'>Programas</Link>
                 <Link partiallyActive={true} to='/escuela/profesoras'>Profesoras</Link>
                 <Link partiallyActive={true} to='/escuela/tarifas'>Tarifas</Link >
+                <Link partiallyActive={true} to='/escuela/inscricion'>Inscricion</Link >
             </SubNavbar>
             <Container p={4}>
                 {children}

@@ -19,6 +19,7 @@ export const ProgramaPostTemplate = ({
   tarifa,
   horarios,
   title,
+  id,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -84,6 +85,7 @@ export const ProgramaPostTemplate = ({
         </Box>
         <Box as='main'>
           <Heading>{title}</Heading>
+          <Link my={4} to={'/escuela/inscricion'} state={{ selected: id }}>Inscricion</Link>
           <Text>{description}</Text>
           <PostContent content={content} />
         </Box>
@@ -119,6 +121,7 @@ const ProgramaPost = ({ data }) => {
         </Helmet>
       }
       tags={post.frontmatter.tags}
+      id={post.id}
       title={post.frontmatter.title}
       profesora={post.frontmatter.profesora}
       tarifa={post.frontmatter.tarifa}

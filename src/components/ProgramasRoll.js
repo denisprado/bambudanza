@@ -46,8 +46,6 @@ const ProgramasRoll = ({ data }) => {
     !filterExist && setFilters([...filters, newFilter]);
   }
 
-
-
   return (
 
     <Flex sx={{ width: '100%' }}>
@@ -61,7 +59,8 @@ const ProgramasRoll = ({ data }) => {
             <Box py={1} key={nivel}>
               <Link onClick={() => addFilter(nivel)}>
                 <Flex sx={{ alignItems: 'center' }}>
-                  <IconsNivel sx={{ marginRight: 2 }} nivel={nivel} />{nivel}
+                  <IconsNivel nivel={nivel} />
+                  <Text ml={2}>{nivel}</Text>
                 </Flex>
               </Link>
             </Box>)
@@ -78,13 +77,13 @@ const ProgramasRoll = ({ data }) => {
       </Box>
 
       {/* Filtros atuais */}
-      <Box sx={{ minWidth: '100%' }}>
+      <Box sx={{ minWidth: '100%' }} >
         {
           filters && filters.length > 0 &&
-          <Box bx={'muted'} mb={2} sx={{ width: '100%' }}>
+          <Box bx={'muted'} mb={2} ml={2} sx={{ width: '100%' }}>
             <Flex sx={{ alignItems: 'center' }}>
               {filters.map(filter =>
-                <Alert variant='highlight' key={filter} p={2} mx={2} bg={'muted'} color={'primary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                <Alert variant='highlight' key={filter} py={2} px={3} mx={2} bg={'muted'} color={'primary'} sx={{ display: 'flex', alignItems: 'center' }}>
                   <Box>{filter}</Box>
                   <Link onClick={() => clearFilter(filter)}>
                     <Close px={2} sx={{ width: '1' }} color={'primary'} />
