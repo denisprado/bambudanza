@@ -87,6 +87,19 @@ export const bambudanza = {
             bg: 'highlight',
         },
     },
+    buttons: {
+        primary: {
+            color: 'white',
+            bg: 'primary',
+            '&:hover': {
+                bg: 'highlighted',
+            }
+        },
+        secondary: {
+            color: 'background',
+            bg: 'secondary',
+        },
+    },
     styles: {
         root: {
             fontFamily: "body",
@@ -180,6 +193,7 @@ export const bambudanza = {
         },
         "img": {
             "maxWidth": "100%"
-        }
+        },
+
     }
 }

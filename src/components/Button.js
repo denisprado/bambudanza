@@ -12,12 +12,13 @@ const Button = ({ children }) =>
             textDecoration: 'none',
             fontSize: 'inherit',
             fontWeight: 'bold',
-            m: 0,
+            my: 2,
             px: 3,
             py: 2,
             border: 0,
             borderRadius: 4,
             variant: 'buttons.primary',
+            cursor: 'pointer'
         }}>
         {children}
     </button>

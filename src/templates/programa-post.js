@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 /** @jsx jsx */
 import { Box, Flex, Heading, Text, jsx, AspectRatio } from 'theme-ui'
 import Content, { HTMLContent } from '../components/Content'
+import Button from '../components/Button'
 import Link from '../components/Link'
 import Escuela from '../pages/escuela'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -85,7 +86,7 @@ export const ProgramaPostTemplate = ({
         </Box>
         <Box as='main'>
           <Heading>{title}</Heading>
-          <Link my={4} to={'/escuela/inscricion'} state={{ selected: id }}>Inscricion</Link>
+          <Link to={'/escuela/inscricion'} state={{ selected: id }}><Button sx={{ my: 4 }}>Inscricion</Button></Link>
           <Text>{description}</Text>
           <PostContent content={content} />
         </Box>
