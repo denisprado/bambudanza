@@ -124,9 +124,9 @@ const Inscricion = ({ location }) => {
           </Box>
           <Box sx={{ flex: 1 }}>
             <Label htmlFor='programa'>Programa</Label>
-            <Select onChange={handleChange} name='programa' id='programa' mb={3} value={location.state.selected}>
+            <Select onChange={handleChange} name='programa' id='programa' mb={3} value={location && location.state.selected}>
               {programas && programas.map(({ node: programa }) =>
-                <option key={programa.id} value={programa.id}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
+                <option key={programa.id} value={programa && programa.id}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
               )}
             </Select>
             <Button className="button is-link" type="submit">Enviar</Button>
