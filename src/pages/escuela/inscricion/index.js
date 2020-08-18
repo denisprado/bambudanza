@@ -7,6 +7,7 @@ import {
   Select,
   Textarea
 } from 'theme-ui'
+import { useForm } from "react-hook-form";
 import Escuela from '../../escuela'
 
 function encode(data) {
@@ -17,26 +18,25 @@ function encode(data) {
 
 const Inscricion = ({ location }) => {
 
+  const { register, handleSubmit, watch, errors } = useForm();
+
+
   const [isValidated, setIsValidated] = useState(false)
-  const [formData, setFormData] = useState(null)
+  const [formData, setFormData] = useState([])
 
-  const handleChange = (e) => {
-    e.preventDefault()
-    setFormData({ [e.target.name]: e.target.value })
-  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
+  const onSubmit = (e) => {
+
+    console.log("FormData: ", e)
+    const form = e
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
         ...formData,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => navigate(e.action))
       .catch((error) => alert(error))
   }
 
@@ -71,52 +71,45 @@ const Inscricion = ({ location }) => {
       <Box as='form'
         name="contact"
         method="post"
-        action="/escuela/inscricion/thanks/"
+
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-
+        onSubmit={handleSubmit(onSubmit)}
       >
         <Flex>
           <Box mr={2} sx={{ flex: 1 }}>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="inscriciones" />
+            <input type="hidden" ref={register} name="form-name" value="inscriciones" />
+            <input type="hidden" ref={register} name="action" value="/escuela/inscricion/thanks/" />
             <div hidden>
               <Label>
                 Don’t fill this out:{' '}
-                <input name="bot-field" onChange={handleChange} />
+                <input name="bot-field" ref={register} />
               </Label>
             </div>
 
             <Label htmlFor={'name'}>Nombre</Label>
-
             <Input
               type={'text'}
               name={'name'}
-              onChange={handleChange}
+              ref={register}
               id={'name'}
               required={true}
             />
 
-
-            <Label htmlFor={'email'}>
-              Email
-                  </Label>
-
+            <Label htmlFor={'email'}>Email</Label>
             <Input
               type={'email'}
               name={'email'}
-              onChange={handleChange}
+              ref={register}
               id={'email'}
               required={true}
             />
 
-            <Label className="label" htmlFor={'message'}>Mesage</Label>
-
+            <Label htmlFor={'message'}>Mesage</Label>
             <Textarea
-              className="textarea"
               name={'message'}
-              onChange={handleChange}
+              ref={register}
               id={'message'}
               required={true}
             />
@@ -124,7 +117,7 @@ const Inscricion = ({ location }) => {
           </Box>
           <Box sx={{ flex: 1 }}>
             <Label htmlFor='programa'>Programa</Label>
-            <Select onChange={handleChange} name='programa' id='programa' mb={3} value={location.state && location.state.selected}>
+            <Select ref={register} name='programa' id='programa' mb={3} value={location.state && location.state.selected}>
               {programas && programas.map(({ node: programa }) =>
                 <option key={programa.id} value={programa.id}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
               )}
