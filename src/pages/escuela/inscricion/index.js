@@ -34,7 +34,7 @@ const Inscricion = ({ location }) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        ...formData,
+        ...e,
       }),
     })
       .then(() => navigate(e.action))
