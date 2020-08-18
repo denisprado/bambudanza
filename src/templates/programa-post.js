@@ -86,7 +86,7 @@ export const ProgramaPostTemplate = ({
         </Box>
         <Box as='main'>
           <Heading>{title}</Heading>
-          <Link to={'/escuela/inscricion'} state={{ selected: id }}><Button sx={{ my: 4 }}>Inscricion</Button></Link>
+          <Link to={'/escuela/inscricion'} state={{ selected: title }}><Button sx={{ my: 4 }}>Inscricion</Button></Link>
           <Text>{description}</Text>
           <PostContent content={content} />
         </Box>

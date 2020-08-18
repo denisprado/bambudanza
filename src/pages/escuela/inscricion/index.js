@@ -119,7 +119,7 @@ const Inscricion = ({ location }) => {
             <Label htmlFor='programa'>Programa</Label>
             <Select ref={register} name='programa' id='programa' mb={3} value={location.state && location.state.selected}>
               {programas && programas.map(({ node: programa }) =>
-                <option key={programa.id} value={programa.id}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
+                <option key={programa.id} value={programa.frontmatter.title}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
               )}
             </Select>
             <Button className="button is-link" type="submit">Enviar</Button>
