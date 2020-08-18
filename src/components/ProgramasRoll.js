@@ -3,7 +3,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { BsFillCircleFill } from 'react-icons/bs'
-import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text, jsx } from 'theme-ui'
+import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text, jsx, Divider } from 'theme-ui'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 
@@ -49,14 +49,20 @@ const ProgramasRoll = ({ data }) => {
   return (
 
     <Flex sx={{ width: '100%' }}>
+
       {/* Seletor de filtros */}
-      <Box mt={3} sx={{ minWidth: '150px' }}>
+      <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>
         <Box>
-          {tipos && tipos.map(t => <Box py={2} key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
+          <Heading as={'h4'} color={'primary'}>Tipo de programa</Heading>
+          <Divider />
+
+          {tipos && tipos.map(t => <Box key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
         </Box>
-        <Box mt={3}>
+        <Box>
+          <Heading as={'h4'} color={'primary'}>Nível</Heading>
+          <Divider />
           {niveis && niveis.map(nivel =>
-            <Box py={1} key={nivel}>
+            <Box key={nivel}>
               <Link onClick={() => addFilter(nivel)}>
                 <Flex sx={{ alignItems: 'center' }}>
                   <IconsNivel nivel={nivel} />
@@ -66,12 +72,14 @@ const ProgramasRoll = ({ data }) => {
             </Box>)
           }
         </Box>
-        <Box mt={3}>
-          <Heading as={'h4'} >Dias</Heading>
+        <Box>
+          <Heading as={'h4'} color={'primary'}>Dias</Heading>
+          <Divider />
           {dias && dias.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
-        <Box mt={3}>
-          <Heading as={'h4'} >Horarios</Heading>
+        <Box>
+          <Heading as={'h4'} color={'primary'}>Horarios</Heading>
+          <Divider />
           {horas && horas.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
       </Box>
@@ -80,22 +88,29 @@ const ProgramasRoll = ({ data }) => {
       <Box sx={{ minWidth: '100%' }} >
         {
           filters && filters.length > 0 &&
-          <Box bx={'muted'} mb={2} ml={2} sx={{ width: '100%' }}>
+          <Box bx={'muted'} mb={1} ml={2} sx={{ width: '100%' }}>
             <Flex sx={{ alignItems: 'center' }}>
+              <Heading as={'h4'} color={'primary'} mr={2}>Filtros: </Heading>
               {filters.map(filter =>
-                <Alert variant='highlight' key={filter} py={2} px={3} mx={2} bg={'muted'} color={'primary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                <Badge variant='highlight'
+                  key={filter} my={0} px={2} bg={'gray'} sx={{ display: 'flex', alignItems: 'center' }}>
                   <Box>{filter}</Box>
-                  <Link onClick={() => clearFilter(filter)}>
-                    <Close px={2} sx={{ width: '1' }} color={'primary'} />
-                  </Link>
-                </Alert>)
+                  <Box>
+                    <Link onClick={() => clearFilter(filter)}>
+                      <Close px={2} color={'white'} />
+                    </Link>
+                  </Box>
+                </Badge>)
               }
-              <Alert variant='highlight' p={2} mr={2} bg={'transparent'} color={'primary'}>
+              <Text variant='highlight' p={1} ml={2} bg={'transparent'} color={'primary'}>
                 <Link onClick={() => clearFilters()}>
-                  Limpar Filtros
+                  <Flex sx={{ alignItems: 'center', p: 0 }}>
+                    <Box>Limpiar Todos los Filtros </Box><Close px={2} sx={{ width: '1' }} color={'primary'} />
+                  </Flex>
                 </Link>
-              </Alert>
+              </Text>
             </Flex>
+            <Divider />
           </Box>
         }
 
@@ -133,8 +148,8 @@ const ProgramasRoll = ({ data }) => {
                 <Box>
 
                   <Flex sx={{ justifyContent: "space-between", alignItems: 'center' }}>
-                    <Link href={programa.fields.slug}>
-                      <Heading as={'h3'} pr={2} mt={2}>
+                    <Link href={programa.fields.slug} sx={{ flex: 1 }}>
+                      <Heading as={'h3'} pr={2} mt={2} mr={2}>
                         {programa.frontmatter.title}
                       </Heading>
                       <Text sx={{
@@ -142,11 +157,11 @@ const ProgramasRoll = ({ data }) => {
                         fontStyle: 'italic',
                       }}>{programa.frontmatter.estilo}</Text>
                     </Link>
-                    <Badge px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
+                    <Badge bg={'gray'} px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
                   </Flex>
 
                   <Flex mt={1} sx={{ justifyContent: 'flex-start', alignItems: 'center' }}>
-                    <Flex >
+                    <Flex>
                       {programa.frontmatter.nivel.map(n =>
                         <IconsNivel key={n} mr={1} nivel={n} />
                       )

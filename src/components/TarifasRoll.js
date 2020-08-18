@@ -35,7 +35,7 @@ const TarifasRoll = ({ data }) => {
         {
           tarifas &&
           tarifas.map(({ node: tarifa }) => (
-            <tr>
+            <tr key={tarifa.id}>
               <td>
                 <Text py={1}>{tarifa.frontmatter.title}</Text>
               </td>

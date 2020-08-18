@@ -41,7 +41,7 @@ export const bambudanza = {
     colors: {
         text: "#404A3C",
         background: "#fff",
-        primary: "#61B74A",
+        primary: "#2E4F24",
         secondary: "#A3AF9E",
         highlight: "#2E4F24",
         muted: "rgb(247,250,252)",

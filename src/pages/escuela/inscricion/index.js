@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import Escuela from '../../escuela'
 
 function encode(data) {
+  console.log(data)
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
