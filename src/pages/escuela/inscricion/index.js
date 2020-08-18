@@ -70,9 +70,8 @@ const Inscricion = ({ location }) => {
   return (
     <Escuela showImage={false}>
       <Box as='form'
-        name="contact"
+        name="inscriciones"
         method="post"
-
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
