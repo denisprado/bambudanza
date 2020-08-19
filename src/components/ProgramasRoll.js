@@ -14,6 +14,8 @@ export const IconsNivel = (props) => {
   return (<BsFillCircleFill mr={1} {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 
+const MyHr = () => <Divider mr={3} />
+
 const ProgramasRoll = ({ data }) => {
 
   const { edges: programas } = data.allMarkdownRemark;
@@ -54,13 +56,12 @@ const ProgramasRoll = ({ data }) => {
       <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>
         <Box>
           <Heading as={'h4'} color={'primary'}>Tipo de programa</Heading>
-          <Divider />
-
+          <MyHr />
           {tipos && tipos.map(t => <Box key={t}><Link onClick={() => addFilter(t[0])}>{t[0]}</Link></Box>)}
         </Box>
         <Box>
           <Heading as={'h4'} color={'primary'}>Nível</Heading>
-          <Divider />
+          <MyHr />
           {niveis && niveis.map(nivel =>
             <Box key={nivel}>
               <Link onClick={() => addFilter(nivel)}>
@@ -74,12 +75,12 @@ const ProgramasRoll = ({ data }) => {
         </Box>
         <Box>
           <Heading as={'h4'} color={'primary'}>Dias</Heading>
-          <Divider />
+          <MyHr />
           {dias && dias.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
         <Box>
           <Heading as={'h4'} color={'primary'}>Horarios</Heading>
-          <Divider />
+          <MyHr />
           {horas && horas.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
       </Box>

@@ -12,8 +12,8 @@ const BlogIndexPage = ({ children }, ...rest) => {
 
   return (
     <Layout>
-      <SubNavbar {...rest}>
-        <Link p={4} to='/blog'>El Centro</Link>
+      <SubNavbar {...rest} title={"Blog"}>
+
       </SubNavbar>
       <Container p={4}>
         <BlogRoll /></Container>

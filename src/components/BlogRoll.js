@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Link from '../components/Link'
-import { Card, Flex, Text } from 'theme-ui'
+import { Card, Flex, Heading } from 'theme-ui'
 
 const BlogRoll = ({ data }) => {
 
@@ -15,9 +15,7 @@ const BlogRoll = ({ data }) => {
       {posts &&
         posts.map(({ node: post }) => (
           <Card as='article'
-            /*sx={{
-              maxWidth: 256,
-            }}*/
+            sx={{ flex: 1 }}
             key={post.id}>
             <Link
               to={post.fields.slug}
@@ -29,15 +27,13 @@ const BlogRoll = ({ data }) => {
                 }}
               />
             </Link>
-            <Text>
+            <Heading>
               <Link
                 to={post.fields.slug}
               >
                 {post.frontmatter.title}
               </Link>
-
-            </Text>
-
+            </Heading>
           </Card>
         ))}
     </Flex>

@@ -9,7 +9,7 @@ const About = ({ children }, ...rest) => {
 
     return (
         <Layout>
-            <SubNavbar {...rest}>
+            <SubNavbar title={"Sobre Nosotros"}>
                 <Link p={4} to='/about/centro'>El Centro</Link>
                 <Link p={4} to='/about/filosofia'>Filosofia</Link>
                 <Link p={4} to='/contacto'>Contacto</Link>
