@@ -4,7 +4,8 @@ import { FiSearch } from 'react-icons/fi'
 /** @jsx jsx */
 import { Flex, Box, jsx, Container, Input } from 'theme-ui'
 import Link from '../components/Link'
-
+import { MdSchool } from 'react-icons/md'
+import { GoKey } from 'react-icons/go'
 const Navbar = () => (
   <Container>
     <Flex as="nav"
@@ -63,8 +64,8 @@ const Navbar = () => (
           alignSelf: 'flex-end'
         }}
         >
-          <Link partiallyActive={true} to="/escuela">Escuela</Link>
-          <Link partiallyActive={true} to="/alquiler">Alquiler</Link>
+          <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><MdSchool sx={{ mr: 2 }} />Escuela</Flex></Link>
+          <Link partiallyActive={true} to="/alquiler"><Flex sx={{ alignItems: 'center' }}><GoKey sx={{ mr: 2 }} />Alquiler</Flex></Link>
           <Link partiallyActive={true} to="/blog">Blog</Link>
           <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
         </Flex>
