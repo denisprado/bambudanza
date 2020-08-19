@@ -20,6 +20,8 @@ tarifa:
   - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
   - 10h a 11h30
+dias:
+  - Jueves
 tipo:
   - Proyetos
 estilo:
