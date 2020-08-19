@@ -37,7 +37,7 @@ const Navbar = () => (
         }}>
         <Link to="/" title="Logo"
         >
-          <img src={logo} alt="Bambudanza" style={{ width: '200px' }} />
+          <img src={logo} alt="Bambudanza" style={{ width: '250px' }} />
         </Link>
       </Box>
 

@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { FiXCircle } from 'react-icons/fi'
-import _ from 'lodash'
-import { Card, Flex, Text, AspectRatio, Box, Heading, Badge, Link } from 'theme-ui'
-// @jsx jsx
-import { jsx } from 'theme-ui'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Box, Flex, Text, Button } from 'theme-ui'
+import Link from '../components/Link'
+
 
 const TarifasRoll = ({ data }) => {
 
@@ -14,15 +11,11 @@ const TarifasRoll = ({ data }) => {
 
   return (
     <Flex>
-      <aside sx={{ maxWidth: '250px', paddingr: '4' }}>El aforo es limitado.
-      Para participar es necesario reservar plaza con antelación.
-      Más información en infobambudanza@gmail.com
-    </aside>
-      <table sx={{
-        marginTop: 4,
+      <Box as='table' sx={{
+        margin: 4,
         'th': {
           textAlign: 'left',
-          '&:nth-child(even)': {
+          'td:nth-child(even)': {
             backgroundColor: 'muted',
           }
         },
@@ -45,7 +38,11 @@ const TarifasRoll = ({ data }) => {
             </tr>
           ))
         }
-      </table>
+      </Box>
+      <Box sx={{ maxWidth: '250px', paddingr: '4' }}>
+        <Link to={'/escuela/inscripcion'} ><Button sx={{ my: 4 }}>Inscripción</Button></Link>
+      </Box>
+
     </Flex>
   )
 }
