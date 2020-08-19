@@ -5,7 +5,9 @@ import { FiSearch } from 'react-icons/fi'
 import { Flex, Box, jsx, Container, Input } from 'theme-ui'
 import Link from '../components/Link'
 import { MdSchool } from 'react-icons/md'
-import { GoKey } from 'react-icons/go'
+import { RiKey2Line } from 'react-icons/ri'
+import Search from '../components/SearchContainer'
+
 const Navbar = () => (
   <Container>
     <Flex as="nav"
@@ -52,10 +54,7 @@ const Navbar = () => (
           py: 2,
           my: 4
         }}>
-          <Input mr={2} />
-          <Box p={2} >
-            <FiSearch />
-          </Box>
+          <Search mr={2} />
         </Flex>
 
         <Flex sx={{
@@ -65,7 +64,7 @@ const Navbar = () => (
         }}
         >
           <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><MdSchool sx={{ mr: 2 }} />Escuela</Flex></Link>
-          <Link partiallyActive={true} to="/alquiler"><Flex sx={{ alignItems: 'center' }}><GoKey sx={{ mr: 2 }} />Alquiler</Flex></Link>
+          <Link partiallyActive={true} to="/alquiler"><Flex sx={{ alignItems: 'center' }}><RiKey2Line sx={{ mr: 2 }} />Alquiler</Flex></Link>
           <Link partiallyActive={true} to="/blog">Blog</Link>
           <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
         </Flex>
