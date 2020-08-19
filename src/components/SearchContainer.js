@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
-import * as JsSearch from "js-search"
 import { useStaticQuery } from 'gatsby'
-import { Heanding, Text, Link, Input } from 'theme-ui'
-import { union } from "lodash"
-
+import * as JsSearch from "js-search"
+import React, { useEffect, useState } from "react"
+import { Box, Flex, Input, Text, Heading } from 'theme-ui'
+import { FiSearch } from "react-icons/fi"
 const Search = () => {
 
     const [bookList, setBookList] = useState([])
@@ -75,7 +74,8 @@ const Search = () => {
         const { edges } = allMarkdownRemark
 
         const frontmatter = edges.map(({ node: item }) => item.frontmatter)
-        //const fields = edges.map(({ node: item }) => item.fields)
+        const fields = edges.map(({ node: item }) => item.fields)
+
 
         setBookList(frontmatter)
         rebuildIndex()
@@ -101,91 +101,46 @@ const Search = () => {
     const queryResults = searchQuery === "" ? bookList : searchResults
 
     return (
-        <div>
-            <div style={{ position: 'relative' }}>
-                <form onSubmit={handleSubmit}>
-                    <div style={{ margin: "0 auto" }}>
+        <Box style={{ position: 'relative' }}>
+            <Flex onSubmit={handleSubmit} as={'form'} sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
+                <Box sx={{ marginLeft: 'auto', flex: 1, marginRight: 3 }}><FiSearch /></Box>
+                <Input
+                    autoComplete="off"
+                    id="Search"
+                    ml={3}
+                    value={searchQuery}
+                    onChange={searchData}
+                    placeholder={"Busqueda"}
+                    sx={{ margin: "0 auto", minWidth: "300px", flex: 1, marginLeft: 'auto' }}
+                />
+            </Flex>
 
-                        <Input
-                            autoComplete="off"
-                            id="Search"
-                            value={searchQuery}
-                            onChange={searchData}
-                            placeholder="Busqueda"
-                            sx={{ margin: "0 auto", width: "300px" }}
-                        />
-                    </div>
-                </form>
-                {queryResults && searchQuery &&
-                    <div style={{ position: 'absolute', border: '1px solid primary', backgroundColor: 'white', zIndex: 99, width: '100%' }}>
-
-                        <table
-                            style={{
-                                width: "100%",
-                                borderCollapse: "collapse",
-                                borderRadius: "4px",
-                                border: "1px solid #d3d3d3",
-                            }}
-                        >
-                            <thead style={{ border: "1px solid #808080" }}>
-                                <tr>
-                                    <th
-                                        style={{
-                                            textAlign: "left",
-                                            padding: "5px",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            borderBottom: "2px solid #d3d3d3",
-                                            cursor: "pointer",
-                                        }}
-                                    >
-                                        Title
-                  </th>
-                                    <th
-                                        style={{
-                                            textAlign: "left",
-                                            padding: "5px",
-                                            fontSize: "14px",
-                                            fontWeight: 600,
-                                            borderBottom: "2px solid #d3d3d3",
-                                            cursor: "pointer",
-                                        }}
-                                    >
-                                        Description
-                  </th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {queryResults && queryResults.map((item) => {
-                                    return (
-                                        <tr key={`row_${item.title}`}>
-                                            <td
-                                                style={{
-                                                    fontSize: "14px",
-                                                    border: "1px solid #d3d3d3",
-                                                }}
-                                            >
-                                                {item.title}
-                                            </td>
-                                            <td
-                                                style={{
-                                                    fontSize: "14px",
-                                                    border: "1px solid #d3d3d3",
-                                                }}
-                                            >
-                                                {item.description.substring(0, 100)}
-                                            </td>
-                                        </tr>
-                                    )
-                                })
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                }
-            </div>
-        </div>
+            {queryResults && searchQuery &&
+                <Box style={{
+                    position: 'absolute',
+                    right: 0,
+                    border: '1px solid primary',
+                    backgroundColor: 'white',
+                    zIndex: 99,
+                    width: '25vw',
+                    textAlign: 'left'
+                }}>
+                    <Box>
+                        {queryResults && queryResults.map((item) => {
+                            return (
+                                <Box key={item.title} bg={'muted'} m={1} p={2}>
+                                    <Heading>{item.title}</Heading>
+                                    <Text sx={{ lineHeight: 1.2 }}>
+                                        {item.description.substring(0, 100)}
+                                    </Text>
+                                </Box>
+                            )
+                        })
+                        }
+                    </Box>
+                </Box>
+            }
+        </Box>
     )
 }
 
