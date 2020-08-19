@@ -1,5 +1,5 @@
 import React from 'react'
-import Escuela from '../../escuela'
+import Escuela from '..'
 import { Message, Heading } from 'theme-ui'
 
 export default () => (

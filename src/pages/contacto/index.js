@@ -1,15 +1,12 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import { navigate } from 'gatsby-link';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import {
   Box,
   Button, Flex, Input, Label,
-
-  Select,
   Textarea
 } from 'theme-ui';
-import Alquiler from '../../alquiler';
+import About from '../about';
 
 function encode(data) {
   console.log(data)
@@ -18,7 +15,7 @@ function encode(data) {
     .join('&')
 }
 
-const Inscricion = ({ location }) => {
+const Contacto = () => {
 
   const { register, handleSubmit, watch, errors } = useForm();
 
@@ -37,34 +34,10 @@ const Inscricion = ({ location }) => {
       .catch((error) => alert(error))
   }
 
-  const data = useStaticQuery(graphql`
-      query SalasQuery {
-        allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___tipo] }
-          filter: { frontmatter: { templateKey: { eq: "salas-post" } } }
-        ) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                templateKey
-              }
-            }
-          }
-        }
-      }
-    `)
-
-  const { edges: salas } = data.allMarkdownRemark;
-
   return (
-    <Alquiler showImage={false}>
+    <About showImage={false}>
       <Box as='form'
-        name="presupuestos"
+        name="contacto"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -73,8 +46,8 @@ const Inscricion = ({ location }) => {
         <Flex>
           <Box mr={2} sx={{ flex: 1 }}>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" ref={register} name="form-name" value="presupuestos" />
-            <input type="hidden" ref={register} name="action" value="/alquiler/presupuesto/thanks/" />
+            <input type="hidden" ref={register} name="form-name" value="contacto" />
+            <input type="hidden" ref={register} name="action" value="/contacto/thanks/" />
             <div hidden>
               <Label>
                 Don’t fill this out:{' '}
@@ -108,24 +81,16 @@ const Inscricion = ({ location }) => {
               required={true}
             />
 
-          </Box>
-          <Box sx={{ flex: 1 }}>
-            <Label htmlFor='sala'>Sala</Label>
-            <Select ref={register} name='sala' id='sala' mb={3} value={location.state && location.state.selected} defaultValue={'Elige una sala'}>
-
-              {salas && salas.map(({ node: sala }) =>
-                <option key={sala.id} value={sala.frontmatter.title}>{sala.frontmatter.title}</option>
-              )}
-            </Select>
-            <Button className="button is-link" type="submit">Enviar</Button>
+            <Button my={4} type="submit">Enviar</Button>
           </Box>
 
         </Flex>
       </Box>
-    </Alquiler>
+
+    </About >
 
   )
 
 }
 
-export default Inscricion;
+export default Contacto;

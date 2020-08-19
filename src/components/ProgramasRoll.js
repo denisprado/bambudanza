@@ -90,14 +90,14 @@ const ProgramasRoll = ({ data }) => {
           filters && filters.length > 0 &&
           <Box bx={'muted'} mb={1} ml={2} sx={{ width: '100%' }}>
             <Flex sx={{ alignItems: 'center' }}>
-              <Heading as={'h4'} color={'primary'} mr={2}>Filtros: </Heading>
+              <Heading as={'h4'} color={'primary'} mx={2}>Filtros: </Heading>
               {filters.map(filter =>
                 <Badge variant='highlight'
-                  key={filter} my={0} px={2} bg={'gray'} sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Box>{filter}</Box>
-                  <Box>
+                  key={filter} mr={1} px={2} bg={'gray'} sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box sx={{ flex: 1 }}>{filter}</Box>
+                  <Box sx={{ marginLeft: 'auto' }}>
                     <Link onClick={() => clearFilter(filter)}>
-                      <Close px={2} color={'white'} />
+                      <Close pl={2} color={'white'} />
                     </Link>
                   </Box>
                 </Badge>)
@@ -105,7 +105,7 @@ const ProgramasRoll = ({ data }) => {
               <Text variant='highlight' p={1} ml={2} bg={'transparent'} color={'primary'}>
                 <Link onClick={() => clearFilters()}>
                   <Flex sx={{ alignItems: 'center', p: 0 }}>
-                    <Box>Limpiar Todos los Filtros </Box><Close px={2} sx={{ width: '1' }} color={'primary'} />
+                    <Text>Limpiar Todos los Filtros </Text><Close px={2} sx={{ width: '1' }} color={'primary'} />
                   </Flex>
                 </Link>
               </Text>

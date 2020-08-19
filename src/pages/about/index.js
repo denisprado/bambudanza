@@ -12,6 +12,7 @@ const About = ({ children }, ...rest) => {
             <SubNavbar {...rest}>
                 <Link p={4} to='/about/centro'>El Centro</Link>
                 <Link p={4} to='/about/filosofia'>Filosofia</Link>
+                <Link p={4} to='/contacto'>Contacto</Link>
             </SubNavbar>
             <Container p={4}>
                 {children}</Container>

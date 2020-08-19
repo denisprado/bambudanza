@@ -38,7 +38,7 @@ export const ProfesoraPostTemplate = ({
         <Box as='main'>
 
           <Heading>{title}</Heading>
-          <Text>{description}</Text>
+
           <PostContent content={content} />
         </Box>
       </Flex>

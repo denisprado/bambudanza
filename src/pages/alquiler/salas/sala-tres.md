@@ -1,15 +1,13 @@
 ---
 templateKey: salas-post
-title: Sala 1
+title: Sala 3
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
-description: Sala.
+description: Sala 3.
 tags:
   - flavor
   - tasting
 ---
 
-import Alquiler from "../../alquiler";
-
-<Alquiler showImage={false}>Informaciones sobre la sala Uno</Alquiler>
+Informaciones sobre la sala Tres

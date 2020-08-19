@@ -8,7 +8,7 @@ import {
   Textarea
 } from 'theme-ui'
 import { useForm } from "react-hook-form";
-import Escuela from '../../escuela'
+import Escuela from '..'
 
 function encode(data) {
   console.log(data)
@@ -17,7 +17,7 @@ function encode(data) {
     .join('&')
 }
 
-const Inscricion = ({ location }) => {
+const Inscripcion = ({ location }) => {
 
   const { register, handleSubmit, watch, errors } = useForm();
 
@@ -117,7 +117,8 @@ const Inscricion = ({ location }) => {
           </Box>
           <Box sx={{ flex: 1 }}>
             <Label htmlFor='programa'>Programa</Label>
-            <Select ref={register} name='programa' id='programa' mb={3} value={location.state && location.state.selected}>
+            <Select ref={register} name='programa' id='programa' mb={3} value={location.state && location.state.selected} defaultValue={'Elige un programa'}>
+
               {programas && programas.map(({ node: programa }) =>
                 <option key={programa.id} value={programa.frontmatter.title}>{programa.frontmatter.title} - {programa.frontmatter.dias} - {programa.frontmatter.horarios}</option>
               )}
@@ -134,4 +135,4 @@ const Inscricion = ({ location }) => {
 
 }
 
-export default Inscricion;
+export default Inscripcion;

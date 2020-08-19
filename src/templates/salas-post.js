@@ -1,10 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { Button } from 'theme-ui'
 import Content, { HTMLContent } from '../components/Content'
+import Layout from '../components/Layout'
+import Alquiler from '../pages/alquiler'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage.js'
+import { Flex, Box, AspectRatio, Heading } from 'theme-ui'
 
 export const SalasPostTemplate = ({
   content,
@@ -12,15 +15,40 @@ export const SalasPostTemplate = ({
   description,
   tags,
   title,
+  featuredimage,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <Alquiler showImage={false}>
       {helmet || ''}
-      <PostContent content={content} />
-    </section>
+      <Flex>
+        <Box px={4} as='aside' sx={{
+          flexGrow: 1,
+          flexBasis: 'sidebar',
+          minWidth: '400px'
+        }}>
+          <AspectRatio ratio={4 / 3}>
+
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: featuredimage,
+                alt: `featured image thumbnail for programas ${title}`,
+                styles: { width: '100%' }
+              }}
+            />
+
+          </AspectRatio>
+
+        </Box>
+        <Box as='main'>
+          <Heading>{title}</Heading>
+          <Link to={'/alquiler/presupuesto'} state={{ selected: title }}><Button sx={{ my: 4 }}>Solicitar presupuesto</Button></Link>
+          <PostContent content={content} />
+        </Box>
+      </Flex>
+    </Alquiler>
   )
 }
 
@@ -36,7 +64,7 @@ const SalasPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <>
       <SalasPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -52,8 +80,9 @@ const SalasPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
       />
-    </Layout>
+    </>
   )
 }
 
@@ -74,7 +103,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 640, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,10 +1,10 @@
 import React from 'react'
-import Escuela from '../../escuela'
+import About from '../about'
 import { Message, Heading } from 'theme-ui'
 
 export default () => (
-  <Escuela showImage={false}>
+  <About showImage={false}>
     <Heading>Gracias!</Heading>
     <Message bg={'muted'}>En breve te contestamos.</Message>
-  </Escuela>
+  </About>
 )

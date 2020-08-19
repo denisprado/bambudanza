@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-mdx',
     {
       resolve: `gatsby-plugin-theme-ui`,
     },
@@ -62,7 +63,6 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-mdx',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {

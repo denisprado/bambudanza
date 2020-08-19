@@ -10,6 +10,4 @@ tags:
   - tasting
 ---
 
-import Alquiler from "../../alquiler";
-
-<Alquiler showImage={false}>Informaciones sobre la sala Dos</Alquiler>
+Informaciones sobre la sala Dos

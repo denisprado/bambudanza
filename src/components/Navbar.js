@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../img/logo.svg'
 import { FiSearch } from 'react-icons/fi'
 /** @jsx jsx */
-import { Flex, Box, jsx, Container } from 'theme-ui'
+import { Flex, Box, jsx, Container, Input } from 'theme-ui'
 import Link from '../components/Link'
 
 const Navbar = () => {
@@ -66,12 +66,10 @@ const Navbar = () => {
           marginLeft: 'auto',
           textAlign: 'right',
           alignSelf: 'flex-end'
-        }}
-        >
+        }}>
           <Link partiallyActive={true} to="/blog">Blog</Link>
           <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
-
-          <Link partiallyActive={true} to="/about" ><FiSearch /></Link>
+          <Flex p={1}><Input p={2} /><Box mx={4}><FiSearch /></Box></Flex>
         </Flex>
       </Flex >
     </Container>
