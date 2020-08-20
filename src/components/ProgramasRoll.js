@@ -10,7 +10,7 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 export const IconsNivel = (props) => {
   const { nivel } = props;
   const niveis = ["Iniciación", "Intermedio", "Avanzado"]
-  const colors = ["#21618C", "#6C3483", '#943126'];
+  const colors = ["#0083DD", "#7160C1", '#9A338E'];
   return (<BsFillCircleFill mr={1} {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 

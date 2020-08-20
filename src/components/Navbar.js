@@ -16,15 +16,14 @@ const Navbar = () => (
         alignItems: "center",
         justifyContent: "space-between",
         'a': {
-          paddingY: '3',
-          paddingX: '4',
-          borderTopLeftRadius: '2',
-          borderTopRightRadius: '2',
+          paddingY: 2,
+          paddingX: 3,
           color: 'text'
         },
         'a.active': {
-          backgroundColor: 'muted',
-          color: "primary"
+          borderBottom: '2px solid',
+          borderColor: 'highlight',
+          color: "hightlight"
         },
 
       }}

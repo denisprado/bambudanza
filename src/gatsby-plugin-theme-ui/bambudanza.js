@@ -39,24 +39,24 @@ export const bambudanza = {
         heading: 1.25
     },
     colors: {
-        text: "#404A3C",
+        text: "#3d4c53",
         background: "#fff",
-        primary: "#2E4F24",
-        secondary: "#A3AF9E",
-        highlight: "#2E4F24",
-        muted: "rgb(247,250,252)",
-        gray: "#A3AF9E",
-        accent: "#08658C",
-        darken: "#2E4F24",
+        primary: "#428365",
+        secondary: "#b4c8c4",
+        highlight: "#496d50",
+        muted: "#eaf2f1",
+        gray: "#b4c8c4",
+        accent: "#545479",
+        darken: "#496d50",
         iniciacion: 'primary',
         medio: 'accent',
         avanzado: 'red',
         modes: {
             dark: {
-                text: "#A3AF9E",
-                background: "#2E4F24",
-                primary: "#61B74A",
-                secondary: "#A3AF9E",
+                text: "#b4c8c4",
+                background: "#496d50",
+                primary: "#428365",
+                secondary: "#b4c8c4",
                 highlight: "#F3FCEF",
                 muted: "#e6e6e6"
             }
