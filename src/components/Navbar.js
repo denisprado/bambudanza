@@ -1,12 +1,11 @@
 import React from 'react'
-import logo from '../img/logo.svg'
-import { FiSearch } from 'react-icons/fi'
+import { RiDoorOpenLine, RiTeamLine, RiFingerprintFill, RiChatSmile2Line } from 'react-icons/ri'
+
 /** @jsx jsx */
-import { Flex, Box, jsx, Container, Input } from 'theme-ui'
+import { Box, Container, Flex, jsx } from 'theme-ui'
 import Link from '../components/Link'
-import { MdSchool } from 'react-icons/md'
-import { RiKey2Line } from 'react-icons/ri'
 import Search from '../components/SearchContainer'
+import logo from '../img/logo.svg'
 
 const Navbar = () => (
   <Container>
@@ -51,8 +50,8 @@ const Navbar = () => (
           alignSelf: 'flex-start',
           marginLeft: 'auto',
           textAlign: 'right',
-          py: 2,
-          my: 4
+          py: 1,
+          my: 3
         }}>
           <Search mr={2} />
         </Flex>
@@ -63,10 +62,19 @@ const Navbar = () => (
           alignSelf: 'flex-end'
         }}
         >
-          <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><MdSchool sx={{ mr: 2 }} />Escuela</Flex></Link>
-          <Link partiallyActive={true} to="/alquiler"><Flex sx={{ alignItems: 'center' }}><RiKey2Line sx={{ mr: 2 }} />Alquiler</Flex></Link>
-          <Link partiallyActive={true} to="/blog">Blog</Link>
-          <Link partiallyActive={true} to="/about" >Sobre nosotros</Link>
+          <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><RiTeamLine sx={{ mr: 2 }} />Escuela</Flex></Link>
+          <Link partiallyActive={true} to="/alquiler"><Flex sx={{ alignItems: 'center' }}><RiDoorOpenLine sx={{ mr: 2 }} />Alquiler</Flex></Link>
+          <Link partiallyActive={true} to="/blog">
+            <Flex sx={{ alignItems: 'center' }}><RiChatSmile2Line sx={{ mr: 2 }} />
+            Blog
+            </Flex>
+          </Link>
+          <Link partiallyActive={true} to="/about">
+            <Flex sx={{ alignItems: 'center' }}>
+              <RiFingerprintFill sx={{ mr: 2 }} />
+              <Box>Nosotros</Box>
+            </Flex>
+          </Link>
         </Flex>
 
       </Flex>

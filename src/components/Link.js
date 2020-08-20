@@ -4,13 +4,12 @@ import { Styled, jsx } from 'theme-ui'
 import { Link as GatsbyLink } from 'gatsby'
 
 const Link = (props) => {
-    const { children } = props;
-    const { onClick } = props;
+    const { children, onClick, sx } = props;
     return (
         <Styled.a as={GatsbyLink}
             {...props}
             activeClassName={'active'}
-            sx={{ cursor: 'pointer' }}
+
             onClick={onClick}
         >
             {children}
