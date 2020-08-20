@@ -1,4 +1,4 @@
-import { useStaticQuery } from 'gatsby'
+import { useStaticQuery, Link } from 'gatsby'
 import * as JsSearch from "js-search"
 import React, { useEffect, useState } from "react"
 import { Box, Flex, Input, Text, Heading } from 'theme-ui'
@@ -18,7 +18,7 @@ const Search = () => {
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {
-            allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {}}}) {
+            allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {nin: ["dias-post","tarifa-post","horario-post"]}}}) {
                 edges {
                   node {
                     id
@@ -76,6 +76,9 @@ const Search = () => {
         const frontmatter = edges.map(({ node: item }) => item.frontmatter)
         const fields = edges.map(({ node: item }) => item.fields)
 
+        frontmatter.map((f, i) => {
+            f.slug = fields[i].slug
+        })
 
         setBookList(frontmatter)
         rebuildIndex()
@@ -128,10 +131,11 @@ const Search = () => {
                     <Box>
                         {queryResults && queryResults.map((item) => {
                             return (
+
                                 <Box key={item.title} bg={'muted'} m={1} p={2}>
-                                    <Heading>{item.title}</Heading>
+                                    <Link to={item.slug}><Heading as={"h3"}>{item.title}</Heading></Link>
                                     <Text sx={{ lineHeight: 1.2 }}>
-                                        {item.description.substring(0, 100)}
+                                        {item.description && item.description.substring(0, 100)}
                                     </Text>
                                 </Box>
                             )
