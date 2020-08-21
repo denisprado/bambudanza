@@ -158,7 +158,7 @@ const ProgramasRoll = ({ data }) => {
                         fontStyle: 'italic',
                       }}>{programa.frontmatter.estilo}</Text>
                     </Link>
-                    <Badge bg={'gray'} px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
+                    <Badge bg={'primary'} px={2} sx={{ marginLeft: 'auto' }}>{programa.frontmatter.tipo}</Badge>
                   </Flex>
 
                   <Flex mt={1} sx={{ justifyContent: 'flex-start', alignItems: 'center' }}>

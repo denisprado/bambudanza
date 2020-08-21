@@ -34,7 +34,6 @@ const ProfesorasRoll = ({ data }) => {
                     objectPosition: 'center',
                     image: post.frontmatter.featuredimage,
                     alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-
                   }}
                 />
               </AspectRatio>
