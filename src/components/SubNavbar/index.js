@@ -23,6 +23,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         ml: [0, 0, 4],
                         'a': {
                             flex: '1 1 auto',
+                            fontSize: 3,
                             mx: 2,
                             paddingY: 3,
                             paddingX: 3,
