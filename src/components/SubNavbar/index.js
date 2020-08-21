@@ -20,7 +20,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                     <Flex as='nav' sx={{
                         ml: 4,
                         'a': {
-                            flex: 1,
+                            flex: '1 1 auto',
                             mx: 2,
                             paddingY: 3,
                             paddingX: 3,
