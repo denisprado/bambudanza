@@ -13,8 +13,8 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 <Flex pt={1} sx={{ alignItems: 'flex-end' }}>
 
                     <Flex sx={{ alignItems: 'center', justifyContent: 'flex-start' }}>
-                        <Heading as={'h1'} color={'primary'} py={2} ml={3} mr={1}>{icon}</Heading>
-                        <Heading as={'h1'} color={'primary'} py={2} ml={1} mr={2}>{title}</Heading>
+                        <Heading as={'h1'} color={'gray'} pb={2} ml={4} mr={1}>{icon}</Heading>
+                        <Heading as={'h1'} color={'primary'} pb={2} ml={2} mr={2}>{title}</Heading>
                     </Flex>
 
                     <Flex as='nav' sx={{
@@ -29,7 +29,8 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         },
                         'a.active': {
                             borderBottom: '3px solid',
-                            color: 'highlight'
+                            color: 'highlight',
+                            marginBottom: '-3px'
                         },
                         borderBottom: '1px solid "primary"',
                         justifyContent: 'flex-end',
