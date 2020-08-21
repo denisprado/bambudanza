@@ -10,10 +10,10 @@ import vimeo from '../img/social/vimeo.svg'
 
 const Footer = () => (
 
-  <footer mt={4}
+  <footer
     sx={{
       width: '100%',
-      backgroundColor: 'gray',
+      backgroundColor: 'primary',
 
       'a': {
         padding: '2',

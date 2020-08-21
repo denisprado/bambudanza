@@ -15,7 +15,8 @@ const BlogIndexPage = ({ children }, ...rest) => {
 
       </SubNavbar>
       <Container p={4}>
-        <BlogRoll /></Container>
+        <BlogRoll />
+      </Container>
     </Layout >
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Flex, Heading, Image } from 'theme-ui';
+import { Box, Container, Flex, Heading, Image, AspectRatio } from 'theme-ui';
 
 const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
     <Box>
@@ -12,12 +12,12 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 <Flex pt={1} sx={{ alignItems: ['center', 'center', 'flex-end'], flexDirection: ['column', 'column', 'row'] }}>
 
                     <Flex sx={{ alignItems: 'center', justifyContent: 'flex-start' }}>
-                        <Heading as={'h1'} color={'gray'} pb={2} ml={4} mr={1}>{icon}</Heading>
-                        <Heading as={'h1'} color={'primary'} pb={2} ml={2} mr={2}>{title}</Heading>
+                        <Heading as={'h2'} color={'gray'} pb={3} ml={4} mr={1}>{icon}</Heading>
+                        <Heading as={'h2'} color={'primary'} pb={3} ml={2} mr={2}>{title}</Heading>
                     </Flex>
 
                     <Flex as='nav' sx={{
-                        flexDirection: ['column', 'column', 'row'],
+                        flexDirection: ['column', 'row', 'row'],
                         ml: 4,
                         'a': {
                             flex: '1 1 auto',
@@ -43,10 +43,16 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 </Flex>
             </Container>
         </Box>
-        <Box>
-            {image && showImage && <Image src={image} width={'100%'}></Image>}
-        </Box>
-    </Box>
+        <Box >
+
+            {image && showImage &&
+                <AspectRatio ratio={4 / 1}>
+                    <Image src={image} width={'100%'} height={'100%'} styles={{ objectPosition: 'center center' }} ></Image>
+                </AspectRatio>
+            }
+
+        </Box >
+    </Box >
 )
 
 export default SubNavbar;
