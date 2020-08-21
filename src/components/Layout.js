@@ -5,7 +5,7 @@ import { Box, jsx, Flex } from 'theme-ui'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
-import "./layout.css"
+import "./Layout.css"
 import Width from './Width'
 
 const TemplateWrapper = ({ children }) => {

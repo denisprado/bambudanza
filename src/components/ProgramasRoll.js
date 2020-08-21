@@ -50,7 +50,7 @@ const ProgramasRoll = ({ data }) => {
 
   return (
 
-    <Flex sx={{ width: '100%' }}>
+    <Flex p={4} sx={{ width: '100%' }}>
 
       {/* Seletor de filtros */}
       <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>

@@ -15,7 +15,8 @@ const About = ({ children }, ...rest) => {
                 <Link p={4} to='/about/filosofia'>Filosofia</Link>
                 <Link p={4} to='/contacto'>Contacto</Link>
             </SubNavbar>
-            {children}
+            <Container>
+                {children}</Container>
         </Layout >
     )
 }

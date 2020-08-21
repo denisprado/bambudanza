@@ -11,48 +11,47 @@ const ProfesorasRoll = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
 
   return (
-    <Container>
-      <Flex sx={{
-        flexWrap: 'wrap',
-        alignContent: 'flex-start',
-      }}>
-        {posts &&
-          posts.map(({ node: post }) => (
-            <Card as='article'
-              sx={{
-                flex: '1 1 33%',
-                maxWidth: '33%',
-                minWidth: '33%',
-              }}
-              key={post.id}>
 
+    <Flex p={4} sx={{
+      flexWrap: 'wrap',
+      alignContent: 'flex-start',
+    }}>
+      {posts &&
+        posts.map(({ node: post }) => (
+          <Card as='article'
+            sx={{
+              flex: '1 1 33%',
+              maxWidth: '33%',
+              minWidth: '33%',
+            }}
+            key={post.id}>
+
+            <Link
+              to={post.fields.slug}
+            ><AspectRatio ratio={4 / 3}>
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    objectPosition: 'center',
+                    image: post.frontmatter.featuredimage,
+                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+
+                  }}
+                />
+              </AspectRatio>
+            </Link>
+            <Text>
               <Link
                 to={post.fields.slug}
-              ><AspectRatio ratio={4 / 3}>
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      objectPosition: 'center',
-                      image: post.frontmatter.featuredimage,
-                      alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-
-                    }}
-                  />
-                </AspectRatio>
+              ><Heading as={'h3'}>
+                  {post.frontmatter.title}
+                </Heading>
               </Link>
-              <Text>
-                <Link
-                  to={post.fields.slug}
-                ><Heading as={'h3'}>
-                    {post.frontmatter.title}
-                  </Heading>
-                </Link>
 
-              </Text>
+            </Text>
 
-            </Card>
-          ))}
-      </Flex>
-    </Container>
+          </Card>
+        ))}
+    </Flex>
   )
 }
 

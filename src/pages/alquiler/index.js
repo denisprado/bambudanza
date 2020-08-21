@@ -14,7 +14,9 @@ const Alquiler = ({ children, showImage }) => (
             <Link p={4} to='/alquiler/normas'>Normas</Link>
             <Link p={4} to='/alquiler/presupuesto'>Presupuesto</Link>
         </SubNavbar>
-        {children}
+        <Container>
+            {children}
+        </Container>
     </Layout >
 )
 

@@ -2,10 +2,11 @@ import React from 'react';
 import { Box, Container, Flex, Heading, Image, AspectRatio } from 'theme-ui';
 
 const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
-    <Box>
+    <Flex sx={{ flexDirection: 'column' }}>
         <Box sx={{
             borderBottom: '2px solid',
             borderColor: 'muted',
+            flex: '1 1 auto'
         }}>
 
             <Container>
@@ -43,16 +44,12 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 </Flex>
             </Container>
         </Box>
-        <Box >
+        <Flex sx={{ backgroundImage: `url(${image && image && showImage && image})`, backgroundPosition: 'center center', backgroundSize: 'cover', flex: '1 1 auto' }}>
+            <Box></Box>
 
-            {image && showImage &&
-                <AspectRatio ratio={4 / 1}>
-                    <Image src={image} width={'100%'} height={'100%'} styles={{ objectPosition: 'center center' }} ></Image>
-                </AspectRatio>
-            }
 
-        </Box >
-    </Box >
+        </Flex >
+    </Flex >
 )
 
 export default SubNavbar;

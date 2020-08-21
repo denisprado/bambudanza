@@ -14,7 +14,7 @@ const BlogIndexPage = ({ children }, ...rest) => {
       <SubNavbar {...rest} title={"Blog"} icon={<RiChatSmile2Line />}>
 
       </SubNavbar>
-      <Container p={4}>
+      <Container>
         <BlogRoll />
       </Container>
     </Layout >
