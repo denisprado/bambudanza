@@ -112,11 +112,10 @@ const Search = () => {
                 <Input
                     autoComplete="off"
                     id="Search"
-                    ml={3}
                     value={searchQuery}
                     onChange={searchData}
                     placeholder={"Busqueda"}
-                    sx={{ margin: "0 auto", minWidth: "300px", flex: 1, marginLeft: 'auto' }}
+                    sx={{ minWidth: "250px", flex: 1 }}
                 />
             </Flex>
 

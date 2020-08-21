@@ -8,21 +8,21 @@ import Search from '../components/SearchContainer'
 import logo from '../img/logo.svg'
 
 const Navbar = () => (
-  <Container>
+  <Container py={4}>
     <Flex as="nav"
       role="navigation"
       aria-label="main-navigation"
+
       sx={{
         alignItems: "center",
-        justifyContent: "space-between",
         'a': {
           paddingY: 2,
           paddingX: 3,
+          borderRadius: '8px',
           color: 'text'
         },
         'a.active': {
-          borderBottom: '2px solid',
-          borderColor: 'highlight',
+          backgroundColor: 'muted',
           color: "hightlight"
         },
 
@@ -33,32 +33,23 @@ const Navbar = () => (
       <Box
         sx={{
           'a.active': {
-            backgroundColor: 'transparent',
+            borderBottom: 'none',
+            backgroundColor: 'transparent'
           },
         }}>
-        <Link to="/" title="Logo"
-        >
+        <Link to="/" title="Logo">
           <img src={logo} alt="Bambudanza" style={{ width: '250px' }} />
         </Link>
       </Box>
 
       {/* Menu Principal */}
-      <Flex sx={{ flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
-        <Flex sx={{
-          flex: 1,
-          alignSelf: 'flex-start',
-          marginLeft: 'auto',
-          textAlign: 'right',
-          py: 1,
-          my: 3
-        }}>
-          <Search mr={2} />
-        </Flex>
+      <Flex sx={{ flexDirection: 'row', flex: 1, justifyContent: 'right', alignItems: 'center' }}>
 
         <Flex sx={{
-          flex: '1',
+          flex: 2,
           justifyContent: 'flex-end',
-          alignSelf: 'flex-end'
+          alignSelf: 'flex-end',
+
         }}
         >
           <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><RiTeamLine sx={{ mr: 2 }} />Escuela</Flex></Link>
@@ -74,6 +65,13 @@ const Navbar = () => (
               <Box>Nosotros</Box>
             </Flex>
           </Link>
+        </Flex>
+
+        <Flex sx={{
+          flex: 1,
+          justifyContent: 'flex-end'
+        }}>
+          <Search />
         </Flex>
 
       </Flex>

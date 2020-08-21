@@ -4,10 +4,11 @@ import Layout from '../../components/Layout'
 import Link from '../../components/Link'
 import SubNavbar from '../../components/SubNavbar'
 import escuelaHeader from '../../img/escuela-header.jpg'
+import { RiDoorOpenLine, RiTeamLine, RiFingerprintFill, RiChatSmile2Line } from 'react-icons/ri'
 
 const Alquiler = ({ children, showImage }) => (
     <Layout>
-        <SubNavbar image={escuelaHeader} showImage={showImage} title={'Alquileres de Sala'}>
+        <SubNavbar image={escuelaHeader} showImage={showImage} icon={<RiDoorOpenLine />} title={'Alquileres de Sala'}>
             <Link p={4} to='/alquiler/salas'>Salas</Link>
             <Link p={4} to='/alquiler/condiciones'>Condiciones</Link>
             <Link p={4} to='/alquiler/normas'>Normas</Link>

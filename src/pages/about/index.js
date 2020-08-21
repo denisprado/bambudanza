@@ -4,12 +4,13 @@ import Link from '../../components/Link'
 import Layout from '../../components/Layout'
 import SubNavbar from '../../components/SubNavbar'
 import escuelaHeader from '../../img/escuela-header.jpg'
+import { RiDoorOpenLine, RiTeamLine, RiFingerprintFill, RiChatSmile2Line } from 'react-icons/ri'
 
 const About = ({ children }, ...rest) => {
 
     return (
         <Layout>
-            <SubNavbar title={"Sobre Nosotros"}>
+            <SubNavbar title={"Sobre Nosotros"} icon={<RiFingerprintFill />}>
                 <Link p={4} to='/about/centro'>El Centro</Link>
                 <Link p={4} to='/about/filosofia'>Filosofia</Link>
                 <Link p={4} to='/contacto'>Contacto</Link>

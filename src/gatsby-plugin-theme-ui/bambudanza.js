@@ -1,4 +1,3 @@
-import { lightness, lighten, shade } from '@theme-ui/color'
 
 export const bambudanza = {
     breakpoints: ['40em', '52em', '64em'],
