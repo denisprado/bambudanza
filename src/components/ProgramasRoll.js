@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { BsFillCircleFill } from 'react-icons/bs'
 import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text, jsx, Divider } from 'theme-ui'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-
+import MyHr from '../components/MyHr'
 
 export const IconsNivel = (props) => {
   const { nivel } = props;
@@ -14,7 +14,7 @@ export const IconsNivel = (props) => {
   return (<BsFillCircleFill mr={1} {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 
-const MyHr = () => <Divider mr={3} />
+
 
 const ProgramasRoll = ({ data }) => {
 

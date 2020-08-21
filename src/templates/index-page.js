@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { Image, AspectRatio } from 'theme-ui'
+import { Image, AspectRatio, Box, Flex, Container, Text } from 'theme-ui'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-
-import IndexImage from '../img/index-image.jpeg'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import IndexImage from '../img/grid-poesia-100.jpg'
 import { grayscale } from '@theme-ui/color'
 
 export const IndexPageTemplate = ({
@@ -38,18 +38,27 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <AspectRatio ratio={21 / 9} sx={{
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        objectFit: 'cover',
-        alignItems: 'center',
-        backgroundImage: `url(${IndexImage})`,
-        backgroundPosition: '50% center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        filter: 'grayscale(100%)'
-      }} />
+      <Container>
+
+        <Flex>
+          <Box sx={{ flex: '1' }}>
+            <Text>en Movimiento Mi cadera y mis pies desobedecen,
+            Cada uno tiene su propia independencia,
+            Mis manos acarician el aire …disfruto
+            Brazos ,hombros, cuello, piernas, pies, caderas, manos…
+            Ahora todo tiene sentido.
+            Soy danza
+            Soy vida
+            Soy poesía…
+            es Poesia......donde el CuerpoMi oído escucha
+            Mi corazón palpita
+            El alma despierta
+            Mi cuerpo cobra vida
+          Se mueve</Text>
+          </Box>
+          <Box sx={{ flex: '2' }}><Image src={IndexImage} alt='Poesia' /></Box>
+        </Flex>
+      </Container>
     </Layout >
   )
 }

@@ -9,11 +9,14 @@ import Button from '../components/Button'
 import Link from '../components/Link'
 import Escuela from '../pages/escuela'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import MyHr from '../components/MyHr'
 
 export const ProgramaPostTemplate = ({
   content,
   contentComponent,
   description,
+  nivel,
+  tipo,
   featuredimage,
   dias,
   profesora,
@@ -34,7 +37,7 @@ export const ProgramaPostTemplate = ({
           flexBasis: 'sidebar',
           minWidth: '400px'
         }}>
-          <AspectRatio ratio={4 / 3}>
+          <AspectRatio ratio={4 / 3} >
 
             <PreviewCompatibleImage
               imageInfo={{
@@ -47,45 +50,53 @@ export const ProgramaPostTemplate = ({
           </AspectRatio>
 
 
-          <Heading as='h4' pt={4}>Profesora</Heading>
+
+          <Heading as={'h4'} color={'primary'} mt={4}>Profesora</Heading>
           <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
 
-          <Heading as='h4' pt={4}>Horário</Heading>
-          <ul>
-            {horarios && horarios.length ? (
-              horarios.map((horarios) => (
-                <li key={horarios + `horarios`}>
-                  <Text>{horarios}</Text>
-                </li>
-              ))
-            )
-              : null}
-            {dias && dias.length ? (
+          <MyHr />
+          <Heading as={'h4'} color={'primary'}>Horario</Heading>
+          <Flex>
+            {dias && dias.length &&
               dias.map((dia) => (
-                <li key={dia + `dia`}>
+                <Box key={dia + `dia`}>
                   <Text>{dia}</Text>
-                </li>
+                </Box>
+              ))}
+            {horarios && horarios.length && (
+              horarios.map((horarios) => (
+                <Box key={horarios + `horarios`}>
+                  <Text ml={2}> - {horarios}</Text>
+                </Box>
               ))
-            )
-              : null}
-          </ul>
+            )}
+          </Flex>
 
-          <Heading as='h4' pt={4}>Tarifa</Heading>
-          <ul>
+          <MyHr />
+          <Heading as={'h4'} color={'primary'}>Tipo</Heading>
+          <Flex>
+            {tipo && tipo.length &&
+              tipo.map((tipo) => (
+                <Box key={tipo + `tipo`}>
+                  <Text>{tipo}</Text>
+                </Box>
+              ))}
 
-            {tarifa && tarifa.length ? (
-              tarifa.map((t) => (
-                <li key={t + `tarifa`}>
-                  <Link to="/escuela/tarifas">{t}</Link>
-                </li>
-              ))
-            )
-              : null}
-          </ul>
+          </Flex>
+
+          <MyHr />
+          <Heading as='h4' color={'primary'}>Tarifas</Heading>
+          {tarifa && tarifa.length && (
+            tarifa.map((t) => (
+              <Box key={t + `tarifa`}>
+                <Link to="/escuela/tarifas">{t}</Link>
+              </Box>
+            ))
+          )}
 
         </Box>
         <Box as='main'>
-          <Heading>{title}</Heading>
+          <Heading mb={2}>{title}</Heading>
           <Link to={'/escuela/inscripcion'} state={{ selected: title }}><Button sx={{ my: 4 }}>Inscripción</Button></Link>
 
           <PostContent content={content} />
@@ -128,6 +139,8 @@ const ProgramaPost = ({ data }) => {
       tarifa={post.frontmatter.tarifa}
       horarios={post.frontmatter.horarios}
       dias={post.frontmatter.dias}
+      nivel={post.frontmatter.nivel}
+      tipo={post.frontmatter.tipo}
       featuredimage={post.frontmatter.featuredimage}
     />
   )
@@ -154,6 +167,8 @@ export const pageQuery = graphql`
         profesora
         tarifa
         horarios
+        tipo
+        nivel
         dias
         featuredimage {
           childImageSharp {

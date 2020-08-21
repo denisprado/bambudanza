@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import "./layout.css"
+import Width from './Width'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -50,6 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Flex sx={{ flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
+        {/*<Width /> */}
         <Navbar />
         <Box sx={{
           width: '100%',

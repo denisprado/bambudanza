@@ -9,7 +9,6 @@ const Link = (props) => {
         <Styled.a as={GatsbyLink}
             {...props}
             activeClassName={'active'}
-
             onClick={onClick}
         >
             {children}

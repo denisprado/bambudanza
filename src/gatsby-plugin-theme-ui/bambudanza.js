@@ -1,6 +1,6 @@
 
 export const bambudanza = {
-    breakpoints: ['40em', '52em', '64em'],
+    breakpoints: ['40em', '52em', '70em'],
     space: [
         0,
         4,
@@ -38,7 +38,7 @@ export const bambudanza = {
         heading: 1.25
     },
     colors: {
-        text: "#3d4c53",
+        text: "#454f5b",
         background: "#fff",
         primary: "#428365",
         secondary: "#b4c8c4",
@@ -160,6 +160,7 @@ export const bambudanza = {
             ':hover': {
                 "color": 'primary',
                 "textDecoration": 'bold',
+                "transition": 'all .5s'
             },
             '&.active': {
                 color: "Primary",

@@ -20,7 +20,7 @@ const Search = () => {
 
     const data = useStaticQuery(graphql`
         query HeaderQuery {
-            allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {nin: ["dias-post","tarifa-post","horario-post"]}}}, limit: 10) {
+            allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___templateKey]}, filter: {frontmatter: {templateKey: {nin: ["dias-post","tarifa-post","horario-post"]}}}, limit: 10) {
                 edges {
                   node {
                     id
@@ -134,9 +134,9 @@ const Search = () => {
                             return (
 
                                 <Box key={item.title} bg={'muted'} m={2} p={2}>
-                                    <Heading as={"h3"}><Link sx={{ paddingLeft: 0 }} to={item.slug}>{item.title}</Link></Heading>
+                                    <Heading as={"h3"}><Link to={item.slug}>{item.title}</Link></Heading>
                                     <Text sx={{ lineHeight: 1.2 }}>
-                                        {item.description && item.description.substring(0, 100)}
+                                        {item.description && item.description.substring(0, 100)} (...)
                                     </Text>
                                 </Box>
                             )

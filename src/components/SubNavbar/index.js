@@ -1,6 +1,5 @@
-import React from 'react'
-import { Box, Flex, Image, Container, Heading } from 'theme-ui'
-import { lightness } from '@theme-ui/color';
+import React from 'react';
+import { Box, Container, Flex, Heading, Image } from 'theme-ui';
 
 const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
     <Box>
@@ -10,7 +9,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
         }}>
 
             <Container>
-                <Flex pt={1} sx={{ alignItems: 'flex-end' }}>
+                <Flex pt={1} sx={{ alignItems: ['center', 'center', 'flex-end'], flexDirection: ['column', 'column', 'row'] }}>
 
                     <Flex sx={{ alignItems: 'center', justifyContent: 'flex-start' }}>
                         <Heading as={'h1'} color={'gray'} pb={2} ml={4} mr={1}>{icon}</Heading>
@@ -18,6 +17,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                     </Flex>
 
                     <Flex as='nav' sx={{
+                        flexDirection: ['column', 'column', 'row'],
                         ml: 4,
                         'a': {
                             flex: '1 1 auto',
@@ -25,7 +25,10 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                             paddingY: 3,
                             paddingX: 3,
                             py: 2,
-                            color: 'text'
+                            color: 'text',
+                            '&:hover': {
+                                transition: 'all .5s'
+                            }
                         },
                         'a.active': {
                             borderBottom: '3px solid',

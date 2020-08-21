@@ -14,12 +14,18 @@ const Navbar = () => (
       aria-label="main-navigation"
 
       sx={{
+        flexDirection: ['column', 'column', 'row'],
         alignItems: "center",
         'a': {
+          fontSize: 2,
           paddingY: 2,
           paddingX: 3,
           borderRadius: '8px',
-          color: 'text'
+          textAlign: 'center',
+          color: 'text',
+          '&:hover': {
+            transition: 'all .2s'
+          }
         },
         'a.active': {
           backgroundColor: 'muted',
@@ -43,13 +49,14 @@ const Navbar = () => (
       </Box>
 
       {/* Menu Principal */}
-      <Flex sx={{ flexDirection: 'row', flex: 1, justifyContent: 'right', alignItems: 'center' }}>
+      <Flex sx={{ flexDirection: ['column-reverse', 'column-reverse', 'row'], flex: 1, justifyContent: 'right', alignItems: 'center' }}>
 
         <Flex sx={{
           flex: 2,
+          textAlign: 'center',
           justifyContent: 'flex-end',
-          alignSelf: 'flex-end',
-
+          alignSelf: ['center', 'center', 'flex-end'],
+          py: [4, null, null]
         }}
         >
           <Link partiallyActive={true} to="/escuela"><Flex sx={{ alignItems: 'center' }}><RiTeamLine sx={{ mr: 2 }} />Escuela</Flex></Link>
@@ -69,6 +76,7 @@ const Navbar = () => (
 
         <Flex sx={{
           flex: 1,
+          py: [4, null, null],
           justifyContent: 'flex-end'
         }}>
           <Search />
