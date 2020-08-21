@@ -48,7 +48,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Flex sx={{ flexDirection: 'column', flexGrow: 1, minHeight: '100vh' }}>
+      <Flex sx={{ flexDirection: 'column', flexGrow: 1, minHeight: '100vh', overflowY: 'scroll' }}>
         <Navbar />
         <Box sx={{
           width: '100%',
