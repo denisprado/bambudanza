@@ -69,15 +69,15 @@ const Inscripcion = ({ location }) => {
 
   return (
     <Escuela showImage={false}>
-      <Box as='form'
+      <Box p={4} as='form'
         name="inscriciones"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <Flex>
-          <Box mr={2} sx={{ flex: 1 }}>
+        <Flex p={4}>
+          <Box mr={4} sx={{ flex: 1 }}>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" ref={register} name="form-name" value="inscriciones" />
             <input type="hidden" ref={register} name="action" value="/escuela/inscricion/thanks/" />

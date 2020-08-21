@@ -31,7 +31,7 @@ export const ProgramaPostTemplate = ({
   return (
     <Escuela showImage={false}>
       {helmet || ''}
-      <Flex>
+      <Flex py={4}>
         <Box px={4} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',

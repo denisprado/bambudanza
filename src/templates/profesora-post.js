@@ -22,16 +22,18 @@ export const ProfesoraPostTemplate = ({
   return (
     <Escuela showImage={false}>
       {helmet || ''}
-      <Flex>
-        <Box p={4} as='aside' sx={{
+      <Flex p={4}>
+        <Box pr={4} as='aside' sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
-          minWidth: '300px'
+          minWidth: '300px',
+          margin: '0 auto'
         }}>
           <PreviewCompatibleImage
             imageInfo={{
               image: featuredimage,
               alt: `featured image thumbnail for post ${title}`,
+              styles: { borderRadius: '50%', height: '250px', width: '250px' }
             }}
           />
         </Box>

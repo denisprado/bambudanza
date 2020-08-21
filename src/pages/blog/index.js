@@ -7,12 +7,11 @@ import SubNavbar from '../../components/SubNavbar'
 
 
 
-const BlogIndexPage = ({ children }, ...rest) => {
+const BlogIndexPage = ({ children, showImage }) => {
 
   return (
     <Layout>
-      <SubNavbar {...rest} title={"Blog"} icon={<RiChatSmile2Line />}>
-
+      <SubNavbar showImage={false} title={"Blog"} icon={<RiChatSmile2Line />}>
       </SubNavbar>
       <Container>
         <BlogRoll />

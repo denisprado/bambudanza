@@ -2,12 +2,11 @@ import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Button } from 'theme-ui'
+/** @jsx jsx */
+import { AspectRatio, Box, Button, Flex, Heading, jsx } from 'theme-ui'
 import Content, { HTMLContent } from '../components/Content'
-import Layout from '../components/Layout'
-import Alquiler from '../pages/alquiler'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage.js'
-import { Flex, Box, AspectRatio, Heading } from 'theme-ui'
+import Alquiler from '../pages/alquiler'
 
 export const SalasPostTemplate = ({
   content,

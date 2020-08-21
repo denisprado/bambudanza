@@ -69,9 +69,10 @@ const Inscricion = ({ location }) => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
+        p={4}
       >
         <Flex>
-          <Box mr={2} sx={{ flex: 1 }}>
+          <Box mr={4} sx={{ flex: 1 }}>
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" ref={register} name="form-name" value="presupuestos" />
             <input type="hidden" ref={register} name="action" value="/alquiler/presupuesto/thanks/" />
