@@ -3,37 +3,31 @@ templateKey: programa-post
 title: Danza Contemporárea
 date: 2020-08-11T15:08:43.538Z
 description: >
-  Comienza un nuevo curso. Hora de arrancar motores. De traer al cuerpo todas
-  las herramientas que tiene para bailar, sentir, gozar, estirar, colocarse.
-  Para volver a escuchar los silencios y para rencontrarnos con energías altas.
-  Vuelve la hora de tomar conciencia y escuchar dentro.
-
-  En las clases trabajaremos: improvisaciones guiadas para conectar con diferentes mecanismos, calidades e imágenes desde lo que nos es más cercano y natural y ejercicios técnicos para colocar el cuerpo y ampliar nuestro lenguaje. 
-
-  Pongamos el cuerpo en danza!
+  Llamamos danza contemporánea a todo aquello que pueda expresarnos, transmitirnos, hacernos sentir algo a través del cuerpo.
+  A lo largo del año trabajaremos diferentes técnicas y pautas que abarcan toda esta danza contemporánea.
+  Mis clases se basan en un entrenamiento físico, aportando técnica de suelo, musicalidad, variaciones, improvisación, pautas de creación, etc. 
+  El objetivo es de tener consciencia del control de nuestro cuerpo, de la percepción del espacio y tiempo, así como llevarlo al mayor límite posible dominando diferentes cualidades y dinámicas, pero ante todo bailar y disfrutar bailando, dejándonos llevar y viajar a sitios desconocidos.
 featuredpost: false
-featuredimage: /img/image60.png
+featuredimage: /img/raquel.png
 tags:
   - Danza Contemporárea
-profesora: Iris Muñoz
+profesora: Raquel Ferradaz
 tarifa:
   - 2x a La Semana
 horarios:
-  - 10h a 11h30
+  - 18h30 a 20h
 dias:
   - Martes y Jueves
 tipo:
-  - Escuela Online
+  - Clases Regulares
 estilo:
   - Danza Contemporárea
 nivel:
   - Iniciación
   - Intermedio
-  - Avanzado
 ---
 
-Comienza un nuevo curso. Hora de arrancar motores. De traer al cuerpo todas las herramientas que tiene para bailar, sentir, gozar, estirar, colocarse. Para volver a escuchar los silencios y para rencontrarnos con energías altas. Vuelve la hora de tomar conciencia y escuchar dentro.
-En las clases trabajaremos: improvisaciones guiadas para conectar con diferentes mecanismos, calidades e imágenes desde lo que nos es más cercano y natural y ejercicios técnicos para colocar el cuerpo y ampliar nuestro lenguaje.
-Pongamos el cuerpo en danza!
-
-**Pensado para espacios reducidos**
+Llamamos danza contemporánea a todo aquello que pueda expresarnos, transmitirnos, hacernos sentir algo a través del cuerpo.
+A lo largo del año trabajaremos diferentes técnicas y pautas que abarcan toda esta danza contemporánea.
+Mis clases se basan en un entrenamiento físico, aportando técnica de suelo, musicalidad, variaciones, improvisación, pautas de creación, etc.
+El objetivo es de tener consciencia del control de nuestro cuerpo, de la percepción del espacio y tiempo, así como llevarlo al mayor límite posible dominando diferentes cualidades y dinámicas, pero ante todo bailar y disfrutar bailando, dejándonos llevar y viajar a sitios desconocidos.
