@@ -136,21 +136,18 @@ const ProgramasRoll = ({ data }) => {
 
                 }}
                 key={programa.id}>
-                <AspectRatio ratio={4 / 3}>
+
+                <AspectRatio ratio={4 / 3} bg={'gray'}>
                   <Link href={programa.fields.slug}>
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: programa.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for programas ${programa.frontmatter.title}`,
-                      }}
-                    />
+                    {console.log(programa.frontmatter.featuredimage)}
+                    <Box sx={{ filter: 'grayscale(1)', backgroundSize: 'cover', height: '100%', backgroundImage: `url('${programa.frontmatter.featuredimage.childImageSharp.fluid.src}')`, backgroundPosition: 'center center' }} />
                   </Link>
                 </AspectRatio>
-                <Box>
 
-                  <Flex sx={{ justifyContent: "space-between", alignItems: 'center' }}>
+                <Box>
+                  <Flex mt={2} sx={{ justifyContent: "space-between", alignItems: 'flex-start' }}>
                     <Link href={programa.fields.slug} sx={{ flex: 1 }}>
-                      <Heading as={'h3'} pr={2} mt={2} mr={2}>
+                      <Heading as={'h3'} pr={2} mr={2}>
                         {programa.frontmatter.title}
                       </Heading>
                       <Text sx={{
