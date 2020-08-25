@@ -139,7 +139,6 @@ const ProgramasRoll = ({ data }) => {
 
                 <AspectRatio ratio={4 / 3} bg={'gray'}>
                   <Link href={programa.fields.slug}>
-                    {console.log(programa.frontmatter.featuredimage)}
                     <Box sx={{ filter: 'grayscale(1)', backgroundSize: 'cover', height: '100%', backgroundImage: `url('${programa.frontmatter.featuredimage.childImageSharp.fluid.src}')`, backgroundPosition: 'top center' }} />
                   </Link>
                 </AspectRatio>

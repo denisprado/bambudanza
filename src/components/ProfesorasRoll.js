@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import Link from './Link'
-import { Card, Flex, Text, AspectRatio, Container, Heading } from 'theme-ui'
+import { Card, Flex, Text, AspectRatio, Container, Heading, Box } from 'theme-ui'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
@@ -29,13 +29,7 @@ const ProfesorasRoll = ({ data }) => {
             <Link
               to={post.fields.slug}
             ><AspectRatio ratio={4 / 3}>
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    objectPosition: 'center',
-                    image: post.frontmatter.featuredimage,
-                    alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                  }}
-                />
+                <Box sx={{ filter: 'grayscale(1)', backgroundSize: 'cover', height: '100%', backgroundImage: `url('${post.frontmatter.featuredimage.childImageSharp.fluid.src}')`, backgroundPosition: 'top center' }} />
               </AspectRatio>
             </Link>
             <Text>
