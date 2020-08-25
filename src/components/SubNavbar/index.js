@@ -24,6 +24,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         'a': {
                             flex: '1 1 auto',
                             fontSize: 3,
+                            fontVariantCaps: 'all-petite-caps',
                             mx: 2,
                             paddingY: '11px',
                             paddingX: 3,
@@ -31,7 +32,8 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                             textAlign: 'center',
                             color: 'text',
                             '&:hover': {
-                                transition: 'all .5s'
+                                transition: 'all .5s',
+                                fontWeight: '400'
                             }
                         },
                         'a.active': {
