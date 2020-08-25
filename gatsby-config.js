@@ -40,7 +40,7 @@ module.exports = {
       options: {
         typekit: {
           id: 'ooq5pph',
-          families: ['FF Tisa Pro'],
+          families: ['Source Sans'],
         },
       },
     },

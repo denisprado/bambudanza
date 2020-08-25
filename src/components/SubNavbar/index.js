@@ -37,7 +37,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         'a.active': {
                             borderBottom: '3px solid',
                             color: 'highlight',
-                            fontWeight: 'bolder',
+                            fontWeight: '600',
                             marginBottom: '-3px',
                         },
                         borderBottom: '1px solid "primary"',
