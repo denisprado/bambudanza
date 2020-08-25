@@ -12,9 +12,61 @@ export const bambudanza = {
         256,
         512
     ],
+
+    /*
+    Fira Sans Regular
+font-family: fira-sans, sans-serif;
+font-weight: 400;
+
+Fira Sans Bold
+font-family: fira-sans, sans-serif;
+font-weight: 700;
+
+Fira Sans Heavy
+font-family: fira-sans-2, sans-serif;
+font-weight: 700;
+
+Fira Sans Hair
+font-family: fira-sans-2, sans-serif;
+font-weight: 400;
+
+
+Fira Sans Compressed Bold
+font-family: fira-sans-compressed, sans-serif;
+font-weight: 700;
+
+Fira Sans Compressed Regular
+font-family: fira-sans-compressed, sans-serif;
+font-weight: 400;
+
+Fira Sans Compressed Hair
+font-family: fira-sans-compressed-2, sans-serif;
+font-weight: 400;
+
+Fira Sans Compressed ExtraLight
+font-family: fira-sans-compressed-2, sans-serif;
+font-weight: 700;
+
+Fira Sans Condensed Medium
+font-family: fira-sans-condensed, sans-serif;
+font-weight: 400;
+
+Fira Sans Condensed ExtraBold
+font-family: fira-sans-condensed, sans-serif;
+font-weight: 700;
+
+Fira Sans Condensed Hair
+font-family: fira-sans-condensed-2, sans-serif;
+font-weight: 400;
+
+Fira Sans Condensed ExtraLight
+font-family: fira-sans-condensed-2, sans-serif;
+font-weight: 700;
+
+  */
     fonts: {
-        body: "proxima-nova, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
-        heading: "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+        body: "ff-tisa-web-pro, proxima-nova, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+        heading: "ff-tisa-web-pro, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
         monospace: "Menlo, monospace"
     },
     fontSizes: [
@@ -30,7 +82,7 @@ export const bambudanza = {
     ],
     fontWeights: {
         "body": 400,
-        "heading": 600,
+        "heading": 700,
         "bold": 700
     },
     lineHeights: {

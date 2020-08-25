@@ -3,8 +3,7 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { BsFillCircleFill } from 'react-icons/bs'
-import { Alert, AspectRatio, Badge, Box, Card, Close, Flex, Heading, Link, Text, jsx, Divider } from 'theme-ui'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { AspectRatio, Badge, Box, Card, Close, Divider, Flex, Heading, Link, Text } from 'theme-ui'
 import MyHr from '../components/MyHr'
 
 export const IconsNivel = (props) => {

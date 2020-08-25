@@ -39,8 +39,8 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         typekit: {
-          id: 'xoi7mxq',
-          families: ['Proxima Nova'],
+          id: 'ooq5pph',
+          families: ['FF Tisa Pro'],
         },
       },
     },
