@@ -51,7 +51,7 @@ const ProgramasRoll = ({ data }) => {
 
     <Flex p={4} sx={{ width: '100%' }}>
 
-      {/* Seletor de filtros */}
+      {/* Seletor de filtros
       <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>
         <Box>
           <Heading as={'h4'} color={'primary'}>Tipo de programa</Heading>
@@ -83,9 +83,9 @@ const ProgramasRoll = ({ data }) => {
           {horas && horas.map(t => <Box key={t}><Link onClick={() => addFilter(t)}>{t}</Link></Box>)}
         </Box>
       </Box>
-
-      {/* Filtros atuais */}
+      */}
       <Box sx={{ minWidth: '100%' }} >
+      {/* Filtros atuais
         {
           filters && filters.length > 0 &&
           <Box bx={'muted'} mb={1} ml={2} sx={{ width: '100%' }}>

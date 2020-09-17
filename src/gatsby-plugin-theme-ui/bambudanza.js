@@ -65,8 +65,8 @@ font-weight: 700;
 
   */
     fonts: {
-        body: "source-sans, proxima-nova, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
-        heading: "source-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+        body: "century-gothic, source-sans, proxima-nova, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+        heading: "century-gothic, source-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
         monospace: "Menlo, monospace"
     },
     fontSizes: [
@@ -81,7 +81,7 @@ font-weight: 700;
         96
     ],
     fontWeights: {
-        "body": 300,
+        "body": 400,
         "heading": 700,
         "bold": 700
     },

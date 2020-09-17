@@ -19,7 +19,8 @@ SalasPageTemplate.propTypes = {
 }
 
 const SalasPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { allMarkdownRemark: edges } = data
+  const {node: post} = edges
 
   return (
     <Layout>
@@ -39,12 +40,22 @@ SalasPage.propTypes = {
 export default SalasPage
 
 export const pageQuery = graphql`
-  query SalasPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
+  query SalasPage {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "salas-page"}}}) {
+    edges {
+      node {
+        id
+        html
+        fields {
+          slug
+        }
+        frontmatter {
+          tags
+          templateKey
+          title
+        }
       }
     }
+  }
   }
 `

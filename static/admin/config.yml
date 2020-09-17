@@ -115,8 +115,8 @@ collections:
         }
 
   - name: "profesoras"
-    label: "Profesoras"
-    folder: "src/pages/escuela/profesoras"
+    label: "Profesores"
+    folder: "src/pages/escuela/profesores"
     create: true
     slug: "{{slug}}"
     fields:

@@ -40,7 +40,7 @@ module.exports = {
       options: {
         typekit: {
           id: 'ooq5pph',
-          families: ['Source Sans'],
+          families: ['Century Gothic'],
         },
       },
     },

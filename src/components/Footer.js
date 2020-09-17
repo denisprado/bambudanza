@@ -71,16 +71,16 @@ const Footer = () => {
               <Box pb={3}><Link href="/escuela"><Heading as={'h3'}>Escuela</Heading></Link></Box>
 
               <Box pb={1}><Link href="/escuela/programas">Programas</Link></Box>
-              <Box pb={1}><Link href="/escuela/profesoras">Profesoras</Link></Box>
+              <Box pb={1}><Link href="/escuela/profesores">Profesoras</Link></Box>
               <Box pb={1}><Link href="/escuela/tarifas">Tarifas</Link></Box>
               <Box pb={1}><Link href="/escuela/inscripcion">Inscripcion</Link></Box>
             </Box>
             <Box><Box pb={3}><Link href="/alquiler"><Heading as={'h3'}>Alquiler de Salas</Heading></Link></Box>
 
-              <Box pb={1}><Link href="/escuela/salas">Salas</Link></Box>
-              <Box pb={1}><Link href="/escuela/condiciones">Condiciones</Link></Box>
-              <Box pb={1}><Link href="/escuela/normas">Normas</Link></Box>
-              <Box pb={1}><Link href="/escuela/presupuestos">Presupuesto</Link></Box></Box>
+              <Box pb={1}><Link href="/alquiler/salas">Salas</Link></Box>
+              <Box pb={1}><Link href="/alquiler/condiciones">Condiciones</Link></Box>
+              <Box pb={1}><Link href="/alquiler/normas">Normas</Link></Box>
+              <Box pb={1}><Link href="/alquiler/presupuestos">Presupuesto</Link></Box></Box>
             <Box>
               <Box pb={3}><Link py={3} href="/about"><Heading as={'h3'}>Nosotros</Heading></Link></Box>
 
@@ -93,7 +93,7 @@ const Footer = () => {
 
 
               {blogList && blogList.map(entrie =>
-                <Box pb={3} sx={{ maxWidth: '300px' }}><Link href={entrie.slug}>{entrie.title}</Link></Box>
+                <Box pb={3} key={entrie.title} sx={{ maxWidth: '300px' }}><Link href={entrie.slug}>{entrie.title}</Link></Box>
               )}
             </Box>
           </Flex>
