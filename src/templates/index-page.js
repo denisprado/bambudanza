@@ -2,63 +2,49 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 /** @jsx jsx */
-import { Box, Container, Flex, Heading, Image, Text, jsx } from 'theme-ui'
+import { Box, Flex, Image, jsx } from 'theme-ui'
 import Layout from '../components/Layout'
-import IndexImage from '../img/grid-poesia-100.jpg'
+import Content, { HTMLContent } from '../components/Content'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
-  mainpitch,
   description,
-  intro,
-}) => (
-    <></>
+  content,
+  contentComponent
+}) => {
+  const PageContent = contentComponent || Content
+
+  return (
+    <section>
+      <PageContent className="content" content={content} />
+    </section>
   )
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
 
   return (
     <Layout>
-
-      <Flex py={4} px={4} sx={{ margin: '0 auto', maxWidth: '1440px', flex: 1, alignItems: 'center', justifyItems: 'center' }}>
-        <Box sx={{ flex: '1', 'p': { fontStyle: 'italic' } }}>
-          <Text pl={7}>Mi oído escucha</Text>
-          <Text pl={6}>Mi corazón palpita</Text>
-          <Text pl={5}>El alma despierta</Text>
-          <Text pl={4}>Mi cuerpo cobra vida</Text>
-          <Text pl={3}>Se mueve</Text>
-          <Heading py={2} pl={1}>...donde el <span sx={{ color: 'primary' }}>Cuerpo</span></Heading>
-          <Text pl={2}>Mi cadera y mis pies desobedecen,</Text>
-          <Text pl={1}>Cada uno tiene su propia independencia,</Text>
-          <Text pl={1}>Mis manos acarician el aire …disfruto</Text>
-          <Text pl={2}>Brazos ,hombros, cuello, pies, caderas, manos…</Text>
-          <Heading py={2} pl={1}>en <span sx={{ color: 'primary' }}>Movimiento</span></Heading>
-          <Text pl={3}>Ahora todo tiene sentido.</Text>
-          <Text pl={3}>Soy danza</Text>
-          <Text pl={3}>Soy vida</Text>
-          <Text pl={4}>Soy poesía…</Text>
-          <Text pl={5}>es Poesia......donde el Cuerpo<Heading pl={6}>es <span sx={{ color: 'primary' }}>Poesia...</span></Heading></Text>
-
-        </Box>
-        <Box sx={{ flex: '2' }}><Image src={IndexImage} alt='Poesia' /></Box>
-      </Flex>
-
+      <IndexPageTemplate
+        contentComponent={HTMLContent}
+        title={frontmatter.title}
+        heading={frontmatter.heading}
+        subheading={frontmatter.subheading}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        content={html}
+      />
     </Layout >
   )
 }
@@ -74,37 +60,21 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-                          markdownRemark(frontmatter: {templateKey: {eq: "index-page" } }) {
-                          frontmatter {
-                          title
-        image {
-                          childImageSharp {
-                          fluid(maxWidth: 2048, quality: 100) {
-                          ...GatsbyImageSharpFluid
-                        }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-                          title
-          description
-        }
-        description
-        intro {
-                          blurbs {
-                          image {
-                          childImageSharp {
-                          fluid(maxWidth: 240, quality: 64) {
-                          ...GatsbyImageSharpFluid
-                        }
-              }
+  query IndexPageTemplate
+        {
+          markdownRemark(frontmatter: {templateKey: {eq: "index-page" } }) {
+          html
+          frontmatter {
+            title
+            heading
+            subheading
+            description
+            image {
+              childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
-            text
           }
-          heading
-          description
         }
       }
     }

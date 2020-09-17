@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Box, Container, Flex, jsx, Link, Heading, Text } from 'theme-ui'
-import logo from '../img/logo-footer.svg'
+import logo from '../img/logo.svg'
 import Escuela from '../pages/escuela/index';
 import Inscripcion from '../pages/escuela/inscripcion/index';
 import MyHr from '../components/MyHr'
@@ -48,10 +48,10 @@ const Footer = () => {
     <footer
       sx={{
         width: '100%',
-        backgroundColor: 'primary',
+        backgroundColor: 'gray',
         'a': {
-          color: 'muted',
-          '&:hover': { color: 'white' }
+          color: 'secondary',
+          '&:hover': { color: 'primary' }
         },
       }}>
       <Container mt={3}>

@@ -9,9 +9,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <section className="section section--gradient">
-
       <PageContent className="content" content={content} />
-
     </section>
   )
 }

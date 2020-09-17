@@ -85,7 +85,7 @@ const ProgramasRoll = ({ data }) => {
       </Box>
       */}
       <Box sx={{ minWidth: '100%' }} >
-      {/* Filtros atuais
+        {/* Filtros atuais
         {
           filters && filters.length > 0 &&
           <Box bx={'muted'} mb={1} ml={2} sx={{ width: '100%' }}>
@@ -131,7 +131,7 @@ const ProgramasRoll = ({ data }) => {
               <Card as='article'
                 sx={{
                   flex: '1 1 auto',
-                  maxWidth: '30%',
+                  maxWidth: '33%',
 
                 }}
                 key={programa.id}>
@@ -191,10 +191,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query ProgramasRollQuery {
-        allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___tipo] }
-          filter: { frontmatter: { templateKey: { eq: "programa-post" } } }
-        ) {
+        allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {eq: "programa-post"}, tipo: {eq: "Clases Regulares"}}}) {
           edges {
             node {
               excerpt(pruneLength: 400)

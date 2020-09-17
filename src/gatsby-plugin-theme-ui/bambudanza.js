@@ -92,22 +92,22 @@ font-weight: 700;
     colors: {
         text: "#454f5b",
         background: "#fff",
-        primary: "#428365",
-        secondary: "#b4c8c4",
-        highlight: "#428365",
-        muted: "#eaf2f1",
-        gray: "#b4c8c4",
-        accent: "#545479",
-        darken: "#428365",
+        primary: "#768858",
+        secondary: "#88976d",
+        highlight: "#556b2f",
+        muted: "#eef0ea",
+        gray: "#EEF0EA",
+        accent: "#6b2f55",
+        darken: "#445525",
         iniciacion: 'primary',
         medio: 'accent',
         avanzado: 'red',
         modes: {
             dark: {
-                text: "#b4c8c4",
-                background: "#428365",
-                primary: "#428365",
-                secondary: "#b4c8c4",
+                text: "#EEF0EA",
+                background: "#556b2f",
+                primary: "#556b2f",
+                secondary: "#EEF0EA",
                 highlight: "#F3FCEF",
                 muted: "#e6e6e6"
             }
