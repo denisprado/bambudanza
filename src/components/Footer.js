@@ -70,30 +70,30 @@ const Footer = () => {
             <Box>
               <Box pb={3}><Link href="/escuela"><Heading as={'h3'}>Escuela</Heading></Link></Box>
 
-              <Box pb={1}><Link href="/escuela/programas">Programas</Link></Box>
-              <Box pb={1}><Link href="/escuela/profesores">Profesoras</Link></Box>
-              <Box pb={1}><Link href="/escuela/tarifas">Tarifas</Link></Box>
-              <Box pb={1}><Link href="/escuela/inscripcion">Inscripcion</Link></Box>
+              <Box><Link href="/escuela/programas">Programas</Link></Box>
+              <Box><Link href="/escuela/profesores">Profesoras</Link></Box>
+              <Box><Link href="/escuela/tarifas">Tarifas</Link></Box>
+              <Box><Link href="/escuela/inscripcion">Inscripcion</Link></Box>
             </Box>
             <Box><Box pb={3}><Link href="/alquiler"><Heading as={'h3'}>Alquiler de Salas</Heading></Link></Box>
 
-              <Box pb={1}><Link href="/alquiler/salas">Salas</Link></Box>
-              <Box pb={1}><Link href="/alquiler/condiciones">Condiciones</Link></Box>
-              <Box pb={1}><Link href="/alquiler/normas">Normas</Link></Box>
-              <Box pb={1}><Link href="/alquiler/presupuestos">Presupuesto</Link></Box></Box>
+              <Box><Link href="/alquiler/salas">Salas</Link></Box>
+              <Box><Link href="/alquiler/condiciones">Condiciones</Link></Box>
+              <Box><Link href="/alquiler/normas">Normas</Link></Box>
+              <Box><Link href="/alquiler/presupuestos">Presupuesto</Link></Box></Box>
             <Box>
               <Box pb={3}><Link py={3} href="/about"><Heading as={'h3'}>Nosotros</Heading></Link></Box>
 
-              <Box pb={1}><Link href="/about/centro">El centro</Link></Box>
-              <Box pb={1}><Link href="/about/filosofia">Filosofia</Link></Box>
-              <Box pb={1}><Link href="/about/contacto">Contacto</Link></Box>
+              <Box><Link href="/about/centro">El centro</Link></Box>
+              <Box><Link href="/about/filosofia">Filosofia</Link></Box>
+              <Box><Link href="/about/contacto">Contacto</Link></Box>
             </Box>
             <Box>
               <Box pb={3}><Link py={3} href="/blog"><Heading as={'h3'}>Blog</Heading></Link></Box>
 
 
               {blogList && blogList.map(entrie =>
-                <Box pb={3} key={entrie.title} sx={{ maxWidth: '300px' }}><Link href={entrie.slug}>{entrie.title}</Link></Box>
+                <Box pb={1} key={entrie.title} sx={{ maxWidth: '300px' }}><Link href={entrie.slug}>{entrie.title}</Link></Box>
               )}
             </Box>
           </Flex>
