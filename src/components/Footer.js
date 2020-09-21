@@ -11,7 +11,7 @@ const Footer = () => {
   const [blogList, setBlogList] = useState([])
   const data = useStaticQuery(graphql`
   query BlogListQuery {
-    allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, limit: 10) {
+    allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___title]}, filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, limit: 10) {
       edges {
         node {
           id
@@ -55,7 +55,7 @@ const Footer = () => {
         },
       }}>
       <Container mt={3}>
-        <Flex p={4} sx={{ flex: 1, justifyContent: `space-between`, alignItems: 'flex-start' }} >
+        <Flex p={2} sx={{ flex: 1, justifyContent: `space-between`, alignItems: 'flex-start' }} >
           <Flex>
             <Link href="/">
               <img
@@ -70,7 +70,9 @@ const Footer = () => {
             <Box>
               <Box pb={3}><Link href="/escuela"><Heading as={'h3'}>Escuela</Heading></Link></Box>
 
-              <Box><Link href="/escuela/programas">Programas</Link></Box>
+              <Box><Link href="/escuela/clases">Clases Regulares</Link></Box>
+              <Box><Link href="/escuela/proyetos">Proyetos</Link></Box>
+              <Box><Link href="/escuela/escuela-online">Escuela Online</Link></Box>
               <Box><Link href="/escuela/profesores">Profesoras</Link></Box>
               <Box><Link href="/escuela/tarifas">Tarifas</Link></Box>
               <Box><Link href="/escuela/inscripcion">Inscripcion</Link></Box>

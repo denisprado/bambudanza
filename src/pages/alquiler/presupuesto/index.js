@@ -40,7 +40,7 @@ const Inscricion = ({ location }) => {
   const data = useStaticQuery(graphql`
       query SalasQuery {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___tipo] }
+          sort: { order: ASC, fields: [frontmatter___title] }
           filter: { frontmatter: { templateKey: { eq: "salas-post" } } }
         ) {
           edges {

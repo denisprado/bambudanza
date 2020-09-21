@@ -17,9 +17,10 @@ export const IndexPageTemplate = ({
   const PageContent = contentComponent || Content
 
   return (
-    <section>
+    <>
+      {description}
       <PageContent className="content" content={content} />
-    </section>
+    </>
   )
 }
 
@@ -45,7 +46,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         content={html}
       />
-    </Layout >
+    </Layout>
   )
 }
 

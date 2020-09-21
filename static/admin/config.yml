@@ -90,20 +90,72 @@ collections:
           searchFields: ["title"],
           displayFields: ["title"],
         }
+      - { label: "Estilo", name: "estilo", widget: "list" }
       - {
-          label: "Tipo de Programa",
-          name: "tipo",
+          label: "Nível del Programa",
+          name: "nivel",
           multiple: true,
           widget: "select",
-          options:
-            [
-              "Clases Regulares",
-              "Escuela Online",
-              "Training Escuela",
-              "Cursos de Verano",
-              "Talleres",
-              "Proyetos",
-            ],
+          options: ["Iniciación", "Intermedio", "Avanzado"],
+        }
+
+  - name: "online"
+    label: "Escuela Online"
+    folder: "src/pages/escuela/escuela-online"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "online-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Profesora del Programa",
+          name: "profesora",
+          widget: "relation",
+          collection: "profesoras",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
+      - {
+          label: "Tarifa",
+          name: "tarifa",
+          widget: "relation",
+          multiple: true,
+          collection: "tarifas",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title", "price"],
+        }
+      - {
+          label: "Horarios",
+          name: "horarios",
+          widget: "relation",
+          multiple: true,
+          collection: "horarios",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title"],
+        }
+      - {
+          label: "Dias",
+          name: "dias",
+          widget: "relation",
+          multiple: true,
+          collection: "dias",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title"],
         }
       - { label: "Estilo", name: "estilo", widget: "list" }
       - {
@@ -112,6 +164,36 @@ collections:
           multiple: true,
           widget: "select",
           options: ["Iniciación", "Intermedio", "Avanzado"],
+        }
+
+  - name: "proyetos"
+    label: "Proyetos"
+    folder: "src/pages/escuela/proyetos"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "proyeto-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Tarifa",
+          name: "tarifa",
+          widget: "relation",
+          multiple: true,
+          collection: "tarifas",
+          valueField: "title",
+          searchFields: ["title"],
+          displayFields: ["title", "price"],
         }
 
   - name: "profesoras"

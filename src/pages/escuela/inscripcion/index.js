@@ -44,7 +44,7 @@ const Inscripcion = ({ location }) => {
   const data = useStaticQuery(graphql`
       query ProgramasQuery {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___tipo] }
+          sort: { order: ASC, fields: [frontmatter___templateKey] }
           filter: { frontmatter: { templateKey: { eq: "programa-post" } } }
         ) {
           edges {

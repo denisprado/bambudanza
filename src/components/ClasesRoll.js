@@ -4,19 +4,19 @@ import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import { BsFillCircleFill } from 'react-icons/bs'
 import { AspectRatio, Badge, Box, Card, Close, Divider, Flex, Heading, Link, Text } from 'theme-ui'
-import MyHr from '../components/MyHr'
+import MyHr from './MyHr'
 
 export const IconsNivel = (props) => {
   const { nivel } = props;
   const niveis = ["Iniciación", "Intermedio", "Avanzado"]
-  const colors = ["#0083DD", "#7160C1", '#9A338E'];
+  const colors = ["#919f79", "#768858", '#5e6c46'];
   return (<BsFillCircleFill mr={1} {...props} color={colors[niveis.indexOf(nivel)]} />);
 }
 
 
 
-const ProgramasRoll = ({ data }) => {
-
+const ProgramasRoll = ({ data }, location) => {
+  console.log(location)
   const { edges: programas } = data.allMarkdownRemark;
 
   const [filters, setFilters] = useState([])
@@ -132,7 +132,7 @@ const ProgramasRoll = ({ data }) => {
                 sx={{
                   flex: '1 1 auto',
                   maxWidth: '33%',
-
+                  minWidth: '33%',
                 }}
                 key={programa.id}>
 
@@ -191,7 +191,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query ProgramasRollQuery {
-        allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___tipo]}, filter: {frontmatter: {templateKey: {eq: "programa-post"}, tipo: {eq: "Clases Regulares"}}}) {
+        allMarkdownRemark(sort: {order: ASC, fields: [frontmatter___title]}, filter: {frontmatter: {templateKey: {eq: "programa-post"}}}) {
           edges {
             node {
               excerpt(pruneLength: 400)
@@ -201,7 +201,6 @@ export default () => (
               }
               frontmatter {
                 title
-                tipo
                 nivel
                 estilo
                 horarios

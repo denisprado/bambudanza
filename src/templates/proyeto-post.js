@@ -11,16 +11,12 @@ import Escuela from '../pages/escuela'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import MyHr from '../components/MyHr'
 
-export const ProgramaPostTemplate = ({
+export const ProyetoPostTemplate = ({
   content,
   contentComponent,
   description,
-  nivel,
   featuredimage,
-  dias,
-  profesora,
   tarifa,
-  horarios,
   title,
   id,
   helmet,
@@ -48,29 +44,6 @@ export const ProgramaPostTemplate = ({
 
           </AspectRatio>
 
-
-
-          <Heading as={'h4'} color={'primary'} mt={4}>Profesora</Heading>
-          <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>{profesora}</Link>
-
-          <MyHr />
-          <Heading as={'h4'} color={'primary'}>Horario</Heading>
-          <Flex>
-            {dias && dias.length &&
-              dias.map((dia) => (
-                <Box key={dia + `dia`}>
-                  <Text>{dia}</Text>
-                </Box>
-              ))}
-            {horarios && horarios.length && (
-              horarios.map((horarios) => (
-                <Box key={horarios + `horarios`}>
-                  <Text ml={2}> - {horarios}</Text>
-                </Box>
-              ))
-            )}
-          </Flex>
-
           <MyHr />
 
           <Heading as='h4' color={'primary'}>Tarifas</Heading>
@@ -94,7 +67,7 @@ export const ProgramaPostTemplate = ({
   )
 }
 
-ProgramaPostTemplate.propTypes = {
+ProyetoPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -102,17 +75,17 @@ ProgramaPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const ProgramaPost = ({ data }) => {
+const ProyetoPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
 
-    <ProgramaPostTemplate
+    <ProyetoPostTemplate
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={
-        <Helmet titleTemplate="%s | Programa">
+        <Helmet titleTemplate="%s | Proyeto">
           <title>{`${post.frontmatter.title}`}</title>
           <meta
             name="description"
@@ -123,26 +96,22 @@ const ProgramaPost = ({ data }) => {
       tags={post.frontmatter.tags}
       id={post.id}
       title={post.frontmatter.title}
-      profesora={post.frontmatter.profesora}
       tarifa={post.frontmatter.tarifa}
-      horarios={post.frontmatter.horarios}
-      dias={post.frontmatter.dias}
-      nivel={post.frontmatter.nivel}
       featuredimage={post.frontmatter.featuredimage}
     />
   )
 }
 
-ProgramaPost.propTypes = {
+ProyetoPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ProgramaPost
+export default ProyetoPost
 
 export const pageQuery = graphql`
-  query ProgramaPostByID($id: String!) {
+  query ProyetoPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -151,11 +120,7 @@ export const pageQuery = graphql`
         title
         description
         tags
-        profesora
         tarifa
-        horarios
-        nivel
-        dias
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 640, quality: 100) {

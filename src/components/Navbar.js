@@ -44,7 +44,7 @@ const Navbar = () => (
           },
         }}>
         <Link to="/" title="Logo">
-          <img src={logo} alt="Bambudanza" style={{ width: '250px' }} />
+          <img src={logo} alt="Bambudanza" style={{ width: '220px' }} />
         </Link>
       </Box>
 

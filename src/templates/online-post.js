@@ -11,11 +11,12 @@ import Escuela from '../pages/escuela'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import MyHr from '../components/MyHr'
 
-export const ProgramaPostTemplate = ({
+export const OnlinePostTemplate = ({
   content,
   contentComponent,
   description,
   nivel,
+  tipo,
   featuredimage,
   dias,
   profesora,
@@ -94,7 +95,7 @@ export const ProgramaPostTemplate = ({
   )
 }
 
-ProgramaPostTemplate.propTypes = {
+OnlinePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -102,17 +103,17 @@ ProgramaPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const ProgramaPost = ({ data }) => {
+const OnlinePost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
 
-    <ProgramaPostTemplate
+    <OnlinePostTemplate
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={
-        <Helmet titleTemplate="%s | Programa">
+        <Helmet titleTemplate="%s | Online">
           <title>{`${post.frontmatter.title}`}</title>
           <meta
             name="description"
@@ -128,21 +129,22 @@ const ProgramaPost = ({ data }) => {
       horarios={post.frontmatter.horarios}
       dias={post.frontmatter.dias}
       nivel={post.frontmatter.nivel}
+      tipo={post.frontmatter.tipo}
       featuredimage={post.frontmatter.featuredimage}
     />
   )
 }
 
-ProgramaPost.propTypes = {
+OnlinePost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ProgramaPost
+export default OnlinePost
 
 export const pageQuery = graphql`
-  query ProgramaPostByID($id: String!) {
+  query OnlinePostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

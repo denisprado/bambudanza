@@ -10,7 +10,9 @@ const Escuela = ({ children, showImage }) => {
     return (
         <Layout>
             <SubNavbar image={escuelaHeader} showImage={showImage} title={'Escuela'} icon={<RiTeamLine />}>
-                <Link partiallyActive={true} to='/escuela/programas'>Programas</Link>
+                <Link partiallyActive={true} to='/escuela/clases'>Clases Regulares</Link>
+                <Link partiallyActive={true} to='/escuela/proyetos'>Proyetos</Link>
+                <Link partiallyActive={true} to='/escuela/escuela-online'>Escuela Online</Link>
                 <Link partiallyActive={true} to='/escuela/equipo'>Equipo</Link>
                 <Link partiallyActive={true} to='/escuela/tarifas'>Tarifas</Link >
                 <Link partiallyActive={true} to='/escuela/inscripcion'>Inscripción</Link >

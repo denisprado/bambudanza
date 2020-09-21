@@ -3,26 +3,24 @@ templateKey: programa-post
 title: Manos en la Tierra Pies en el Aire
 date: 2020-08-08T23:04:17.326Z
 description: El lenguaje Afrocontemporáneo une los ritmos y movimientos afros
-  con las técnicas de danza moderna como Limón, Graham, Horton, Release, entre
-  otros.
+    con las técnicas de danza moderna como Limón, Graham, Horton, Release, entre
+    otros.
 featuredpost: true
 featuredimage: /img/image14.png
 tags:
-  - Afrocontempoerâneo
+    - Afrocontempoerâneo
 profesora: Lucyanna Pettengill
 tarifa:
-  - 1 CURSO 1 X A LA SEMANA (2H)
-  - 2x a La Semana  80€
+    - 1 CURSO 1 X A LA SEMANA (2H)
+    - 2x a La Semana  80€
 horarios:
-  - 19h a 20h30
+    - 19h a 20h30
 dias:
-  - Lunes y Miércoles
-tipo:
-  - Clases Regulares
+    - Lunes y Miércoles
 estilo:
-  - Afrocontempoerâneo
+    - Afrocontempoerâneo
 nivel:
-  - Iniciación
+    - Iniciación
 ---
 
 El lenguaje Afrocontemporáneo une los ritmos y movimientos afros con las técnicas de danza moderna como Limón, Graham, Horton, Release, entre otros. Es el punto de encuentro entre lo étnico de la cultura africana y brasileña con la dinámica, fuerza y expresividad de los recursos contemporáneos.

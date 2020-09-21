@@ -14,7 +14,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 <Flex pt={1} sx={{ alignItems: ['center', 'center', 'flex-end'], flexDirection: ['column', 'column', 'row'] }}>
 
                     <Flex sx={{ alignItems: 'center', justifyContent: 'flex-start', flexDirection: ['column', 'row', 'row'] }}>
-                        <Heading as={'h2'} color={'gray'} pb={3} ml={[0, 0, 4]} mr={[0, 0, 1]}>{icon}</Heading>
+                        <Heading as={'h2'} color={'primary'} pb={3} ml={[0, 0, 3]} mr={[0, 0, 1]}>{icon}</Heading>
                         <Heading as={'h2'} color={'primary'} pb={3} ml={2} mr={2}>{title}</Heading>
                     </Flex>
 
@@ -23,12 +23,10 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         ml: [0, 0, 4],
                         'a': {
                             flex: '1 1 auto',
-                            fontSize: 3,
-                            fontVariantCaps: 'all-petite-caps',
+                            fontSize: 2,
                             mx: 2,
-                            paddingY: '11px',
+                            paddingY: 3,
                             paddingX: 3,
-                            minWidth: '150px',
                             textAlign: 'center',
                             color: 'text',
                             '&:hover': {
