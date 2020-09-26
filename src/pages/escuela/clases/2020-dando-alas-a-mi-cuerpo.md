@@ -28,8 +28,7 @@ horarios:
 dias:
     - Martes
 estilo:
-    - Danza
-    - movimiento e improvisación
+    - Danza, movimiento e improvisación
 nivel:
     - Iniciación
 ---
