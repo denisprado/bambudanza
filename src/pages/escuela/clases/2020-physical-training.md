@@ -1,6 +1,6 @@
 ---
 templateKey: programa-post
-title: Danza Contemporárea
+title: Physical training
 date: 2020-08-11T15:08:43.538Z
 description: >
     Llamamos danza contemporánea a todo aquello que pueda expresarnos, transmitirnos, hacernos sentir algo a través del cuerpo.
