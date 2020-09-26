@@ -15,9 +15,9 @@ tags:
   - Laboratório de Movimiento
 profesora: Poliana Lima
 tarifa:
-  - 1 CURSO 1 X A LA SEMANA (2H)
+  - TRIMESTRE 255€
 horarios:
-  - 21h a 22h30
+  - 21h a 22h45
 dias:
   - Lunes y Miércoles
 estilo:
@@ -27,6 +27,8 @@ nivel:
   - Intermedio
   - Avanzado
 ---
+(2 pagos de 127,50€ ( octubre y noviembre)
+
 Este taller será impartido por bloques trimestrales 
 Empezaremos en octubre y finalizaremos en diciembre. 
 El aforo es reducido y cerrado. 
