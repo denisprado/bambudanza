@@ -32,9 +32,9 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
-  - name: "programas"
-    label: "Programas"
-    folder: "src/pages/escuela/programas"
+  - name: "clases"
+    label: "clases Regulares"
+    folder: "src/pages/escuela/clases"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
