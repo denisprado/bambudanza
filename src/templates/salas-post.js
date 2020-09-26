@@ -21,9 +21,9 @@ export const SalasPostTemplate = ({
 
   return (
     <Alquiler showImage={false}>
-      {helmet || ''}
-      <Flex>
-        <Box px={4} as='aside' sx={{
+      
+      <Flex p={4}>
+        <Box px={4} sx={{
           flexGrow: 1,
           flexBasis: 'sidebar',
           minWidth: '400px'
@@ -41,11 +41,12 @@ export const SalasPostTemplate = ({
           </AspectRatio>
 
         </Box>
-        <Box as='main'>
+        <Box>
           <Heading>{title}</Heading>
-          <Link to={'/alquiler/presupuesto'} state={{ selected: title }}><Button sx={{ my: 4 }}>Solicitar presupuesto</Button></Link>
           <PostContent content={content} />
+          
         </Box>
+        <Box><Link to={'/alquiler/presupuesto'} state={{ selected: title }}><Button >Solicitar presupuesto</Button></Link></Box>
       </Flex>
     </Alquiler>
   )
