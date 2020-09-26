@@ -11,7 +11,7 @@ description: >
 
     El programa está dirigido a todo tipo de público no teniendo limitación de edad  ni nivel técnico.
 featuredpost: true
-featuredimage: /img/default-image.png
+featuredimage: /img/picimage19.jpg
 tags:
     - Proyeto
 tarifa:

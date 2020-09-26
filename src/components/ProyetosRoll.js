@@ -35,7 +35,7 @@ const ProyetosRoll = ({ data }) => {
                 sx={{
                   flex: '1 1',
                   maxWidth: '33%',
-
+                  minWidth: '33%'
                 }}
                 key={proyeto.id}>
 
