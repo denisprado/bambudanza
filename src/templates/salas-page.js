@@ -14,7 +14,7 @@ export const SalasPageTemplate = ({ title, content, contentComponent }) => {
 }
 
 SalasPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -55,7 +55,7 @@ const SalasPage = () => {
 }
 
 SalasPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 }
 
 export default SalasPage
