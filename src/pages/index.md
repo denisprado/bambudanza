@@ -15,9 +15,9 @@ Mi cuerpo cobra **vida**
 
 **Se mueve**
 
-Mi cadera y mis pies desobedecen,
-Cada uno tiene su propia independencia,
-Mis manos acarician el aire …**disfruto**
+Mi cadera y mis pies desobedecen,  
+Cada uno tiene su propia independencia,  
+Mis manos acarician el aire …**disfruto**  
 Brazos ,hombros, cuello, piernas, pies, caderas, manos…
 
 Ahora todo tiene sentido
