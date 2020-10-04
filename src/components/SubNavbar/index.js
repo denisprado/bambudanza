@@ -48,7 +48,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 </Flex>
             </Container>
         </Box>
-        {showImage && <Flex sx={{ backgroundImage: `url(${image && image && showImage && image})`, backgroundPosition: 'center center', backgroundSize: 'cover', minHeight: '60vh' }}>
+        {showImage && <Flex sx={{ backgroundImage: `url(${image && image && showImage && image})`, backgroundPosition: 'center center', backgroundSize: 'cover', minHeight: '60vh', filter: 'grayscale(100%)' }}>
         </Flex >
         }
     </Flex >
