@@ -22,6 +22,6 @@ nivel:
 ---
 <!--StartFragment-->
 
-La intención de este taller es acercar a bailarines de todas las disciplinas, actores y todo aquel que quiera adentrarse a formas de movimientos con las raíces Africanas. Dando hincapié a un trabajo que abrirá un abanico de posibilidades de movimientos y musicalidad, aportando a todos los artistas y aficionados ideas de movimientos y expresión corporal que sumará a vuestro repertorio artístico. África y Latinoamérica nos permitirá experimentar desde las danzas tradicionales movimientos llenos de fuerza y expresividad. El trabajo en conjunto entre la música y la danza con sus diferencias y similitudes desarrollarán un trabajo dinámico, con un hilo conductor en común que nos llevará al mismo objetivo.
+La intención de esta clase es acercar los alumnos a las danzas de raiz Africana y Latinoamericana, permitiendo experimentar movimientos tradicionales llenos de fuerza y expresividad. El trabajo en conjunto entre la música y la danza, con sus diferencias y similitudes, proporcionará el desarrollo de una actividad dinámica, con un hilo conductor en común.
 
 <!--EndFragment-->
