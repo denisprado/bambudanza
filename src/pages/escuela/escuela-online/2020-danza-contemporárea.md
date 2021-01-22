@@ -1,6 +1,6 @@
 ---
 templateKey: online-post
-title: Danza Contemporárea
+title: Danza Contemporánea
 date: 2020-08-11T15:08:43.538Z
 description: >
   Comienza un nuevo curso. Hora de arrancar motores. De traer al cuerpo todas
