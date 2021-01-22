@@ -19,11 +19,11 @@ featuredpost: false
 featuredimage: /img/unnamed.jpg
 tags:
   - Danza
-  - movimiento e improvisación
+  - Movimiento e Improvisação
 profesora: Lucyanna Pettengill
 tarifa:
-  - 1 CURSO 1 X A LA SEMANA (2H)
   - 1 CURSO  2 X A LA SEMANA
+  - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
   - 20h a 22h
 dias:
