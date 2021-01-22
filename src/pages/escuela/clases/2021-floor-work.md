@@ -11,7 +11,7 @@ profesora: Raquel Ferradás
 tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
 horarios:
-  - 20h30 a 22h
+  - 20h30 a 22h30
 dias:
   - Jueves
 estilo:
