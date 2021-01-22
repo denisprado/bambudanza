@@ -9,7 +9,7 @@ tags:
   - "#Creación #Movimiento"
 profesora: Poliana Lima
 tarifa:
-  - TRIMESTRE 255€
+  - TRIMESTRE (2 CUOTAS DE 97,50€)
 horarios:
   - 20h30 a 22h
 dias:
