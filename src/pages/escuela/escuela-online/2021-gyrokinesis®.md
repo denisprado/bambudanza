@@ -15,7 +15,7 @@ tarifa:
   - 2 X A LA SEMANA ONLINE
   - 1 X A LA SEMANA ONLINE
 horarios:
-  - 11h00 a 13h00
+  - 12h00 a 13h30
 dias:
   - Martes y Jueves
 estilo:
