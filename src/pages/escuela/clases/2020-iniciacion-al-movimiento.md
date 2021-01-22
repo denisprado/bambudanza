@@ -6,19 +6,19 @@ description: Danza contemporánea para principiantes
 featuredpost: false
 featuredimage: /img/iniciacion-al-movimiento.jpg
 tags:
-    - Danza contemporánea
+  - Danza contemporánea
 profesora: Lucyanna Pettengill
 tarifa:
-    - 1 CURSO 1 X A LA SEMANA (2H)
-    - 2x a La Semana  80€
+  - 1 CURSO 1  X A LA SEMANA (1H30)
+  - 1 CURSO  2 X A LA SEMANA
 horarios:
-    - 18h a 19h30
+  - 18h a 19h30
 dias:
-    - Lunes y Miércoles
+  - Lunes y Miércoles
 estilo:
-    - danza Contemporânea
+  - Danza Contemporânea
 nivel:
-    - Iniciación
+  - Iniciación
 ---
 
 Vamos a trabajar los mecanismos más básicos del cuerpo de una forma específica de pensar las articulaciones y los engranajes anatómicos, llevando en cuenta las posibilidades y las organizaciones de nuestra estructura física siempre con mucho respecto a los límites de cada cuerpo.
