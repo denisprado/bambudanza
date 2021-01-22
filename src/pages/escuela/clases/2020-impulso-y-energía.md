@@ -3,24 +3,24 @@ templateKey: programa-post
 title: Impulso y Energía
 date: 2020-08-06T18:58:57.088Z
 description: "En este curso nuestro objetivo es trabajar elementos técnicos de
-    la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya
-    iniciado. "
+  la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya
+  iniciado. "
 featuredpost: false
 featuredimage: /img/impulso-y-energia.jpg
 tags:
-    - Danza contemporánea
+  - Danza contemporánea
 profesora: Poliana Lima
 tarifa:
-    - 1 CURSO 1 X A LA SEMANA (2H)
-    - 2x a La Semana  80€
+  - 1 CURSO  2 X A LA SEMANA
+  - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-    - 18h a 19h30
+  - 18h a 19h30
 dias:
-    - Lunes y Miércoles
+  - Lunes y Miércoles
 estilo:
-    - Danza Contemporânea
+  - Danza Contemporânea
 nivel:
-    - Intermedio
+  - Intermedio
 ---
 
 En este curso nuestro objetivo es trabajar elementos técnicos de la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya iniciado.
