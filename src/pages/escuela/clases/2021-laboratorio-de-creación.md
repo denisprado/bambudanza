@@ -11,7 +11,7 @@ profesora: Poliana Lima
 tarifa:
   - TRIMESTRE (2 CUOTAS DE 97,50€)
 horarios:
-  - 20h30 a 22h
+  - 20h30 a 22h30
 dias:
   - Martes
 estilo:
