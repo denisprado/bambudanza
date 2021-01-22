@@ -3,26 +3,33 @@ templateKey: programa-post
 title: Physical training
 date: 2020-08-11T15:08:43.538Z
 description: >
-    Llamamos danza contemporánea a todo aquello que pueda expresarnos, transmitirnos, hacernos sentir algo a través del cuerpo.
-    A lo largo del año trabajaremos diferentes técnicas y pautas que abarcan toda esta danza contemporánea.
-    Mis clases se basan en un entrenamiento físico, aportando técnica de suelo, musicalidad, variaciones, improvisación, pautas de creación, etc. 
-    El objetivo es de tener consciencia del control de nuestro cuerpo, de la percepción del espacio y tiempo, así como llevarlo al mayor límite posible dominando diferentes cualidades y dinámicas, pero ante todo bailar y disfrutar bailando, dejándonos llevar y viajar a sitios desconocidos.
+  Llamamos danza contemporánea a todo aquello que pueda expresarnos,
+  transmitirnos, hacernos sentir algo a través del cuerpo. A lo largo del año
+  trabajaremos diferentes técnicas y pautas que abarcan toda esta danza
+  contemporánea. Mis clases se basan en un entrenamiento físico, aportando
+  técnica de suelo, musicalidad, variaciones, improvisación, pautas de creación,
+  etc.  El objetivo es de tener consciencia del control de nuestro cuerpo, de la
+  percepción del espacio y tiempo, así como llevarlo al mayor límite posible
+  dominando diferentes cualidades y dinámicas, pero ante todo bailar y disfrutar
+  bailando, dejándonos llevar y viajar a sitios desconocidos.
 featuredpost: false
 featuredimage: /img/raquel.png
 tags:
-    - Danza Contemporárea
-profesora: Raquel Ferradaz
+  - Danza Contemporárea
+profesora: Raquel Ferradas
 tarifa:
-    - 2x a La Semana
+  - 1 CURSO  2 X A LA SEMANA
+  - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-    - 18h30 a 20h
+  - 19h a 20h30
+  - 10h00 a 11h30
 dias:
-    - Martes y Jueves
+  - Martes y Jueves
 estilo:
-    - Danza Contemporárea
+  - Danza Contemporárea
 nivel:
-    - Iniciación
-    - Intermedio
+  - Iniciación
+  - Intermedio
 ---
 
 Llamamos danza contemporánea a todo aquello que pueda expresarnos, transmitirnos, hacernos sentir algo a través del cuerpo.
