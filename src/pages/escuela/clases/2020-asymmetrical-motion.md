@@ -26,11 +26,12 @@ tags:
 profesora: Lucas Condro
 tarifa:
   - 1X A LA SEMANA
-  - 2x a La Semana
+  - 1 CURSO  2 X A LA SEMANA
 horarios:
   - 10h a 11h30
 dias:
   - Martes y Jueves
+  - Lunes y Miércoles
 estilo:
   - Danza contemporánea
 nivel:
