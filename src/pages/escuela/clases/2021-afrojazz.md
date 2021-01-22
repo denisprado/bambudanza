@@ -10,6 +10,7 @@ tags:
 profesora: Arnaldo Iarsoli
 tarifa:
   - 1 CURSO  2 X A LA SEMANA
+  - 1 X A LA SEMANA (1H30)
 horarios:
   - 20h00 a 21h30
 dias:
