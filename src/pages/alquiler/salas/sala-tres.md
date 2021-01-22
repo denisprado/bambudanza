@@ -1,13 +1,13 @@
 ---
 templateKey: salas-post
-title: SALA 3 / PLANTA 3
+title: SALA 3 / 3ª PLANTA
 date: 2016-12-17T15:04:10.000Z
+description: Sala 3.
 featuredpost: false
 featuredimage: /img/sala6.jpg
-description: Sala 3.
 tags:
-    - flavor
-    - tasting
+  - flavor
+  - tasting
 ---
 
 SALA 3 / PLANTA 3
