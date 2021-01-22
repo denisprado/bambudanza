@@ -1,6 +1,6 @@
 ---
 templateKey: salas-post
-title: SALA 4 / 1ª PLANTA
+title: SALA 4 / 4ª PLANTA
 date: 2016-12-17T15:04:10.000Z
 description: SALA 4
 featuredpost: false
