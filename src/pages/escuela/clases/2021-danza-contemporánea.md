@@ -4,10 +4,10 @@ title: Danza Contemporánea
 date: 2021-01-22T17:04:58.928Z
 description: Técnicas de danza contemporánea
 featuredpost: true
-featuredimage: /img/albareducida.jpg
+featuredimage: /img/ana-y-alba.jpg
 tags:
   - Danza
-profesora: Iris Muñoz
+profesora: Ana Erdozain y Alba González
 tarifa:
   - 1 CURSO 1 X A LA SEMANA (2H)
   - 1 CURSO  2 X A LA SEMANA
