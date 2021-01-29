@@ -4,7 +4,7 @@ title: Danza Contemporánea
 date: 2021-01-22T17:04:58.928Z
 description: Técnicas de danza contemporánea
 featuredpost: true
-featuredimage: /img/ana-y-alba.jpg
+featuredimage: /img/anayalba.png
 tags:
   - Danza
 profesora: Ana Erdozain y Alba González
