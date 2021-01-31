@@ -349,7 +349,7 @@ collections:
     - name: "pages"
       label: "Pages"
       files:
-          - file: "src/pages/index.md"
+          - file: "src/pages/index.js"
             label: "Pagina Inicial"
             name: "index"
             fields:
@@ -377,7 +377,7 @@ collections:
                   }
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Body", name: "body", widget: "markdown" }
-          - file: "src/pages/about/centro.md"
+          - file: "src/pages/about/centro.mdx"
             label: "El Centro"
             name: "centro"
             fields:
@@ -389,7 +389,7 @@ collections:
                   }
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Body", name: "body", widget: "markdown" }
-          - file: "src/pages/about/filosofia.md"
+          - file: "src/pages/about/filosofia.mdx"
             label: "Filosofia"
             name: "filosofia"
             fields:

@@ -6,8 +6,8 @@ description: Sala dos.
 featuredpost: false
 featuredimage: /img/sala2.jpg
 tags:
-  - flavor
-  - tasting
+    - flavor
+    - tasting
 ---
 
 SALA 2 / PLANTA 2 -120 METROS CUADRADOS

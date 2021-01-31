@@ -1,10 +1,11 @@
-import React from 'react'
-import Alquiler from '..'
-import SalasRoll from '../../../components/SalasRoll'
+import React from "react";
+import Alquiler from "..";
+import SalasRoll from "../../../components/SalasRoll";
 
-const SalasIndexPage = () =>
+const SalasIndexPage = () => (
     <Alquiler showImage={false}>
         <SalasRoll />
     </Alquiler>
+);
 
 export default SalasIndexPage;

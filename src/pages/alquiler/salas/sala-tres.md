@@ -6,8 +6,8 @@ description: Sala 3.
 featuredpost: false
 featuredimage: /img/sala6.jpg
 tags:
-  - flavor
-  - tasting
+    - flavor
+    - tasting
 ---
 
 SALA 3 / PLANTA 3
