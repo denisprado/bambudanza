@@ -22,8 +22,7 @@ horarios:
 dias:
     - Miércoles
 estilo:
-    - Danza
-    - movimiento e improvisación
+    - Danza, movimiento e improvisación
 nivel:
     - Iniciación
 ---

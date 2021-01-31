@@ -1,10 +1,10 @@
 import React from "react";
 import Escuela from "../index";
-import ClasesRoll from "../../../components/ClasesRoll";
+import IntensivosRoll from "../../../components/IntensivosRoll";
 
 const ProgramasIndexPage = (location) => (
     <Escuela showImage={false}>
-        <ClasesRoll />
+        <IntensivosRoll />
     </Escuela>
 );
 
