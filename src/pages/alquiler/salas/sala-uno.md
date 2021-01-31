@@ -1,13 +1,13 @@
 ---
 templateKey: salas-post
-title: SALA 1 / PLANTA 1
+title: SALA 4 / 4ª PLANTA
 date: 2016-12-17T15:04:10.000Z
+description: SALA 4
 featuredpost: false
 featuredimage: /img/sala1.jpg
-description: SALA 1 / PLANTA 1.
 tags:
-    - flavor
-    - tasting
+  - flavor
+  - tasting
 ---
 
 |                                                                                                                     |                                                                                  |                                                |
