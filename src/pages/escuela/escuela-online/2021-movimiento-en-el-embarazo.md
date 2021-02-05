@@ -6,7 +6,7 @@ description: |+
   Yoga, pilates y danza
 
 featuredpost: true
-featuredimage: /img/rebeka.jpg
+featuredimage: /img/rebeca.png
 tags:
   - Movimiento en el embarazo
 profesora: Rebeka Chapman
