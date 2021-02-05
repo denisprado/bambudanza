@@ -11,7 +11,7 @@ tags:
   - "#floorwork #vickymiranda #danzacontemporánea"
 profesora: Victoria P. Miranda
 tarifa:
-  - "-"
+  - Intensivos de fin de semana
 horarios:
   - 11h00 a 14h00
 dias:
