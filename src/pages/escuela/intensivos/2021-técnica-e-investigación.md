@@ -9,7 +9,7 @@ tags:
   - "#movimiento #danza"
 profesora: Natália Fernandes
 tarifa:
-  - "-"
+  - Intensivos de fin de semana
 horarios:
   - 11h00 a 14h00
 dias:
