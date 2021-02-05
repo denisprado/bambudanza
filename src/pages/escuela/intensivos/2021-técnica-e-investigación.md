@@ -1,0 +1,24 @@
+---
+templateKey: intensivo-post
+title: TÉCNICA E INVESTIGACIÓN
+date: 2021-02-05T16:22:24.522Z
+description: ...
+featuredpost: false
+featuredimage: /img/nataliafernandes.png
+tags:
+  - "#movimiento #danza"
+profesora: Natália Fernandes
+tarifa:
+  - "-"
+horarios:
+  - 11h00 a 13h00
+dias:
+  - Lunes a Viernes
+estilo:
+  - Danza Contemporánea
+nivel:
+  - Iniciación
+  - Intermedio
+  - Avanzado
+---
+...
