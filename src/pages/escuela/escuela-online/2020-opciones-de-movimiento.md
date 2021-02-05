@@ -17,7 +17,7 @@ profesora: Poliana Lima
 tarifa:
   - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-  - 19h a 20h30
+  - 18h45 a 20h15
 dias:
   - Martes
 estilo:
