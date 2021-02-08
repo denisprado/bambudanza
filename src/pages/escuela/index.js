@@ -21,8 +21,8 @@ const Escuela = ({ children, showImage }) => {
                 <Link partiallyActive={true} to="/escuela/intensivos">
                     Intensivos
                 </Link>
-                <Link partiallyActive={true} to="/escuela/proyetos">
-                    Proyetos
+                <Link partiallyActive={true} to="/escuela/proyectos">
+                    Proyectos
                 </Link>
                 <Link partiallyActive={true} to="/escuela/escuela-online">
                     Escuela Online

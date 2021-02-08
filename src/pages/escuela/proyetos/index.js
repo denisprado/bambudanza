@@ -1,10 +1,11 @@
-import React from 'react'
-import Escuela from '../index'
-import ProyetosRoll from '../../../components/ProyetosRoll'
+import React from "react";
+import Escuela from "../index";
+import ProyectosRoll from "../../../components/ProyectosRoll";
 
-const ProyetosIndexPage = (location) =>
+const ProyectosIndexPage = (location) => (
     <Escuela showImage={false}>
-        <ProyetosRoll />
+        <ProyectosRoll />
     </Escuela>
+);
 
-export default ProyetosIndexPage;
+export default ProyectosIndexPage;

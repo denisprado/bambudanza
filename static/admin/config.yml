@@ -232,9 +232,9 @@ collections:
                 options: ["Iniciación", "Intermedio", "Avanzado"],
             }
 
-    - name: "proyetos"
-      label: "Proyetos"
-      folder: "src/pages/escuela/proyetos"
+    - name: "proyectos"
+      label: "Proyectos"
+      folder: "src/pages/escuela/proyectos"
       create: true
       slug: "{{year}}-{{slug}}"
       fields:
@@ -242,7 +242,7 @@ collections:
                 label: "Template Key",
                 name: "templateKey",
                 widget: "hidden",
-                default: "proyeto-post",
+                default: "proyecto-post",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Publish Date", name: "date", widget: "datetime" }
