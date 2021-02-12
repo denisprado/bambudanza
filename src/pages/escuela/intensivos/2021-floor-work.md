@@ -15,7 +15,6 @@ tarifa:
 horarios:
   - 11h00 a 14h00
 dias:
-  - Lunes a Viernes
   - Sábado y Domingo
 estilo:
   - Danza Contemporánea
