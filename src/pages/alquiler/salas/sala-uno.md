@@ -3,8 +3,8 @@ templateKey: salas-post
 title: SALA 4 / 4ª PLANTA
 date: 2016-12-17T15:04:10.000Z
 description: SALA 4
-featuredpost: false
-featuredimage: /img/sala1.jpg
+featuredpost: true
+featuredimage: /img/sala4.png
 tags:
   - flavor
   - tasting
