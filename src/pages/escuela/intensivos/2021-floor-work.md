@@ -22,4 +22,9 @@ estilo:
 nivel:
   - Intermedio
 ---
-.....
+<!--StartFragment-->
+
+Partiremos del principio que el suelo es un amigo del cuerpo, explorando diferentes formas de llegar y salir del mismo. Investigaremos várias dinámicas y cualidades del movimiento, buscando un lenguaje más personal y formas de movernos más naturales para nuestro cuerpo, siempre trabajando desde el centro.\
+La idea es que se vaya acumulando la energía, creando una dinámica continua, que se convertirá en una de las herramientas básicas de mi trabajo. La repetición y la continuidad de la clase nos aportará un estado activo, tanto físico como psíquico. Esto nos ayudará a trabajar de una forma mas instintiva con nuestro cuerpo y sacar el animal que llevamos dentro.
+
+<!--EndFragment-->
