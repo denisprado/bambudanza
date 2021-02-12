@@ -8,7 +8,7 @@ description: >
   hasta 4 clases por un precio único de 20€. Este proyecto se realiza
   normalmente en el inicio de cada trimestre.
 featuredpost: true
-featuredimage: /img/default-image.png
+featuredimage: /img/maraton.jpeg
 tags:
   - Proyecto
 tarifa:
