@@ -50,7 +50,7 @@ export const ProgramaPostTemplate = ({
                         />
                     </AspectRatio>
 
-                    <Heading as={"h4"} color={"primary"} mt={4}>
+                    <Heading as={"h4"} color={"primary"} mt={2}>
                         Profesor(a)
                     </Heading>
                     <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>
@@ -59,9 +59,9 @@ export const ProgramaPostTemplate = ({
 
                     <MyHr />
                     <Heading as={"h4"} color={"primary"}>
-                        Horario
+                        Dias
                     </Heading>
-                    <Flex>
+                    <Flex style={{ flexDirection: "column" }}>
                         {dias &&
                             dias.length &&
                             dias.map((dia) => (
@@ -69,6 +69,13 @@ export const ProgramaPostTemplate = ({
                                     <Text>{dia}</Text>
                                 </Box>
                             ))}
+                    </Flex>
+
+                    <MyHr />
+                    <Heading as={"h4"} color={"primary"}>
+                        Horario
+                    </Heading>
+                    <Flex style={{ flexDirection: "column" }}>
                         {horarios &&
                             horarios.length &&
                             horarios.map((horarios) => (
@@ -77,7 +84,6 @@ export const ProgramaPostTemplate = ({
                                 </Box>
                             ))}
                     </Flex>
-
                     <MyHr />
 
                     <Heading as="h4" color={"primary"}>
