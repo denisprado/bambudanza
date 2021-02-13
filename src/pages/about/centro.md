@@ -1,0 +1,8 @@
+BambúDanza - Centro de Arte y Movimiento fue fundado en Madrid/ 2009 por la bailarina, coreógrafa y pedagoga Lucyanna Pettengill.
+Nace de la necesidad de crear un espacio dedicado a la danza que integrara el rigor del estudio técnico, la exploración del potencial expresivo de cada alumn@ con el cuidado y consciencia del cuerpo en movimiento.
+Enfocados en la danza contemporánea, trabajamos con un equipo de profesionales de referencia en el escenario de la creación actual, comprometidos con el arte, la pedagogía, la pluralidad de lenguajes y técnicas.
+Nuestras clases están dirigidas a diferentes perfiles, desde iniciantes hasta profesionales en distintos formatos, tales como: clases regulares, cursos intensivos y entrenamientos.
+Además de nuestros cursos y talleres, BambúDanza acoge diferentes proyectos enfocados en las prácticas somáticas, terapéuticas y de desenvolvimiento personal a través del alquiler de sus instalaciones.
+La energía del centro está abierta a un cambio constante para innovación y renovación de todas sus propuestas, por parte de sus alumnos, profesores y colaboradores.
+
+BambúDanza es un espacio para pensar, sentir y construir un cuerpo inteligente que tenga placer en moverse.
