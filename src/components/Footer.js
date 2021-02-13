@@ -104,9 +104,7 @@ const Footer = () => {
                                 </Link>
                             </Box>
                             <Box>
-                                <Link href="/escuela/profesores">
-                                    Profesoras
-                                </Link>
+                                <Link href="/escuela/equipo">Equipo</Link>
                             </Box>
                             <Box>
                                 <Link href="/escuela/tarifas">Tarifas</Link>
