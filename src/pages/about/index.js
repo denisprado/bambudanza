@@ -1,15 +1,10 @@
 import React from "react";
-import { Box, Flex, Image, jsx, Container } from "theme-ui";
-import Link from "../../components/Link";
+import { RiFingerprintFill } from "react-icons/ri";
+import { Container } from "theme-ui";
 import Layout from "../../components/Layout";
+import Link from "../../components/Link";
 import SubNavbar from "../../components/SubNavbar";
-import aboutHeader from "../../img/about-header.jpg";
-import {
-    RiDoorOpenLine,
-    RiTeamLine,
-    RiFingerprintFill,
-    RiChatSmile2Line,
-} from "react-icons/ri";
+import aboutHeader from "../../img/nosotros.jpeg";
 
 const About = ({ children, showImage }) => {
     return (
@@ -30,7 +25,7 @@ const About = ({ children, showImage }) => {
                     Contacto
                 </Link>
             </SubNavbar>
-            <Container>{children}</Container>
+            <Container p={4}>{children}</Container>
         </Layout>
     );
 };
