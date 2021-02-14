@@ -3,7 +3,11 @@ import React from "react";
 import { Box, Container, Flex, Heading, jsx } from "theme-ui";
 
 const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
-    <Flex sx={{ flexDirection: "column", alignItems: "stretch" }}>
+    <Flex
+        sx={{
+            flexDirection: "column",
+        }}
+    >
         <Box
             sx={{
                 borderBottom: "2px solid",
@@ -78,19 +82,25 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                 </Flex>
             </Container>
         </Box>
-        {showImage && (
-            <Flex
-                sx={{
-                    backgroundImage: `url(${
-                        image && image && showImage && image
-                    })`,
-                    backgroundPosition: "center center",
-                    backgroundSize: "cover",
-                    minHeight: "100vh",
-                    filter: "grayscale(100%)",
-                }}
-            ></Flex>
-        )}
+        <>
+            {showImage && (
+                <Flex
+                    sx={{
+                        backgroundImage: `url(${
+                            image && image && showImage && image
+                        })`,
+                        backgroundPosition: "center center",
+                        backgroundPositionX: "center",
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        minHeight: "75vh",
+                        width: "100vw",
+                        margin: "0 auto",
+                        filter: "grayscale(100%)",
+                    }}
+                ></Flex>
+            )}
+        </>
     </Flex>
 );
 
