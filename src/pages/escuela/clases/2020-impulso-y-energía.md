@@ -5,7 +5,7 @@ date: 2020-08-06T18:58:57.088Z
 description: "En este curso nuestro objetivo es trabajar elementos técnicos de
   la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya
   iniciado. "
-featuredpost: false
+featuredpost: true
 featuredimage: /img/impulso-y-energia.jpg
 tags:
   - Danza contemporánea
@@ -14,13 +14,13 @@ tarifa:
   - 1 CURSO  2 X A LA SEMANA
   - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-  - 18h a 19h30
-  - 19h30 a 21h
+  - 18:00 a 19:30 Horas
 dias:
   - Lunes y Miércoles
 estilo:
-  - Danza Contemporânea
+  - Danza Contemporánea
 nivel:
+  - Iniciación
   - Intermedio
 ---
 
