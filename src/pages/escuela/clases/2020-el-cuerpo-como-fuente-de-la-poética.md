@@ -10,8 +10,8 @@ description: >
   El aforo es reducido y cerrado. 
 
   Está dirigido a todos los que quieran investigar su cuerpo y su movimiento a través de sus elementos inherentes. Trabajaremos desde la propia estructura corporal, de su peso, de su relación con el espacio y con el tiempo. Las sesiones son de improvisación, para todos los niveles.
-featuredpost: false
-featuredimage: /img/el-cuerpo-como-fuente.jpg
+featuredpost: true
+featuredimage: /img/poliana-ii.jpg
 tags:
   - Laboratório de Movimiento
 profesora: Poliana Lima
