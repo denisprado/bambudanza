@@ -6,7 +6,7 @@ description: "En este curso nuestro objetivo es trabajar elementos técnicos de
   la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya
   iniciado. "
 featuredpost: true
-featuredimage: /img/poli.png
+featuredimage: /img/el-cuerpo-como-fuente.jpg
 tags:
   - Danza contemporánea
 profesora: Poliana Lima
