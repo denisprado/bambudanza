@@ -1,6 +1,6 @@
 ---
 templateKey: programa-post
-title: Asymmetrical-Motion
+title: Asymetrical-Motion
 date: 2020-09-26T14:07:44.583Z
 description: Investigación del movimiento
 featuredpost: true
