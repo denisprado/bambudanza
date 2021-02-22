@@ -4,7 +4,7 @@ title: SALA 2 / 2ª PLANTA
 date: 2016-12-17T15:04:10.000Z
 description: Sala dos.
 featuredpost: true
-featuredimage: /img/whatsapp-image-2021-02-12-at-18.46.44.png
+featuredimage: /img/sala2.png
 tags:
   - flavor
   - tasting
