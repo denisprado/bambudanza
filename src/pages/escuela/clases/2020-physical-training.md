@@ -21,8 +21,7 @@ tarifa:
   - 1 CURSO  2 X A LA SEMANA
   - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-  - 19h a 20h30
-  - 10h00 a 11h30
+  - 10:00 a 11:30 Horas
 dias:
   - Martes y Jueves
 estilo:
