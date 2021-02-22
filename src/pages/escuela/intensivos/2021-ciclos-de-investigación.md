@@ -1,6 +1,6 @@
 ---
 templateKey: intensivo-post
-title: Ciclos de Investigación
+title: CICLOS DE INVESTIGACIÓN
 date: 2021-02-22T09:36:02.648Z
 description: La propuesta creativa de este taller plantea un espacio de contacto
   con uno mismo, sin pretensiones ni juicios. Un espacio para la sensibilidad y
