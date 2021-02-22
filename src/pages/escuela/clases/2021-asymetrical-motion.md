@@ -4,7 +4,7 @@ title: Asymetrical-Motion
 date: 2021-02-22T10:44:00.265Z
 description: Investigación del movimiento
 featuredpost: true
-featuredimage: /img/lucas.jpeg
+featuredimage: /img/lucas-4.png
 tags:
   - Danza Contemporánea
 profesora: Lucas Condro
