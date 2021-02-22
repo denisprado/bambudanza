@@ -4,7 +4,7 @@ title: Laboratorio de creación
 date: 2021-01-22T17:42:12.100Z
 description: Laboratorio de creación teórico-práctico
 featuredpost: true
-featuredimage: /img/poliana-ii.jpg
+featuredimage: /img/poli-2.png
 tags:
   - "#Creación #Movimiento"
 profesora: Poliana Lima
