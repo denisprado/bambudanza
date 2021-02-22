@@ -1,12 +1,12 @@
 ---
 templateKey: programa-post
-title: Impulso y Energía
+title: Bailando Puentes
 date: 2020-08-06T18:58:57.088Z
 description: "En este curso nuestro objetivo es trabajar elementos técnicos de
   la danza contemporánea, para aumentar el vocabulario y desafiar al alumno ya
   iniciado. "
 featuredpost: true
-featuredimage: /img/impulso-y-energia.jpg
+featuredimage: /img/poli.png
 tags:
   - Danza contemporánea
 profesora: Poliana Lima
