@@ -12,12 +12,12 @@ tags:
   - GYROKINESIS®
 profesora: Alejandro Martínez
 tarifa:
-  - 1 CURSO 1  X A LA SEMANA (1H30)
-  - 1 CURSO  2 X A LA SEMANA
+  - 1 X A LA SEMANA
+  - "2 X A LA SEMANA "
 horarios:
-  - 10h00 a 11h30
+  - 18:00 a 19:00 Horas
 dias:
-  - Lunes y Miércoles
+  - Martes y Jueves
 estilo:
   - Técnicas conscientes
 nivel:
