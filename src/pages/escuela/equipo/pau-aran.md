@@ -4,7 +4,7 @@ title: Pau Aran
 date: 2021-02-22T09:24:43.069Z
 description: Talleres Intensivos
 featuredpost: true
-featuredimage: /img/pau-aran-1.png
+featuredimage: /img/pau-aran-3.png
 ---
 <!--StartFragment-->
 
