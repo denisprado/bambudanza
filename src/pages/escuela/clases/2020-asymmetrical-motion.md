@@ -15,6 +15,7 @@ horarios:
   - 10:00 a 11:30 Horas
 dias:
   - Lunes y Miércoles
+  - Martes y Jueves
 estilo:
   - Danza contemporánea
 nivel:
