@@ -22,7 +22,7 @@ tags:
     - movimiento y expresividad para mujeres
 profesora: Lucyanna Pettengill
 tarifa:
-    - 1 CURSO 1 X A LA SEMANA (2H)
+    - 1 CURSO 1 X A LA SEMANA (2H) - 65 €
 horarios:
     - 11h a 13h
 dias:

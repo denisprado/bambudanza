@@ -23,8 +23,8 @@ tags:
     - Movimiento e Improvisação
 profesora: Lucyanna Pettengill
 tarifa:
-    - 1 CURSO  2 X A LA SEMANA
-    - 1 CURSO 1  X A LA SEMANA (1H30)
+    - 1 CURSO  2 X A LA SEMANA - 85 €
+    - 1 CURSO 1  X A LA SEMANA (1H30) - 60 €
 horarios:
     - 20h a 22h
 dias:

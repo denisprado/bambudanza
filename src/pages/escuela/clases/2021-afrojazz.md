@@ -6,22 +6,24 @@ description: Técnicas fusionadas
 featuredpost: true
 featuredimage: /img/arnaldo-v.jpg
 tags:
-  - Afrojazz
+    - Afrojazz
 profesora: Arnaldo Iarsoli
 tarifa:
-  - 1 CURSO  2 X A LA SEMANA
-  - 1 X A LA SEMANA (1H30)
+    - 1 CURSO  2 X A LA SEMANA - 85 €
+    - 1 X A LA SEMANA  - 50 €
+ (1H30) - 65 €
 horarios:
-  - 20h00 a 21h30
+    - 20h00 a 21h30
 dias:
-  - Martes y Jueves
+    - Martes y Jueves
 estilo:
-  - Afrojazz
+    - Afrojazz
 nivel:
-  - Iniciación
-  - Intermedio
-  - Avanzado
+    - Iniciación
+    - Intermedio
+    - Avanzado
 ---
+
 <!--StartFragment-->
 
 En esta clase, mezclaremos técnicas de la danza moderna con las raíces y ritmos africanos. Desde un lenguaje técnico, trabajaremos la coordinación, la flexibilidad y la conciencia espacial para permitir la libertad de expresión en el movimiento.

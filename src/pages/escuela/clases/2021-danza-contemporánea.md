@@ -6,20 +6,21 @@ description: Técnicas de danza contemporánea
 featuredpost: true
 featuredimage: /img/anayalba.png
 tags:
-  - Danza
+    - Danza
 profesora: Ana Erdozain y Alba González
 tarifa:
-  - 1 CURSO 1 X A LA SEMANA (2H)
-  - 1 CURSO  2 X A LA SEMANA
+    - 1 CURSO 1 X A LA SEMANA (2H) - 65 €
+    - 1 CURSO  2 X A LA SEMANA - 85 €
 horarios:
-  - 20h00 a 21h30
+    - 20h00 a 21h30
 dias:
-  - Lunes y Miércoles
+    - Lunes y Miércoles
 estilo:
-  - Danza Contemporánea
+    - Danza Contemporánea
 nivel:
-  - Intermedio
+    - Intermedio
 ---
+
 <!--\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
