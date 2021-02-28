@@ -16,7 +16,7 @@ const Alquiler = ({ children, showImage }) => (
         <SubNavbar
             image={alquilerHeader}
             showImage={showImage}
-            icon={<RiDoorOpenLine />}
+            link={"alquiler"}
             title={"Alquiler de Salas"}
         >
             <Link p={4} to="/alquiler/salas">

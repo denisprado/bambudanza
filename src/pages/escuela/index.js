@@ -13,6 +13,7 @@ const Escuela = ({ children, showImage }) => {
                 image={escuelaHeader}
                 showImage={showImage}
                 title={"Escuela"}
+                link={"escuela"}
                 icon={<RiTeamLine />}
             >
                 <Link partiallyActive={true} to="/escuela/clases">
@@ -30,8 +31,8 @@ const Escuela = ({ children, showImage }) => {
                 <Link partiallyActive={true} to="/escuela/equipo">
                     Equipo
                 </Link>
-                <Link partiallyActive={true} to="/escuela/tarifas">
-                    Tarifas
+                <Link partiallyActive={true} to="/escuela/verano">
+                    Verano
                 </Link>
                 <Link partiallyActive={true} to="/escuela/inscripcion">
                     Inscripción

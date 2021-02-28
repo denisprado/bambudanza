@@ -1,8 +1,9 @@
 import React from "react";
 /** @jsx jsx */
 import { Box, Container, Flex, Heading, jsx } from "theme-ui";
+import { Link } from "gatsby";
 
-const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
+const SubNavbar = ({ children, image, showImage = true, title, link }) => (
     <Flex
         sx={{
             flexDirection: "column",
@@ -34,19 +35,18 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                             as={"h2"}
                             color={"primary"}
                             pb={3}
-                            ml={[0, 0, 3]}
-                            mr={[0, 0, 1]}
-                        >
-                            {icon}
-                        </Heading>
-                        <Heading
-                            as={"h2"}
-                            color={"primary"}
-                            pb={3}
-                            ml={2}
+                            ml={3}
                             mr={2}
                         >
-                            {title}
+                            <Link
+                                style={{
+                                    color: "#768858",
+                                    textDecoration: "none",
+                                }}
+                                to={`/${link}`}
+                            >
+                                {title}
+                            </Link>
                         </Heading>
                     </Flex>
 
@@ -96,7 +96,7 @@ const SubNavbar = ({ children, image, showImage = true, title, icon }) => (
                         minHeight: "75vh",
                         width: "100vw",
                         margin: "0 auto",
-                        filter: "grayscale(100%)",
+                        //filter: "grayscale(100%)",
                     }}
                 ></Flex>
             )}

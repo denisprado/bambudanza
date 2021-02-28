@@ -69,7 +69,7 @@ const TemplateWrapper = ({ children }) => {
                 >
                     {children}
                 </Box>
-                <Footer sx={{ marginBottom: "auto", flex: 1 }} />
+                {/* <Footer sx={{ marginBottom: "auto", flex: 1 }} /> */}
             </Flex>
         </div>
     );

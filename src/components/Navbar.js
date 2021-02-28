@@ -33,8 +33,12 @@ const Navbar = () => (
                     },
                 },
                 "a.active": {
-                    backgroundColor: "muted",
-                    color: "hightlight",
+                    //backgroundColor: "muted",
+                    color: "primary",
+                    borderBottomColor: "primary",
+                    borderBottomWidth: "2px",
+                    borderBottomStyle: "solid",
+                    borderRadius: "0px",
                 },
             }}
         >
@@ -76,30 +80,30 @@ const Navbar = () => (
                 >
                     <Link partiallyActive={true} to="/escuela">
                         <Flex sx={{ alignItems: "center" }}>
-                            <RiTeamLine sx={{ mr: 2 }} />
+                            {/* <RiTeamLine sx={{ mr: 2 }} /> */}
                             Escuela
                         </Flex>
                     </Link>
                     <Link partiallyActive={true} to="/alquiler">
                         <Flex sx={{ alignItems: "center" }}>
-                            <RiDoorOpenLine sx={{ mr: 2 }} />
+                            {/* <RiDoorOpenLine sx={{ mr: 2 }} /> */}
                             Alquiler
                         </Flex>
                     </Link>
                     <Link partiallyActive={true} to="/blog">
                         <Flex sx={{ alignItems: "center" }}>
-                            <RiChatSmile2Line sx={{ mr: 2 }} />
+                            {/* <RiChatSmile2Line sx={{ mr: 2 }} /> */}
                             Blog
                         </Flex>
                     </Link>
                     <Link partiallyActive={true} to="/about">
                         <Flex sx={{ alignItems: "center" }}>
-                            <RiFingerprintFill sx={{ mr: 2 }} />
+                            {/* <RiFingerprintFill sx={{ mr: 2 }} /> */}
                             <Box>Nosotros</Box>
                         </Flex>
                     </Link>
                 </Flex>
-
+                {/* 
                 <Flex
                     sx={{
                         flex: 1,
@@ -108,7 +112,7 @@ const Navbar = () => (
                     }}
                 >
                     <Search />
-                </Flex>
+                </Flex> */}
             </Flex>
         </Flex>
     </Container>

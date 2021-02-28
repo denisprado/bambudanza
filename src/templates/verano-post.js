@@ -11,7 +11,7 @@ import Escuela from "../pages/escuela";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import MyHr from "../components/MyHr";
 
-export const ProgramaPostTemplate = ({
+export const VeranoPostTemplate = ({
     content,
     contentComponent,
     description,
@@ -44,24 +44,17 @@ export const ProgramaPostTemplate = ({
                         <PreviewCompatibleImage
                             imageInfo={{
                                 image: featuredimage,
-                                alt: `featured image thumbnail for programas ${title}`,
+                                alt: `featured image thumbnail for veranos ${title}`,
                                 styles: { width: "100%" },
                             }}
                         />
                     </AspectRatio>
 
-                    <Heading as={"h4"} color={"primary"} mt={2}>
-                        Profesor(a)
-                    </Heading>
-                    <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>
-                        {profesora}
-                    </Link>
-
                     <MyHr />
                     <Heading as={"h4"} color={"primary"}>
-                        Dias
+                        Horario
                     </Heading>
-                    <Flex style={{ flexDirection: "column" }}>
+                    <Flex>
                         {dias &&
                             dias.length &&
                             dias.map((dia) => (
@@ -69,21 +62,15 @@ export const ProgramaPostTemplate = ({
                                     <Text>{dia}</Text>
                                 </Box>
                             ))}
-                    </Flex>
-
-                    <MyHr />
-                    <Heading as={"h4"} color={"primary"}>
-                        Horario
-                    </Heading>
-                    <Flex style={{ flexDirection: "column" }}>
                         {horarios &&
                             horarios.length &&
                             horarios.map((horarios) => (
                                 <Box key={horarios + `horarios`}>
-                                    <Text ml={2}>{horarios}</Text>
+                                    <Text ml={2}> - {horarios}</Text>
                                 </Box>
                             ))}
                     </Flex>
+
                     <MyHr />
 
                     <Heading as="h4" color={"primary"}>
@@ -93,7 +80,7 @@ export const ProgramaPostTemplate = ({
                         tarifa.length &&
                         tarifa.map((t) => (
                             <Box key={t + `tarifa`}>
-                                <Text>{t}</Text>
+                                <Link to="/escuela/tarifas">{t}</Link>
                             </Box>
                         ))}
                 </Box>
@@ -113,7 +100,7 @@ export const ProgramaPostTemplate = ({
     );
 };
 
-ProgramaPostTemplate.propTypes = {
+VeranoPostTemplate.propTypes = {
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
     description: PropTypes.string,
@@ -121,16 +108,16 @@ ProgramaPostTemplate.propTypes = {
     helmet: PropTypes.object,
 };
 
-const ProgramaPost = ({ data }) => {
+const VeranoPost = ({ data }) => {
     const { markdownRemark: post } = data;
 
     return (
-        <ProgramaPostTemplate
+        <VeranoPostTemplate
             content={post.html}
             contentComponent={HTMLContent}
             description={post.frontmatter.description}
             helmet={
-                <Helmet titleTemplate="%s | Programa">
+                <Helmet titleTemplate="%s | Verano">
                     <title>{`${post.frontmatter.title}`}</title>
                     <meta
                         name="description"
@@ -151,16 +138,16 @@ const ProgramaPost = ({ data }) => {
     );
 };
 
-ProgramaPost.propTypes = {
+VeranoPost.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
     }),
 };
 
-export default ProgramaPost;
+export default VeranoPost;
 
 export const pageQuery = graphql`
-    query ProgramaPostByID($id: String!) {
+    query VeranoPostByID($id: String!) {
         markdownRemark(id: { eq: $id }) {
             id
             html

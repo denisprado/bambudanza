@@ -6,21 +6,23 @@ description: Investigación del movimiento
 featuredpost: true
 featuredimage: /img/lucas-2.png
 tags:
-  - Danza contemporánea
+    - Danza contemporánea
 profesora: Lucas Condro
 tarifa:
-  - 1 CURSO  2 X A LA SEMANA
-  - 1 CURSO 1  X A LA SEMANA (1H30)
+    - 1 CURSO  2 X A LA SEMANA
+    - 1 CURSO 1  X A LA SEMANA (1H30)
 horarios:
-  - 10:00 a 11:30 Horas
+    - 10:00 a 11:30 Horas
 dias:
-  - Lunes y Miércoles
+    - Lunes y Miércoles
+    - Martes y Jueves
 estilo:
-  - Danza contemporánea
+    - Danza contemporánea
 nivel:
-  - Iniciación
-  - Intermedio
+    - Iniciación
+    - Intermedio
 ---
+
 Esta metodología de movimiento investiga a través de diferentes perspectivas la agilidad del cuerpo para su movimiento y desplazamiento en el espacio.
 
 Comprendiendo la agilidad como el modo mas eficaz de usar la mecánica del cuerpo y el uso de la energía para lograr la máxima potencia.

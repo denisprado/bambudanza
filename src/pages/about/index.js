@@ -13,7 +13,7 @@ const About = ({ children, showImage }) => {
                 title={"Sobre Nosotros"}
                 image={aboutHeader}
                 showImage={showImage}
-                icon={<RiFingerprintFill />}
+                link={"about"}
             >
                 <Link p={4} to="/about/centro">
                     El Centro

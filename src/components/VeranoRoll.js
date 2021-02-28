@@ -8,14 +8,11 @@ import {
     Badge,
     Box,
     Card,
-    Close,
-    Divider,
     Flex,
     Heading,
     Link,
     Text,
 } from "theme-ui";
-import MyHr from "./MyHr";
 
 export const IconsNivel = (props) => {
     const { nivel } = props;
@@ -30,43 +27,10 @@ export const IconsNivel = (props) => {
     );
 };
 
-const ProgramasRoll = ({ data }, location) => {
-    const { edges: programas } = data.allMarkdownRemark;
+const VeranoRoll = ({ data }) => {
+    const { edges: verano } = data.allMarkdownRemark;
 
     const [filters, setFilters] = useState([]);
-
-    const tipos = _.uniqWith(
-        programas.map(({ node: prog }) => prog.frontmatter.tipo),
-        _.isEqual
-    );
-
-    const niveis = ["Iniciación", "Intermedio", "Avanzado"];
-    const horas = _.uniqWith(
-        programas.map(({ node: prog }) => prog.frontmatter.horarios),
-        _.isEqual
-    );
-    const dias = _.uniqWith(
-        programas.map(({ node: prog }) => prog.frontmatter.dias),
-        _.isEqual
-    );
-
-    const clearFilters = () => setFilters([]);
-
-    const clearFilter = (filter) => {
-        let newFilters = filters;
-        newFilters = newFilters.filter((f) => f !== filter);
-        setFilters(newFilters && newFilters);
-    };
-
-    const addFilter = (newFilter) => {
-        const filtersIsEmpty = filters && filters.length === 0;
-        const filterExist =
-            filters &&
-            !filtersIsEmpty &&
-            filters.filter((f) => f === newFilter).length > 0 &&
-            true;
-        !filterExist && setFilters([...filters, newFilter]);
-    };
 
     return (
         <Flex p={4} sx={{ width: "100%" }}>
@@ -133,15 +97,15 @@ const ProgramasRoll = ({ data }, location) => {
           </Box>
         }
 
-        {/* Listagem de programas */}
+        {/* Listagem de verano */}
                 <Flex
                     sx={{
                         flexWrap: "wrap",
                         alignContent: "flex-start",
                     }}
                 >
-                    {programas &&
-                        programas.map(
+                    {verano &&
+                        verano.map(
                             ({ node: programa }) =>
                                 ((filters && filters.length === 0) ||
                                     (filters &&
@@ -256,58 +220,16 @@ const ProgramasRoll = ({ data }, location) => {
                                                         )
                                                     )}
                                                 </Flex>
-                                                <Flex
-                                                    style={{
-                                                        flexDirection: "column",
-                                                    }}
-                                                >
-                                                    {programa.frontmatter.dias.map(
-                                                        (d) => (
-                                                            <Text
-                                                                sx={{
-                                                                    fontSize: 1,
-                                                                }}
-                                                                mx={2}
-                                                                style={{
-                                                                    borderBottomWidth: 1,
-                                                                    borderBottomColor:
-                                                                        "grey",
-                                                                    borderBottomStyle:
-                                                                        "dotted",
-                                                                }}
-                                                            >
-                                                                {d}
-                                                            </Text>
-                                                        )
-                                                    )}
-                                                </Flex>
-
-                                                <Text>»</Text>
-                                                <Flex
-                                                    style={{
-                                                        flexDirection: "column",
-                                                    }}
-                                                >
-                                                    {programa.frontmatter.horarios.map(
-                                                        (h) => (
-                                                            <Text
-                                                                sx={{
-                                                                    fontSize: 1,
-                                                                }}
-                                                                mx={2}
-                                                                style={{
-                                                                    borderBottomWidth: 1,
-                                                                    borderBottomColor:
-                                                                        "grey",
-                                                                    borderBottomStyle:
-                                                                        "dotted",
-                                                                }}
-                                                            >
-                                                                {h}
-                                                            </Text>
-                                                        )
-                                                    )}
-                                                </Flex>
+                                                <Text mx={2}>
+                                                    {programa.frontmatter.dias}
+                                                </Text>
+                                                <Text mr={2}>»</Text>
+                                                <Text>
+                                                    {
+                                                        programa.frontmatter
+                                                            .horarios
+                                                    }
+                                                </Text>
                                             </Flex>
                                         </Box>
                                     </Card>
@@ -319,7 +241,7 @@ const ProgramasRoll = ({ data }, location) => {
     );
 };
 
-ProgramasRoll.propTypes = {
+VeranoRoll.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
@@ -330,18 +252,11 @@ ProgramasRoll.propTypes = {
 export default () => (
     <StaticQuery
         query={graphql`
-            query ProgramasRollQuery {
+            query VeranoRollQuery {
                 allMarkdownRemark(
-                    sort: {
-                        order: ASC
-                        fields: [
-                            frontmatter___order
-                            frontmatter___estilo
-                            frontmatter___title
-                        ]
-                    }
+                    sort: { order: ASC, fields: [frontmatter___title] }
                     filter: {
-                        frontmatter: { templateKey: { eq: "programa-post" } }
+                        frontmatter: { templateKey: { eq: "verano-post" } }
                     }
                 ) {
                     edges {
@@ -372,6 +287,6 @@ export default () => (
                 }
             }
         `}
-        render={(data, count) => <ProgramasRoll data={data} count={count} />}
+        render={(data, count) => <VeranoRoll data={data} count={count} />}
     />
 );
