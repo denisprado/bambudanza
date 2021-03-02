@@ -12,8 +12,7 @@ tags:
     - GYROKINESIS®
 profesora: Alejandro Martínez
 tarifa:
-    - 1 X A LA SEMANA  - 50 €
- - 50 €
+    - 1 X A LA SEMANA - 50 €
     - "2 X A LA SEMANA "
 horarios:
     - 18:00 a 19:00 Horas
