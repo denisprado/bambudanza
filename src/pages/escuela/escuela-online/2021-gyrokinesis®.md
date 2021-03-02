@@ -13,9 +13,7 @@ tags:
 profesora: Alejandro Martínez
 tarifa:
     - 2 X A LA SEMANA ONLINE - 60 €
-
-    - 1 X A LA SEMANA  - 50 €
- ONLINE - 40 €
+    - 1 X A LA SEMANA ONLINE - 40 €
 horarios:
     - 12h00 a 13h30
 dias:

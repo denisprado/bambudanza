@@ -11,8 +11,7 @@ tags:
     - Movimiento en el embarazo
 profesora: Rebeka Chapman
 tarifa:
-    - 1 X A LA SEMANA  - 50 €
- (1H) - 45 €
+    - 1 X A LA SEMANA (1H) - 45 €
 horarios:
     - 10h00 a 11h30
 dias:
