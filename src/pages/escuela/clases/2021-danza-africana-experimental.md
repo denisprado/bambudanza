@@ -10,8 +10,7 @@ tags:
 profesora: Arnaldo Iarsoli
 tarifa:
     - 2 X A LA SEMANA (1H)
-    - 1 X A LA SEMANA  - 50 €
- (1H) - 45 €
+    - 1 X A LA SEMANA (1H) - 45 €
 horarios:
     - 18h00 a 19h00
 dias:
