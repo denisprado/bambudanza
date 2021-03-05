@@ -1,24 +1,25 @@
 ---
 templateKey: programa-post
 title: Danza Africana Experimental
+order: 0
 date: 2021-01-22T18:03:43.296Z
 description: Técnicas fusionadas
 featuredpost: true
 featuredimage: /img/arnaldo-iii.jpg
 tags:
-    - Danza Africana Experimental
+  - Danza Africana Experimental
 profesora: Arnaldo Iarsoli
 tarifa:
-    - 2 X A LA SEMANA (1H)
-    - 1 X A LA SEMANA (1H) - 45 €
+  - 1 X A LA SEMANA (1H) - 45 €
+  - 2 X A LA SEMANA (1H) - 65 €
 horarios:
-    - 18h00 a 19h00
+  - 18:00 a 19:00 Horas
 dias:
-    - Martes y Jueves
+  - Martes y Jueves
 estilo:
-    - Danza Africana Experimental
+  - Danza Africana Experimental
 nivel:
-    - Iniciación
+  - Iniciación
 ---
 
 <!--StartFragment-->
