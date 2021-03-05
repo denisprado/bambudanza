@@ -4,7 +4,7 @@ title: Josefina Gorostiza
 date: 2021-03-05T18:33:29.270Z
 description: Técnica
 featuredpost: true
-featuredimage: /img/josefina.png
+featuredimage: /img/josefina-2.png
 ---
 <!--StartFragment-->
 
