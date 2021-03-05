@@ -5,7 +5,7 @@ order: 0
 date: 2020-09-26T13:37:14.164Z
 description: Laboratorio de movimiento
 featuredpost: true
-featuredimage: /img/josefina.png
+featuredimage: /img/mar-lopez.png
 tags:
   - Laboratório de Movimiento
 profesora: Mar López
