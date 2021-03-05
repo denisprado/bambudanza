@@ -1,17 +1,18 @@
 ---
 templateKey: programa-post
-title: Laboratorio de creación
+title: Técnica e Improvisación
+order: 0
 date: 2021-01-22T17:42:12.100Z
-description: Laboratorio de creación teórico-práctico
+description: Clases de técnica e improvisación
 featuredpost: true
-featuredimage: /img/poli-2.png
+featuredimage: /img/poli-4.png
 tags:
   - "#Creación #Movimiento"
 profesora: Poliana Lima
 tarifa:
   - TRIMESTRE (2 CUOTAS DE 97,50€)
 horarios:
-  - 20h30 a 22h30
+  - 20:30 a 22:30 Horas
 dias:
   - Martes
 estilo:
@@ -20,7 +21,7 @@ nivel:
   - Intermedio
   - Avanzado
 ---
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -61,9 +62,9 @@ nivel:
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 9]><xml>
+<!--\\[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="376">
@@ -642,9 +643,9 @@ nivel:
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="Smart Link"/>
  </w:LatentStyles>
-</xml><!\[endif]-->
+</xml><!\\[endif]-->
 
-<!--\[if gte mso 10]>
+<!--\\[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -662,16 +663,10 @@ nivel:
 	font-family:"Arial",sans-serif;
 	mso-ansi-language:EN;}
 </style>
-<!\[endif]-->
+<!\\[endif]-->
 
 <!--StartFragment-->
 
-Para el primer trimestre de 2021, proponemos un laboratorio de creación teórico-práctico con Poliana Lima, en el cual estudiaremos los procesos creativos a partir de dos piezas de su repertorio: *HUECO* (2017) y *LAS COSAS SE MUEVEN PERO NO DICEN NADA* (2020).
-
-En el primer mes discutiremos de manera general los procesos creativos en danza y sus posibilidades: alternando la práctica física con la discusión y el intercambio de ideas con el grupo. El segundo mes, estudiaremos las estrategias y herramientas de creación aplicadas al solo “HUECO” de 2017. En el tercero y último mes estudiaremos la pieza colectiva “LAS COSAS SE MUEVEN PERO NO DICEN NADA” de 2020.
-
-Alentaremos a los participantes del taller a poner en práctica las herramientas ofrecidas para poder crear sus propias células de movimiento.
-
-El taller está dirigido a estudiantes avanzados y profesionales, de artes vivas, danza, teatro y circo, así como a aficionados con experiencia en la exploración corporal que quieran desarrollar un proceso creativo.
+Esta clase está dirigida a todas las personas que quieran disfrutar de las técnicas de danza contemporánea y explorar sus cuerpos a través de pautas de investigación, poniendo en práctica las herramientas ofrecidas para poder crear sus proprias células de movimiento.
 
 <!--EndFragment-->
