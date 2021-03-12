@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
-title: Técnica e Improvisación
-order: 0
+title: TÉCNICA E IMPROVISACIÓN
+order: 13
 date: 2021-01-22T17:42:12.100Z
 description: Clases de técnica e improvisación
 featuredpost: true
