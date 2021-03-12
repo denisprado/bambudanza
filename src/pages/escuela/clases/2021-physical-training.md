@@ -1,6 +1,6 @@
 ---
 templateKey: programa-post
-title: Physical Training
+title: PHYSICAL TRAINING
 order: 7
 date: 2021-02-22T11:25:47.239Z
 description: Danza Contemporánea
