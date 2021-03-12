@@ -1,26 +1,27 @@
 ---
 templateKey: programa-post
-title: Asymetrical-Motion
+title: ASYMETRICAL-MOTION
+order: -1
 date: 2020-09-26T14:07:44.583Z
 description: Investigación del movimiento
 featuredpost: true
 featuredimage: /img/lucas-2.png
 tags:
-    - Danza contemporánea
+  - Danza contemporánea
 profesora: Lucas Condro
 tarifa:
-    - 1 CURSO  2 X A LA SEMANA - 85 €
-    - 1 CURSO 1  X A LA SEMANA (1H30) - 60 €
+  - 1 CURSO  2 X A LA SEMANA - 85 €
+  - 1 CURSO 1  X A LA SEMANA (1H30) - 60 €
 horarios:
-    - 10:00 a 11:30 Horas
+  - 10:00 a 11:30 Horas
 dias:
-    - Lunes y Miércoles
-    - Martes y Jueves
+  - Lunes y Miércoles
+  - Martes y Jueves
 estilo:
-    - Danza contemporánea
+  - Danza contemporánea
 nivel:
-    - Iniciación
-    - Intermedio
+  - Iniciación
+  - Intermedio
 ---
 
 Esta metodología de movimiento investiga a través de diferentes perspectivas la agilidad del cuerpo para su movimiento y desplazamiento en el espacio.
