@@ -1,27 +1,27 @@
 ---
 templateKey: programa-post
-title: "Barra Coreografiada "
+title: BARRA COREOGRAFIADA
+order: 10
 date: 2021-01-22T18:23:09.114Z
 description: Técnicas fusionadas
 featuredpost: true
 featuredimage: /img/arnaldo-iv.jpg
 tags:
-    - Barra Coreografiada
+  - Barra Coreografiada
 profesora: Arnaldo Iarsoli
 tarifa:
-    - 1 X A LA SEMANA (1H) - 45 €
-    - 2 X A LA SEMANA ONLINE - 60 €
-
+  - 1 X A LA SEMANA (1H) - 45 €
+  - 2 X A LA SEMANA ONLINE - 60 €
 horarios:
-    - 19h00 a 20h00
+  - 19h00 a 20h00
 dias:
-    - Martes y Jueves
+  - Martes y Jueves
 estilo:
-    - Jazz y Ballet Clásico
+  - Jazz y Ballet Clásico
 nivel:
-    - Iniciación
-    - Intermedio
-    - Avanzado
+  - Iniciación
+  - Intermedio
+  - Avanzado
 ---
 
 <!--StartFragment-->
