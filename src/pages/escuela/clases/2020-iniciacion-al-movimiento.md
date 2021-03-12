@@ -1,24 +1,25 @@
 ---
 templateKey: programa-post
-title: Iniciación al Movimiento
+title: INICIACIÓN AL MOVIMIENTO
+order: 2
 date: 2016-12-17T15:04:10.000Z
 description: Danza contemporánea para principiantes
 featuredpost: false
 featuredimage: /img/iniciacion-al-movimiento.jpg
 tags:
-    - Danza contemporánea
+  - Danza contemporánea
 profesora: Lucyanna Pettengill
 tarifa:
-    - 1 CURSO 1  X A LA SEMANA (1H30) - 60 €
-    - 1 CURSO  2 X A LA SEMANA - 85 €
+  - 1 CURSO 1  X A LA SEMANA (1H30) - 60 €
+  - 1 CURSO  2 X A LA SEMANA - 85 €
 horarios:
-    - 18h a 19h30
+  - 18h a 19h30
 dias:
-    - Lunes y Miércoles
+  - Lunes y Miércoles
 estilo:
-    - Danza Contemporânea
+  - Danza Contemporânea
 nivel:
-    - Iniciación
+  - Iniciación
 ---
 
 Vamos a trabajar los mecanismos más básicos del cuerpo de una forma específica de pensar las articulaciones y los engranajes anatómicos, llevando en cuenta las posibilidades y las organizaciones de nuestra estructura física siempre con mucho respecto a los límites de cada cuerpo.
