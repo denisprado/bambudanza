@@ -1,6 +1,6 @@
 ---
 templateKey: programa-post
-title: Danza Africana Experimental
+title: DANZA AFRICANA EXPERIMENTAL
 order: 9
 date: 2021-01-22T18:03:43.296Z
 description: Técnicas fusionadas
