@@ -1,23 +1,24 @@
 ---
 templateKey: programa-post
 title: FLOOR WORK
+order: 14
 date: 2021-01-22T17:36:27.372Z
 description: Técnica de suelo
 featuredpost: true
 featuredimage: /img/raquel-iii.jpg
 tags:
-    - Técnica de suelo
+  - Técnica de suelo
 profesora: Raquel Ferradás
 tarifa:
-    - 1 CURSO 1 X A LA SEMANA (2H) - 65 €
+  - 1 CURSO 1 X A LA SEMANA (2H) - 65 €
 horarios:
-    - 20h30 a 22h30
+  - 20h30 a 22h30
 dias:
-    - Jueves
+  - Jueves
 estilo:
-    - Técnica de suelo
+  - Técnica de suelo
 nivel:
-    - Intermedio
+  - Intermedio
 ---
 
 <!--\[if gte mso 9]><xml>
