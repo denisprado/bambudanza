@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
-title: Danza Contemporánea
-order: 0
+title: DANZA CONTEMPORÁNEA
+order: 4
 date: 2021-01-22T17:04:58.928Z
 description: Técnicas de danza contemporánea
 featuredpost: true
