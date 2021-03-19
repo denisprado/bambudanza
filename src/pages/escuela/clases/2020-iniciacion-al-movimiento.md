@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: INICIACIÓN AL MOVIMIENTO
-order: 2
+order: 3
 date: 2016-12-17T15:04:10.000Z
 description: Danza contemporánea para principiantes
 featuredpost: false
