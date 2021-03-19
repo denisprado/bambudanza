@@ -14,7 +14,7 @@ tarifa:
 horarios:
   - 11:00 a 14:00 Horas
 dias:
-  - Sábado y Domingo
+  - Sábado
 estilo:
   - Danza Contemporánea
 nivel:
