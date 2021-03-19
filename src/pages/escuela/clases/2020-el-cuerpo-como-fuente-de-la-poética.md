@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: ESCRITURAS DEL CUERPO
-order: 6
+order: 7
 date: 2020-09-26T13:37:14.164Z
 description: Laboratorio de movimiento
 featuredpost: true
