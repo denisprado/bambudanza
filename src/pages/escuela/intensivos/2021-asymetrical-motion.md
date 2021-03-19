@@ -4,6 +4,8 @@ title: ASYMETRICAL MOTION
 date: 2021-02-22T10:07:58.619Z
 description: |
   24 y 25 de Abril
+  29 y 30 de Mayo
+  26 y 27 de Junio
 
   Precio: 80€ hasta el día 5 de abril
               90€ a partir del día 5
