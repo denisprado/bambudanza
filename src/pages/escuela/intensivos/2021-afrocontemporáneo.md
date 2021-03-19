@@ -6,7 +6,7 @@ description: |-
   Afrocontemporáneo con Lucyanna Pettengill 
   Días 15 y 16 de mayo
 featuredpost: true
-featuredimage: /img/image14.png
+featuredimage: /img/lucy-2.png
 tags:
   - Afrocontemporáneo
 tarifa:
