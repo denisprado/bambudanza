@@ -18,7 +18,7 @@ tags:
 tarifa:
   - ENCUENTROS
 horarios:
-  - 18:00 a 19:30 Horas
+  - 16:00 a 18:00 Horas
 dias:
   - Sábado y Domingo
 estilo:
