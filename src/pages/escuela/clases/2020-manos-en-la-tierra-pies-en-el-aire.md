@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: MANOS EN LA TIERRA PIÉS EN EL AIRE
-order: 5
+order: 6
 date: 2020-08-08T23:04:17.326Z
 description: El lenguaje Afrocontemporáneo une los ritmos y movimientos afros
   con las técnicas de danza moderna como Limón, Graham, Horton, Release, entre
