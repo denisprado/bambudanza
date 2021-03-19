@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: "GYROKINESIS® "
-order: 8
+order: 9
 date: 2021-01-22T19:16:21.866Z
 description: GYROKINESIS® es un entrenamiento físico en el que a través de la
   respiración y de la fluidez de los movimientos de  la columna vertebral, de
