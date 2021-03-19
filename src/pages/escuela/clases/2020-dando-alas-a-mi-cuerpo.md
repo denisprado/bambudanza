@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: DANDO ALAS A MI CUERPO
-order: 11
+order: 12
 date: 2020-08-11T03:08:31.820Z
 description: >
   En este curso trabajaremos los elementos técnicos base de la danza
