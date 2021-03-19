@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: IMPULSO Y ENERGÍA
-order: 3
+order: 4
 date: 2021-02-22T10:29:09.123Z
 description: >
   En este curso nuestro objetivo es trabajar elementos técnicos de la danza
