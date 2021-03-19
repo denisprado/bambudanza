@@ -20,11 +20,10 @@ featuredpost: true
 featuredimage: /img/pau-aran-1.png
 tags:
   - Danza Contemporánea
-profesora: Pau Aran
 tarifa:
-  - "-"
+  - INTENSIVOS DE FIN DE SEMANA  - 90 €
 horarios:
-  - 11h00 a 14h00
+  - 11:00 a 14:00 Horas
 dias:
   - Sábado y Domingo
 estilo:
@@ -33,6 +32,7 @@ nivel:
   - Iniciación
   - Intermedio
   - Avanzado
+profesora: Pau Aran
 ---
 22 y 23 de mayo
 
@@ -41,3 +41,7 @@ nivel:
 24 y 25 de julio
 
 Los ciclos pueden ser realizados separadamente.
+
+Hasta el día 10 - 90€
+
+Después - 100€
