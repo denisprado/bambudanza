@@ -11,9 +11,8 @@ featuredpost: true
 featuredimage: /img/lucas.jpeg
 tags:
   - Danza Contemporánea
-profesora: Lucas Condro
 tarifa:
-  - Ciclo de Investigación
+  - INTENSIVOS DE FIN DE SEMANA  - 90 €
 horarios:
   - 10:00 a 14:00 Horas
 dias:
@@ -24,5 +23,6 @@ nivel:
   - Iniciación
   - Intermedio
   - Avanzado
+profesora: Lucas Condro
 ---
 ....
