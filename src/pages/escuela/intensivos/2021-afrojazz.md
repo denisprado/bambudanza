@@ -11,7 +11,7 @@ description: |-
   Precio: 40€ dos días
               25€ un día
 featuredpost: true
-featuredimage: /img/arnaldo-iii.jpg
+featuredimage: /img/arnaldo-vii.png
 tags:
   - Afrojazz
 tarifa:
