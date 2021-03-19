@@ -1,7 +1,7 @@
 ---
 templateKey: programa-post
 title: BARRA COREOGRAFIADA
-order: 10
+order: 11
 date: 2021-01-22T18:23:09.114Z
 description: Técnicas fusionadas
 featuredpost: true
