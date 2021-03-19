@@ -15,9 +15,10 @@ featuredimage: /img/cristina-rosa-imagen.png
 tags:
   - Danza
 tarifa:
-  - ENCUENTROS
+  - ENCUENTROS CON CRISTINA ROSA
 horarios:
-  - 11:00 a 13:00 Horas
+  - 11:00 a 13:30 Horas
+  - 17:00 a 20:00 Horas
 dias:
   - Sábado y Domingo
 estilo:
