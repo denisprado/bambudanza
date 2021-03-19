@@ -26,4 +26,16 @@ estilo:
 nivel:
   - Intermedio
 ---
-Técnica de suelo
+<!--StartFragment-->
+
+En este taller trabajaremos la consciencia y coordinación del cuerpo con el objetivo de dominar una relación fluida del bailarín/a con el suelo.
+
+Investigaremos juntos la manera de estar en movimiento "cómodos" con el suelo. Cuanto peso, tensión es necesario a la hora de danzar por el suelo.
+
+Utilizar cada punto de apoyo como anclajes de ayuda para desplazarnos, deslizarnos, elevarnos, volar y fluir.
+
+Se repetirán diferentes materiales para dejarlo entrar en el cuerpo a la vez que se irá añadiendo más elementos, complejidad, velocidades, inercias e imaginación en relación al espacio que nos rodea.
+
+El objetivo es disfrutar del regalo de bailar en el suelo.
+
+<!--EndFragment-->
