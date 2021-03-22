@@ -38,6 +38,8 @@ export const ProgramaPostTemplate = ({
                         flexGrow: 1,
                         flexBasis: "sidebar",
                         minWidth: "400px",
+                        maxWidth: "400px",
+                        width: "400px",
                     }}
                 >
                     <AspectRatio ratio={4 / 3}>

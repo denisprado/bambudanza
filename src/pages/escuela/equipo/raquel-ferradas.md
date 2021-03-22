@@ -3,11 +3,12 @@ templateKey: profesora-post
 title: Raquel Ferradás
 date: 2020-08-06T19:03:13.343Z
 description: Bailarina que nace en Vigo y empieza formándose en danzas urbanas y
-  danza contemporánea en escuelas como Unidance, Tepsícore, Mayeusis y
-  finalmente en Conservatorio Coppelia donde obtiene el Grado Elemental de
-  Ballet Clásico.
+    danza contemporánea en escuelas como Unidance, Tepsícore, Mayeusis y
+    finalmente en Conservatorio Coppelia donde obtiene el Grado Elemental de
+    Ballet Clásico.
 featuredpost: false
 featuredimage: /img/raquel.jpg
+tipo: permanente
 ---
 
 Bailarina que nace en Vigo y empieza formándose en danzas urbanas y danza contemporánea en escuelas como Unidance, Tepsícore, Mayeusis y finalmente en Conservatorio Coppelia donde obtiene el Grado Elemental de Ballet Clásico.

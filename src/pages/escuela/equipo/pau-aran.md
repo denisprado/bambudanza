@@ -5,7 +5,9 @@ date: 2021-02-22T09:24:43.069Z
 description: Talleres Intensivos
 featuredpost: true
 featuredimage: /img/pau-aran-3.png
+tipo: convidado
 ---
+
 <!--StartFragment-->
 
 Nacido en las costas mediterráneas catalanas, Pau comenzó su carrera profesional a través del baile de salón y el jazz moderno, donde su interés se expandió hacia múltiples formas de movimiento expresivo.

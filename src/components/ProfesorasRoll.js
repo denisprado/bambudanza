@@ -75,9 +75,15 @@ export default () => (
         query={graphql`
             query ProfesorasRollQuery {
                 allMarkdownRemark(
-                    sort: { order: ASC, fields: [frontmatter___title] }
+                    sort: {
+                        order: ASC
+                        fields: [frontmatter___order, frontmatter___title]
+                    }
                     filter: {
-                        frontmatter: { templateKey: { eq: "profesora-post" } }
+                        frontmatter: {
+                            templateKey: { eq: "profesora-post" }
+                            tipo: { eq: "permanente" }
+                        }
                     }
                 ) {
                     edges {

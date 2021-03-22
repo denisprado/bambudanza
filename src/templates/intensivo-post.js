@@ -38,6 +38,8 @@ export const IntensivoPostTemplate = ({
                         flexGrow: 1,
                         flexBasis: "sidebar",
                         minWidth: "400px",
+                        maxWidth: "400px",
+                        width: "400px",
                     }}
                 >
                     <AspectRatio ratio={4 / 3}>
@@ -85,11 +87,7 @@ export const IntensivoPostTemplate = ({
                     </Heading>
                     {tarifa &&
                         tarifa.length &&
-                        tarifa.map((t) => (
-                            <Box key={t + `tarifa`}>
-                                <Link to="/escuela/tarifas">{t}</Link>
-                            </Box>
-                        ))}
+                        tarifa.map((t) => <Box key={t + `tarifa`}>{t}</Box>)}
                 </Box>
                 <Box as="main">
                     <Heading mb={2}>{title}</Heading>

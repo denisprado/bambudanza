@@ -4,27 +4,27 @@ title: "GYROKINESIS® "
 order: 9
 date: 2021-01-22T19:16:21.866Z
 description: GYROKINESIS® es un entrenamiento físico en el que a través de la
-  respiración y de la fluidez de los movimientos de  la columna vertebral, de
-  los músculos y de los articulaciones, el cuerpo comienza a moverse
-  inteligentemente, con consciencia y con placer.
+    respiración y de la fluidez de los movimientos de  la columna vertebral, de
+    los músculos y de los articulaciones, el cuerpo comienza a moverse
+    inteligentemente, con consciencia y con placer.
 featuredpost: true
 featuredimage: /img/alejandro.jpg
 tags:
-  - GYROKINESIS®
+    - GYROKINESIS®
 profesora: Alejandro Martínez
 tarifa:
-  - 1 X A LA SEMANA - 50 €
-  - "2 X A LA SEMANA "
+    - 1 X A LA SEMANA - 50 €
+    - 2 X A LA SEMANA - 70 €
 horarios:
-  - 18:00 a 19:00 Horas
+    - 18:00 a 19:00 Horas
 dias:
-  - Martes y Jueves
+    - Martes y Jueves
 estilo:
-  - Técnicas conscientes
+    - Técnicas conscientes
 nivel:
-  - Iniciación
-  - Intermedio
-  - Avanzado
+    - Iniciación
+    - Intermedio
+    - Avanzado
 ---
 
 <!--\[if gte mso 9]><xml>

@@ -57,7 +57,7 @@ const Inscricion = ({ location }) => {
     const { edges: salas } = data.allMarkdownRemark;
 
     return (
-        <Alquiler showImage={false}>
+        <Alquiler showImage={false} text={false}>
             <Box
                 as="form"
                 name="presupuestos"

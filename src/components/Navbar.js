@@ -1,15 +1,8 @@
 import React from "react";
-import {
-    RiDoorOpenLine,
-    RiTeamLine,
-    RiFingerprintFill,
-    RiChatSmile2Line,
-} from "react-icons/ri";
 
 /** @jsx jsx */
 import { Box, Container, Flex, jsx } from "theme-ui";
 import Link from "../components/Link";
-import Search from "../components/SearchContainer";
 import logo from "../img/logo.svg";
 
 const Navbar = () => (
@@ -90,10 +83,10 @@ const Navbar = () => (
                             Alquiler
                         </Flex>
                     </Link>
-                    <Link partiallyActive={true} to="/blog">
+                    <Link partiallyActive={true} to="/gallery">
                         <Flex sx={{ alignItems: "center" }}>
                             {/* <RiChatSmile2Line sx={{ mr: 2 }} /> */}
-                            Blog
+                            Gallery
                         </Flex>
                     </Link>
                     <Link partiallyActive={true} to="/about">

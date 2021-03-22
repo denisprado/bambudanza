@@ -256,16 +256,58 @@ const IntensivoRoll = ({ data }, location) => {
                                                         )
                                                     )}
                                                 </Flex>
-                                                <Text mx={2}>
-                                                    {programa.frontmatter.dias}
-                                                </Text>
-                                                <Text mr={2}>»</Text>
-                                                <Text>
-                                                    {
-                                                        programa.frontmatter
-                                                            .horarios
-                                                    }
-                                                </Text>
+                                                <Flex
+                                                    style={{
+                                                        flexDirection: "column",
+                                                    }}
+                                                >
+                                                    {programa.frontmatter.dias.map(
+                                                        (d) => (
+                                                            <Text
+                                                                sx={{
+                                                                    fontSize: 1,
+                                                                }}
+                                                                mx={2}
+                                                                style={{
+                                                                    borderBottomWidth: 1,
+                                                                    borderBottomColor:
+                                                                        "grey",
+                                                                    borderBottomStyle:
+                                                                        "dotted",
+                                                                }}
+                                                            >
+                                                                {d}
+                                                            </Text>
+                                                        )
+                                                    )}
+                                                </Flex>
+
+                                                <Text>»</Text>
+                                                <Flex
+                                                    style={{
+                                                        flexDirection: "column",
+                                                    }}
+                                                >
+                                                    {programa.frontmatter.horarios.map(
+                                                        (h) => (
+                                                            <Text
+                                                                sx={{
+                                                                    fontSize: 1,
+                                                                }}
+                                                                mx={2}
+                                                                style={{
+                                                                    borderBottomWidth: 1,
+                                                                    borderBottomColor:
+                                                                        "grey",
+                                                                    borderBottomStyle:
+                                                                        "dotted",
+                                                                }}
+                                                            >
+                                                                {h}
+                                                            </Text>
+                                                        )
+                                                    )}
+                                                </Flex>
                                             </Flex>
                                         </Box>
                                     </Card>

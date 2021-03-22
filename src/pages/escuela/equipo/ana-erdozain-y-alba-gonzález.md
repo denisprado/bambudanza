@@ -5,7 +5,10 @@ date: 2021-01-23T12:44:34.290Z
 description: Danza Contemporánea
 featuredpost: true
 featuredimage: /img/anayalba.png
+tipo: permanente
+order: 4
 ---
+
 ALBA GONZÁLEZ HERRERA
 Creadora, intérprete y docente, estudia en el Liceo Italiano Enricco Fermi y se licencia en
 Psicología por la UAM. Comienza su formación de danza en Carmen Senra y profundiza

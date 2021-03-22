@@ -3,7 +3,7 @@ import Alquiler from "..";
 import SalasRoll from "../../../components/SalasRoll";
 
 const SalasIndexPage = () => (
-    <Alquiler showImage={false}>
+    <Alquiler showImage={false} text={false}>
         <SalasRoll />
     </Alquiler>
 );

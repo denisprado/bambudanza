@@ -78,11 +78,7 @@ export const VeranoPostTemplate = ({
                     </Heading>
                     {tarifa &&
                         tarifa.length &&
-                        tarifa.map((t) => (
-                            <Box key={t + `tarifa`}>
-                                <Link to="/escuela/tarifas">{t}</Link>
-                            </Box>
-                        ))}
+                        tarifa.map((t) => <Box key={t + `tarifa`}>{t}</Box>)}
                 </Box>
                 <Box as="main">
                     <Heading mb={2}>{title}</Heading>

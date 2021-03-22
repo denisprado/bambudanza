@@ -5,7 +5,10 @@ date: 2021-01-22T17:16:49.859Z
 description: Gyrokinesis
 featuredpost: true
 featuredimage: /img/alejandro-iv.jpg
+tipo: permanente
+order: 5
 ---
+
 <!--\[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>

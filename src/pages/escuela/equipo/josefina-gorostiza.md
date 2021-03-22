@@ -5,7 +5,10 @@ date: 2021-03-05T18:33:29.270Z
 description: Técnica
 featuredpost: true
 featuredimage: /img/josefina-2.png
+tipo: permanente
+order: 2
 ---
+
 <!--StartFragment-->
 
 Directora, coreógrafa, intérprete y docente.

@@ -2,8 +2,17 @@ import React from "react";
 /** @jsx jsx */
 import { Box, Container, Flex, Heading, jsx } from "theme-ui";
 import { Link } from "gatsby";
+import { HTMLContent } from "../Content";
+import { Location } from "@reach/router";
 
-const SubNavbar = ({ children, image, showImage = true, title, link }) => (
+const SubNavbar = ({
+    children,
+    image,
+    showImage = true,
+    title,
+    link,
+    text = false,
+}) => (
     <Flex
         sx={{
             flexDirection: "column",
@@ -83,7 +92,7 @@ const SubNavbar = ({ children, image, showImage = true, title, link }) => (
             </Container>
         </Box>
         <>
-            {showImage && (
+            {showImage && !text && (
                 <Flex
                     sx={{
                         backgroundImage: `url(${
@@ -99,6 +108,24 @@ const SubNavbar = ({ children, image, showImage = true, title, link }) => (
                         //filter: "grayscale(100%)",
                     }}
                 ></Flex>
+            )}
+            {text && (
+                <Container>
+                    <Flex sx={{ mt: 4 }}>
+                        <img
+                            src={`${image && showImage && image}`}
+                            sx={{
+                                minHeight: "25vh",
+                                maxWidth: "30vw",
+                                mr: 4,
+                                objectFit: "cover",
+                            }}
+                        />
+                        <Flex>
+                            <HTMLContent content={text} className={"text"} />
+                        </Flex>
+                    </Flex>
+                </Container>
             )}
         </>
     </Flex>
