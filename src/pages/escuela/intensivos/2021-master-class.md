@@ -6,7 +6,7 @@ description: |-
   Master Class con Mario Glez
   Día 10 de Abril
 featuredpost: true
-featuredimage: /img/marioglez.png
+featuredimage: /img/mario.png
 tags:
   - Danza contemporánea
 tarifa:
