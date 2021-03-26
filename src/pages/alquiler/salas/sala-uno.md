@@ -4,7 +4,7 @@ title: SALA 4 / 4ª PLANTA
 date: 2016-12-17T15:04:10.000Z
 description: SALA 4
 featuredpost: true
-featuredimage: /img/sala4.png
+featuredimage: /img/sala4buena.jpg
 tags:
   - flavor
   - tasting
