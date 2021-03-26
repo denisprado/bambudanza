@@ -1,12 +1,12 @@
 ---
 templateKey: profesora-post
 title: Lucyanna Pettengill
+order: 0
+tipo: permanente
 date: 2016-12-17T15:04:10.000Z
 description: Lucyanna es bailarina, coreógrafa, pedagoga y directora del Centro BambúDanza.
 featuredpost: false
-featuredimage: /img/lucyanna.jpg
-tipo: permanente
-order: 0
+featuredimage: /img/lucy-3.png
 ---
 
 Lucyanna es bailarina, coreógrafa, pedagoga y directora del Centro BambúDanza. Brasileña afincada en Madrid hace más de quince años y con experiencia de más de 25 años en la enseñanza. Licenciada en danza por la Universidad Católica Pontifica de Paraná con Teatro Guaíra, Brasil. Especializada en coreografía por la UFBA (Salvador de Bahía) y Master oficial en Artes Escénicas por la Universidad Rey Juan Carlos I.
