@@ -4,7 +4,7 @@ title: SALA 3 / 3ª PLANTA
 date: 2016-12-17T15:04:10.000Z
 description: Sala 3.
 featuredpost: true
-featuredimage: /img/sala3.png
+featuredimage: /img/sala3buena.png
 tags:
   - flavor
   - tasting
