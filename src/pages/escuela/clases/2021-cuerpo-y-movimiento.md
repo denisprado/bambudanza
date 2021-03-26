@@ -1,6 +1,6 @@
 ---
 templateKey: programa-post
-title: CUERPO Y MOVIMIENTO
+title: ENTRENAMIENTO EN DANZA
 order: 1
 date: 2021-03-05T18:44:31.989Z
 description: Técnica e investigación
