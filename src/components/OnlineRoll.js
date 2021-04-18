@@ -36,8 +36,9 @@ const OnlineRoll = ({ data }, location) => {
               <Card as='article'
                 sx={{
                   flex: '1 1',
-                  maxWidth: '33%',
-                  minWidth: '33%',
+                  maxWidth: ["90%","33%"],
+                                            minWidth: ["100%","33%"],
+                                            width: ["100%","33%"],
 
                 }}
                 key={clase.id}>

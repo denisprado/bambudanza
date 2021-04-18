@@ -18,8 +18,8 @@ export const IndexPageTemplate = ({
     const PageContent = contentComponent || Content;
 
     return (
-        <Container sx={{ mt: 5 }}>
-            <Grid gap={2} columns={["2fr 5fr"]}>
+        <Container sx={{ mt: [0,5] }}>
+            <Grid gap={2} columns={["100%","2fr 5fr"]} >
                 <Box sx={{ ml: 3 }}>
                     <PageContent className="content" content={content} />
                 </Box>

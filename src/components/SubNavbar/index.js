@@ -23,6 +23,7 @@ const SubNavbar = ({
                 borderBottom: "2px solid",
                 borderColor: "muted",
                 flex: "1 1 auto",
+
             }}
         >
             <Container>
@@ -31,9 +32,10 @@ const SubNavbar = ({
                     sx={{
                         alignItems: ["center", "center", "flex-end"],
                         flexDirection: ["column", "column", "row"],
+                        justifyContent:'center'
                     }}
                 >
-                    <Flex
+                    {/* <Flex
                         sx={{
                             alignItems: "center",
                             justifyContent: "flex-start",
@@ -57,7 +59,7 @@ const SubNavbar = ({
                                 {title}
                             </Link>
                         </Heading>
-                    </Flex>
+                    </Flex> */}
 
                     <Flex
                         as="nav"
@@ -84,6 +86,9 @@ const SubNavbar = ({
                             },
                             borderBottom: '1px solid "primary"',
                             justifyContent: "flex-end",
+                            flexDirection:['column','row'],
+                            flexWrap:'wrap'
+
                         }}
                     >
                         {children}
@@ -111,13 +116,15 @@ const SubNavbar = ({
             )}
             {text && (
                 <Container>
-                    <Flex sx={{ mt: 4 }}>
+                    <Flex sx={{ mt: 4,flexDirection:['column','row'] }}>
                         <img
                             src={`${image && showImage && image}`}
                             sx={{
-                                minHeight: "25vh",
-                                maxWidth: "30vw",
-                                mr: 4,
+                                minHeight: ["25vh"],
+                                maxHeight:['25vh','50vh'],
+                                maxWidth: ["100vw",'30vw'],
+                                width:['100vw','25vw'],
+                                mr: [0,4],
                                 objectFit: "cover",
                             }}
                         />
