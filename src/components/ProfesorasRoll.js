@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import Link from "./Link";
+import PropTypes from 'prop-types'
+import { graphql, StaticQuery } from 'gatsby'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Link from './Link'
 import {
     Card,
     Flex,
@@ -10,19 +10,19 @@ import {
     Container,
     Heading,
     Box,
-} from "theme-ui";
+} from 'theme-ui'
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui'
 
 const ProfesorasRoll = ({ data }) => {
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
         <Flex
             p={4}
             sx={{
-                flexWrap: "wrap",
-                alignContent: "flex-start",
+                flexWrap: 'wrap',
+                alignContent: 'flex-start',
             }}
         >
             {posts &&
@@ -30,10 +30,10 @@ const ProfesorasRoll = ({ data }) => {
                     <Card
                         as="article"
                         sx={{
-                            flex: "1 1 33%",
-                            maxWidth: ["90%","33%"],
-                                            minWidth: ["100%","33%"],
-                                            width: ["100%","33%"],
+                            flex: '1 1 33%',
+                            maxWidth: ['90%', '33%'],
+                            minWidth: ['100%', '33%'],
+                            width: ['100%', '33%'],
                         }}
                         key={post.id}
                     >
@@ -41,18 +41,18 @@ const ProfesorasRoll = ({ data }) => {
                             <AspectRatio ratio={4 / 3}>
                                 <Box
                                     sx={{
-                                        filter: "grayscale(1)",
-                                        backgroundSize: "cover",
-                                        height: "100%",
+                                        filter: 'grayscale(1)',
+                                        backgroundSize: 'cover',
+                                        height: '100%',
                                         backgroundImage: `url('${post.frontmatter.featuredimage.childImageSharp.fluid.src}')`,
-                                        backgroundPosition: "top center",
+                                        backgroundPosition: 'top center',
                                     }}
                                 />
                             </AspectRatio>
                         </Link>
                         <Text>
                             <Link to={post.fields.slug}>
-                                <Heading as={"h3"}>
+                                <Heading as={'h3'}>
                                     {post.frontmatter.title}
                                 </Heading>
                             </Link>
@@ -60,8 +60,8 @@ const ProfesorasRoll = ({ data }) => {
                     </Card>
                 ))}
         </Flex>
-    );
-};
+    )
+}
 
 ProfesorasRoll.propTypes = {
     data: PropTypes.shape({
@@ -69,7 +69,7 @@ ProfesorasRoll.propTypes = {
             edges: PropTypes.array,
         }),
     }),
-};
+}
 
 export default () => (
     <StaticQuery
@@ -113,4 +113,4 @@ export default () => (
         `}
         render={(data, count) => <ProfesorasRoll data={data} count={count} />}
     />
-);
+)

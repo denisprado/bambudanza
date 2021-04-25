@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { Box, Container, Flex, jsx, Link, Heading, Text } from "theme-ui";
-import logo from "../img/logo.svg";
-import Escuela from "../pages/escuela/index";
-import Inscripcion from "../pages/escuela/inscripcion/index";
-import MyHr from "../components/MyHr";
-import React, { useState, useEffect } from "react";
-import { useStaticQuery } from "gatsby";
+import { Box, Container, Flex, jsx, Link, Heading, Text } from 'theme-ui'
+import logo from '../img/logo.svg'
+import Escuela from '../pages/escuela/index'
+import Inscripcion from '../pages/escuela/inscripcion/index'
+import MyHr from '../components/MyHr'
+import React, { useState, useEffect } from 'react'
+import { useStaticQuery } from 'gatsby'
 
 const Footer = () => {
-    const [blogList, setBlogList] = useState([]);
+    const [blogList, setBlogList] = useState([])
     const data = useStaticQuery(graphql`
         query BlogListQuery {
             allMarkdownRemark(
@@ -30,30 +30,30 @@ const Footer = () => {
                 }
             }
         }
-    `);
+    `)
 
     useEffect(() => {
-        const { allMarkdownRemark } = data;
-        const { edges } = allMarkdownRemark;
+        const { allMarkdownRemark } = data
+        const { edges } = allMarkdownRemark
 
-        const frontmatter = edges.map(({ node: item }) => item.frontmatter);
-        const fields = edges.map(({ node: item }) => item.fields);
+        const frontmatter = edges.map(({ node: item }) => item.frontmatter)
+        const fields = edges.map(({ node: item }) => item.fields)
 
         frontmatter.map((f, i) => {
-            f.slug = fields[i].slug;
-        });
+            f.slug = fields[i].slug
+        })
 
-        setBlogList(frontmatter);
-    }, [data]);
+        setBlogList(frontmatter)
+    }, [data])
 
     return (
         <footer
             sx={{
-                width: "100%",
-                backgroundColor: "gray",
+                width: '100%',
+                backgroundColor: 'gray',
                 a: {
-                    color: "secondary",
-                    "&:hover": { color: "primary" },
+                    color: 'secondary',
+                    '&:hover': { color: 'primary' },
                 },
             }}
         >
@@ -63,7 +63,7 @@ const Footer = () => {
                     sx={{
                         flex: 1,
                         justifyContent: `space-between`,
-                        alignItems: "flex-start",
+                        alignItems: 'flex-start',
                     }}
                 >
                     <Flex>
@@ -71,7 +71,7 @@ const Footer = () => {
                             <img
                                 src={logo}
                                 alt="Bambudanza"
-                                style={{ width: "14em" }}
+                                style={{ width: '14em' }}
                             />
                         </Link>
                     </Flex>
@@ -80,13 +80,13 @@ const Footer = () => {
                         sx={{
                             flex: 1,
                             justifyContent: `space-around`,
-                            alignItems: "flex-start",
+                            alignItems: 'flex-start',
                         }}
                     >
                         <Box>
                             <Box pb={3}>
                                 <Link href="/escuela">
-                                    <Heading as={"h3"}>Escuela</Heading>
+                                    <Heading as={'h3'}>Escuela</Heading>
                                 </Link>
                             </Box>
 
@@ -118,7 +118,7 @@ const Footer = () => {
                         <Box>
                             <Box pb={3}>
                                 <Link href="/alquiler">
-                                    <Heading as={"h3"}>
+                                    <Heading as={'h3'}>
                                         Alquiler de Salas
                                     </Heading>
                                 </Link>
@@ -144,7 +144,7 @@ const Footer = () => {
                         <Box>
                             <Box pb={3}>
                                 <Link py={3} href="/about">
-                                    <Heading as={"h3"}>Nosotros</Heading>
+                                    <Heading as={'h3'}>Nosotros</Heading>
                                 </Link>
                             </Box>
 
@@ -161,7 +161,7 @@ const Footer = () => {
                         <Box>
                             <Box pb={3}>
                                 <Link py={3} href="/blog">
-                                    <Heading as={"h3"}>Blog</Heading>
+                                    <Heading as={'h3'}>Blog</Heading>
                                 </Link>
                             </Box>
 
@@ -170,7 +170,7 @@ const Footer = () => {
                                     <Box
                                         pb={1}
                                         key={entrie.title}
-                                        sx={{ maxWidth: "300px" }}
+                                        sx={{ maxWidth: '300px' }}
                                     >
                                         <Link href={entrie.slug}>
                                             {entrie.title}
@@ -182,6 +182,6 @@ const Footer = () => {
                 </Flex>
             </Container>
         </footer>
-    );
-};
-export default Footer;
+    )
+}
+export default Footer

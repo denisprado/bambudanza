@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
-import Link from "./Link";
-import { Card, Flex, Text } from "theme-ui";
+import { jsx } from 'theme-ui'
+import PropTypes from 'prop-types'
+import { graphql, StaticQuery } from 'gatsby'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Link from './Link'
+import { Card, Flex, Text } from 'theme-ui'
 
 const SalasRoll = ({ data }) => {
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
         <Flex>
@@ -37,8 +37,8 @@ const SalasRoll = ({ data }) => {
                     </Card>
                 ))}
         </Flex>
-    );
-};
+    )
+}
 
 SalasRoll.propTypes = {
     data: PropTypes.shape({
@@ -46,7 +46,7 @@ SalasRoll.propTypes = {
             edges: PropTypes.array,
         }),
     }),
-};
+}
 
 export default () => (
     <StaticQuery
@@ -84,4 +84,4 @@ export default () => (
         `}
         render={(data, count) => <SalasRoll data={data} count={count} />}
     />
-);
+)

@@ -1,11 +1,11 @@
-import { graphql } from "gatsby";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 /** @jsx jsx */
-import { Box, Flex, AspectRatio, jsx } from "theme-ui";
-import Content, { HTMLContent } from "../components/Content";
-import Gallery from "../pages/gallery";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { Box, Flex, AspectRatio, jsx } from 'theme-ui'
+import Content, { HTMLContent } from '../components/Content'
+import Gallery from '../pages/gallery'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const GalleryPostTemplate = ({
     content,
@@ -14,19 +14,19 @@ export const GalleryPostTemplate = ({
     title,
     helmet,
 }) => {
-    const PostContent = contentComponent || Content;
+    const PostContent = contentComponent || Content
 
     return (
         <Gallery showImage={false}>
-            {helmet || ""}
-            <Flex py={4}>
+            {helmet || ''}
+            <Flex py={4} sx={{flexDirection:['column','row']}}>
                 <Box
                     px={4}
                     as="aside"
                     sx={{
                         flexGrow: 1,
-                        flexBasis: "sidebar",
-                        minWidth: "400px",
+                        flexBasis: 'sidebar',
+                        minWidth: '400px',
                     }}
                 >
                     <AspectRatio ratio={4 / 3}>
@@ -34,15 +34,15 @@ export const GalleryPostTemplate = ({
                             imageInfo={{
                                 image: image,
                                 alt: `featured image thumbnail for Gallerys ${title}`,
-                                styles: { width: "100%" },
+                                styles: { width: '100%' },
                             }}
                         />
                     </AspectRatio>
                 </Box>
             </Flex>
         </Gallery>
-    );
-};
+    )
+}
 
 GalleryPostTemplate.propTypes = {
     content: PropTypes.node.isRequired,
@@ -50,10 +50,10 @@ GalleryPostTemplate.propTypes = {
     description: PropTypes.string,
     title: PropTypes.string,
     helmet: PropTypes.object,
-};
+}
 
 const GalleryPost = ({ data }) => {
-    const { markdownRemark: post } = data;
+    const { markdownRemark: post } = data
 
     return (
         <GalleryPostTemplate
@@ -73,16 +73,16 @@ const GalleryPost = ({ data }) => {
             title={post.frontmatter.title}
             image={post.frontmatter.image}
         />
-    );
-};
+    )
+}
 
 GalleryPost.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
     }),
-};
+}
 
-export default GalleryPost;
+export default GalleryPost
 
 export const pageQuery = graphql`
     query GalleryPostByID($id: String!) {
@@ -103,4 +103,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

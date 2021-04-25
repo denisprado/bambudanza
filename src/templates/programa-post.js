@@ -1,15 +1,15 @@
-import { graphql } from "gatsby";
-import { kebabCase } from "lodash";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import { graphql } from 'gatsby'
+import { kebabCase } from 'lodash'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 /** @jsx jsx */
-import { Box, Flex, Heading, Text, jsx, AspectRatio } from "theme-ui";
-import Content, { HTMLContent } from "../components/Content";
-import Button from "../components/Button";
-import Link from "../components/Link";
-import Escuela from "../pages/escuela";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import MyHr from "../components/MyHr";
+import { Box, Flex, Heading, Text, jsx, AspectRatio } from 'theme-ui'
+import Content, { HTMLContent } from '../components/Content'
+import Button from '../components/Button'
+import Link from '../components/Link'
+import Escuela from '../pages/escuela'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import MyHr from '../components/MyHr'
 
 export const ProgramaPostTemplate = ({
     content,
@@ -25,21 +25,21 @@ export const ProgramaPostTemplate = ({
     id,
     helmet,
 }) => {
-    const PostContent = contentComponent || Content;
+    const PostContent = contentComponent || Content
 
     return (
         <Escuela showImage={false}>
-            {helmet || ""}
-            <Flex py={4}>
+            {helmet || ''}
+            <Flex py={4} sx={{flexDirection:['column','row']}}>
                 <Box
                     px={4}
                     as="aside"
                     sx={{
                         flexGrow: 1,
-                        flexBasis: "sidebar",
-                        minWidth: "400px",
-                        maxWidth: "400px",
-                        width: "400px",
+                        flexBasis: 'sidebar',
+                        minWidth: '400px',
+                        maxWidth: '400px',
+                        width: '400px',
                     }}
                 >
                     <AspectRatio ratio={4 / 3}>
@@ -47,12 +47,12 @@ export const ProgramaPostTemplate = ({
                             imageInfo={{
                                 image: featuredimage,
                                 alt: `featured image thumbnail for programas ${title}`,
-                                styles: { width: "100%" },
+                                styles: { width: '100%' },
                             }}
                         />
                     </AspectRatio>
 
-                    <Heading as={"h4"} color={"primary"} mt={2}>
+                    <Heading as={'h4'} color={'primary'} mt={2}>
                         Profesor(a)
                     </Heading>
                     <Link to={`/escuela/profesoras/${kebabCase(profesora)}/`}>
@@ -60,10 +60,10 @@ export const ProgramaPostTemplate = ({
                     </Link>
 
                     <MyHr />
-                    <Heading as={"h4"} color={"primary"}>
+                    <Heading as={'h4'} color={'primary'}>
                         Dias
                     </Heading>
-                    <Flex style={{ flexDirection: "column" }}>
+                    <Flex style={{ flexDirection: 'column' }}>
                         {dias &&
                             dias.length &&
                             dias.map((dia) => (
@@ -74,10 +74,10 @@ export const ProgramaPostTemplate = ({
                     </Flex>
 
                     <MyHr />
-                    <Heading as={"h4"} color={"primary"}>
+                    <Heading as={'h4'} color={'primary'}>
                         Horario
                     </Heading>
-                    <Flex style={{ flexDirection: "column" }}>
+                    <Flex style={{ flexDirection: 'column' }}>
                         {horarios &&
                             horarios.length &&
                             horarios.map((horarios) => (
@@ -88,7 +88,7 @@ export const ProgramaPostTemplate = ({
                     </Flex>
                     <MyHr />
 
-                    <Heading as="h4" color={"primary"}>
+                    <Heading as="h4" color={'primary'}>
                         Tarifas
                     </Heading>
                     {tarifa &&
@@ -99,10 +99,10 @@ export const ProgramaPostTemplate = ({
                             </Box>
                         ))}
                 </Box>
-                <Box as="main">
+                <Box as="main" sx={{margin:[4,null]}}>
                     <Heading mb={2}>{title}</Heading>
                     <Link
-                        to={"/escuela/inscripcion"}
+                        to={'/escuela/inscripcion'}
                         state={{ selected: title }}
                     >
                         <Button sx={{ my: 4 }}>Inscripción</Button>
@@ -112,8 +112,8 @@ export const ProgramaPostTemplate = ({
                 </Box>
             </Flex>
         </Escuela>
-    );
-};
+    )
+}
 
 ProgramaPostTemplate.propTypes = {
     content: PropTypes.node.isRequired,
@@ -121,10 +121,10 @@ ProgramaPostTemplate.propTypes = {
     description: PropTypes.string,
     title: PropTypes.string,
     helmet: PropTypes.object,
-};
+}
 
 const ProgramaPost = ({ data }) => {
-    const { markdownRemark: post } = data;
+    const { markdownRemark: post } = data
 
     return (
         <ProgramaPostTemplate
@@ -150,16 +150,16 @@ const ProgramaPost = ({ data }) => {
             nivel={post.frontmatter.nivel}
             featuredimage={post.frontmatter.featuredimage}
         />
-    );
-};
+    )
+}
 
 ProgramaPost.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
     }),
-};
+}
 
-export default ProgramaPost;
+export default ProgramaPost
 
 export const pageQuery = graphql`
     query ProgramaPostByID($id: String!) {
@@ -186,4 +186,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

@@ -1,11 +1,11 @@
-import { graphql } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
 /** @jsx jsx */
-import { Container, Box, Grid, Image, jsx } from "theme-ui";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { Container, Box, Flex, Image, jsx } from 'theme-ui'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
     image,
@@ -15,27 +15,27 @@ export const IndexPageTemplate = ({
     content,
     contentComponent,
 }) => {
-    const PageContent = contentComponent || Content;
+    const PageContent = contentComponent || Content
 
     return (
-        <Container sx={{ mt: [0,5] }}>
-            <Grid gap={2} columns={["100%","2fr 5fr"]} >
-                <Box sx={{ ml: 3 }}>
+        <Container sx={{ mt: [0, 5] }}>
+            <Flex  sx={{flexDirection:['column-reverse','row']}}>
+                <Box sx={{ m: [2,4],flexGrow:[1,2] }}>
                     <PageContent className="content" content={content} />
                 </Box>
-                <Box>
+                <Box sx={{m: [2,4],flexGrow:[1,5]}}>
                     <PreviewCompatibleImage
                         imageInfo={{
                             image: image,
                             alt: `featured image thumbnail ${title}`,
-                            styles: { width: "100%" },
+                            styles: { width: '100%' },
                         }}
                     />
                 </Box>
-            </Grid>
+            </Flex>
         </Container>
-    );
-};
+    )
+}
 
 IndexPageTemplate.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -43,10 +43,10 @@ IndexPageTemplate.propTypes = {
     heading: PropTypes.string,
     subheading: PropTypes.string,
     description: PropTypes.string,
-};
+}
 
 const IndexPage = ({ data }) => {
-    const { frontmatter, html } = data.markdownRemark;
+    const { frontmatter, html } = data.markdownRemark
 
     return (
         <Layout>
@@ -60,8 +60,8 @@ const IndexPage = ({ data }) => {
                 content={html}
             />
         </Layout>
-    );
-};
+    )
+}
 
 IndexPage.propTypes = {
     data: PropTypes.shape({
@@ -69,9 +69,9 @@ IndexPage.propTypes = {
             frontmatter: PropTypes.object,
         }),
     }),
-};
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
     query IndexPageTemplate {
@@ -92,4 +92,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

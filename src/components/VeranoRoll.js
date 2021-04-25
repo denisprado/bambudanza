@@ -1,8 +1,8 @@
-import { graphql, StaticQuery } from "gatsby";
-import _ from "lodash";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { BsFillCircleFill } from "react-icons/bs";
+import { graphql, StaticQuery } from 'gatsby'
+import _ from 'lodash'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import { BsFillCircleFill } from 'react-icons/bs'
 import {
     AspectRatio,
     Badge,
@@ -12,28 +12,28 @@ import {
     Heading,
     Link,
     Text,
-} from "theme-ui";
+} from 'theme-ui'
 
 export const IconsNivel = (props) => {
-    const { nivel } = props;
-    const niveis = ["Iniciación", "Intermedio", "Avanzado"];
-    const colors = ["#919f79", "#768858", "#5e6c46"];
+    const { nivel } = props
+    const niveis = ['Iniciación', 'Intermedio', 'Avanzado']
+    const colors = ['#919f79', '#768858', '#5e6c46']
     return (
         <BsFillCircleFill
             mr={1}
             {...props}
             color={colors[niveis.indexOf(nivel)]}
         />
-    );
-};
+    )
+}
 
 const VeranoRoll = ({ data }) => {
-    const { edges: verano } = data.allMarkdownRemark;
+    const { edges: verano } = data.allMarkdownRemark
 
-    const [filters, setFilters] = useState([]);
+    const [filters, setFilters] = useState([])
 
     return (
-        <Flex p={4} sx={{ width: "100%" }}>
+        <Flex p={4} sx={{ width: '100%' }}>
             {/* Seletor de filtros
       <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>
         <Box>
@@ -67,7 +67,7 @@ const VeranoRoll = ({ data }) => {
         </Box>
       </Box>
       */}
-            <Box sx={{ minWidth: "100%" }}>
+            <Box sx={{ minWidth: '100%' }}>
                 {/* Filtros atuais
         {
           filters && filters.length > 0 &&
@@ -100,8 +100,8 @@ const VeranoRoll = ({ data }) => {
         {/* Listagem de verano */}
                 <Flex
                     sx={{
-                        flexWrap: "wrap",
-                        alignContent: "flex-start",
+                        flexWrap: 'wrap',
+                        alignContent: 'flex-start',
                     }}
                 >
                     {verano &&
@@ -136,23 +136,23 @@ const VeranoRoll = ({ data }) => {
                                     <Card
                                         as="article"
                                         sx={{
-                                            flex: "1 1 auto",
-                                            maxWidth: ["90%","33%"],
-                                            minWidth: ["100%","33%"],
-                                            width: ["100%","33%"],
+                                            flex: '1 1 auto',
+                                            maxWidth: ['90%', '33%'],
+                                            minWidth: ['100%', '33%'],
+                                            width: ['100%', '33%'],
                                         }}
                                         key={programa.id}
                                     >
-                                        <AspectRatio ratio={4 / 3} bg={"gray"}>
+                                        <AspectRatio ratio={4 / 3} bg={'gray'}>
                                             <Link href={programa.fields.slug}>
                                                 <Box
                                                     sx={{
-                                                        filter: "grayscale(1)",
-                                                        backgroundSize: "cover",
-                                                        height: "100%",
+                                                        filter: 'grayscale(1)',
+                                                        backgroundSize: 'cover',
+                                                        height: '100%',
                                                         backgroundImage: `url('${programa.frontmatter.featuredimage.childImageSharp.fluid.src}')`,
                                                         backgroundPosition:
-                                                            "top center",
+                                                            'top center',
                                                     }}
                                                 />
                                             </Link>
@@ -163,8 +163,8 @@ const VeranoRoll = ({ data }) => {
                                                 mt={2}
                                                 sx={{
                                                     justifyContent:
-                                                        "space-between",
-                                                    alignItems: "flex-start",
+                                                        'space-between',
+                                                    alignItems: 'flex-start',
                                                 }}
                                             >
                                                 <Link
@@ -172,7 +172,7 @@ const VeranoRoll = ({ data }) => {
                                                     sx={{ flex: 1 }}
                                                 >
                                                     <Heading
-                                                        as={"h3"}
+                                                        as={'h3'}
                                                         pr={2}
                                                         mr={2}
                                                     >
@@ -184,7 +184,7 @@ const VeranoRoll = ({ data }) => {
                                                     <Text
                                                         sx={{
                                                             fontSize: 1,
-                                                            fontStyle: "italic",
+                                                            fontStyle: 'italic',
                                                         }}
                                                     >
                                                         {
@@ -194,9 +194,9 @@ const VeranoRoll = ({ data }) => {
                                                     </Text>
                                                 </Link>
                                                 <Badge
-                                                    bg={"primary"}
+                                                    bg={'primary'}
                                                     px={2}
-                                                    sx={{ marginLeft: "auto" }}
+                                                    sx={{ marginLeft: 'auto' }}
                                                 >
                                                     {programa.frontmatter.tipo}
                                                 </Badge>
@@ -206,8 +206,8 @@ const VeranoRoll = ({ data }) => {
                                                 mt={1}
                                                 sx={{
                                                     justifyContent:
-                                                        "flex-start",
-                                                    alignItems: "center",
+                                                        'flex-start',
+                                                    alignItems: 'center',
                                                 }}
                                             >
                                                 <Flex>
@@ -239,8 +239,8 @@ const VeranoRoll = ({ data }) => {
                 </Flex>
             </Box>
         </Flex>
-    );
-};
+    )
+}
 
 VeranoRoll.propTypes = {
     data: PropTypes.shape({
@@ -248,7 +248,7 @@ VeranoRoll.propTypes = {
             edges: PropTypes.array,
         }),
     }),
-};
+}
 
 export default () => (
     <StaticQuery
@@ -290,4 +290,4 @@ export default () => (
         `}
         render={(data, count) => <VeranoRoll data={data} count={count} />}
     />
-);
+)

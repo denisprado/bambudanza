@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { RiTeamLine } from "react-icons/ri";
-import { Container, jsx } from "theme-ui";
-import Layout from "../../components/Layout";
-import Link from "../../components/Link";
-import SubNavbar from "../../components/SubNavbar";
-import escuelaHeader from "../../img/escuela.jpeg";
+import { RiTeamLine } from 'react-icons/ri'
+import { Container, jsx } from 'theme-ui'
+import Layout from '../../components/Layout'
+import Link from '../../components/Link'
+import SubNavbar from '../../components/SubNavbar'
+import escuelaHeader from '../../img/escuela.jpeg'
 
 const Escuela = ({ children, showImage }) => {
     return (
@@ -12,8 +12,8 @@ const Escuela = ({ children, showImage }) => {
             <SubNavbar
                 image={escuelaHeader}
                 showImage={showImage}
-                title={"Escuela"}
-                link={"escuela"}
+                title={'Escuela'}
+                link={'escuela'}
                 icon={<RiTeamLine />}
             >
                 <Link partiallyActive={true} to="/escuela/clases">
@@ -40,7 +40,7 @@ const Escuela = ({ children, showImage }) => {
             </SubNavbar>
             <Container>{children}</Container>
         </Layout>
-    );
-};
+    )
+}
 
-export default Escuela;
+export default Escuela

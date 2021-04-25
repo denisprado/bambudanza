@@ -1,15 +1,15 @@
-import { graphql } from "gatsby";
-import { kebabCase } from "lodash";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
+import { graphql } from 'gatsby'
+import { kebabCase } from 'lodash'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 /** @jsx jsx */
-import { Box, Flex, Heading, Text, jsx, AspectRatio } from "theme-ui";
-import Content, { HTMLContent } from "../components/Content";
-import Button from "../components/Button";
-import Link from "../components/Link";
-import Escuela from "../pages/escuela";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import MyHr from "../components/MyHr";
+import { Box, Flex, Heading, Text, jsx, AspectRatio } from 'theme-ui'
+import Content, { HTMLContent } from '../components/Content'
+import Button from '../components/Button'
+import Link from '../components/Link'
+import Escuela from '../pages/escuela'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import MyHr from '../components/MyHr'
 
 export const VeranoPostTemplate = ({
     content,
@@ -25,19 +25,19 @@ export const VeranoPostTemplate = ({
     id,
     helmet,
 }) => {
-    const PostContent = contentComponent || Content;
+    const PostContent = contentComponent || Content
 
     return (
         <Escuela showImage={false}>
-            {helmet || ""}
+            {helmet || ''}
             <Flex py={4}>
                 <Box
                     px={4}
                     as="aside"
                     sx={{
                         flexGrow: 1,
-                        flexBasis: "sidebar",
-                        minWidth: "400px",
+                        flexBasis: 'sidebar',
+                        minWidth: '400px',
                     }}
                 >
                     <AspectRatio ratio={4 / 3}>
@@ -45,13 +45,13 @@ export const VeranoPostTemplate = ({
                             imageInfo={{
                                 image: featuredimage,
                                 alt: `featured image thumbnail for veranos ${title}`,
-                                styles: { width: "100%" },
+                                styles: { width: '100%' },
                             }}
                         />
                     </AspectRatio>
 
                     <MyHr />
-                    <Heading as={"h4"} color={"primary"}>
+                    <Heading as={'h4'} color={'primary'}>
                         Horario
                     </Heading>
                     <Flex>
@@ -73,17 +73,17 @@ export const VeranoPostTemplate = ({
 
                     <MyHr />
 
-                    <Heading as="h4" color={"primary"}>
+                    <Heading as="h4" color={'primary'}>
                         Tarifas
                     </Heading>
                     {tarifa &&
                         tarifa.length &&
                         tarifa.map((t) => <Box key={t + `tarifa`}>{t}</Box>)}
                 </Box>
-                <Box as="main">
+                <Box as="main" sx={{margin:[4,null]}}>
                     <Heading mb={2}>{title}</Heading>
                     <Link
-                        to={"/escuela/inscripcion"}
+                        to={'/escuela/inscripcion'}
                         state={{ selected: title }}
                     >
                         <Button sx={{ my: 4 }}>Inscripción</Button>
@@ -93,8 +93,8 @@ export const VeranoPostTemplate = ({
                 </Box>
             </Flex>
         </Escuela>
-    );
-};
+    )
+}
 
 VeranoPostTemplate.propTypes = {
     content: PropTypes.node.isRequired,
@@ -102,10 +102,10 @@ VeranoPostTemplate.propTypes = {
     description: PropTypes.string,
     title: PropTypes.string,
     helmet: PropTypes.object,
-};
+}
 
 const VeranoPost = ({ data }) => {
-    const { markdownRemark: post } = data;
+    const { markdownRemark: post } = data
 
     return (
         <VeranoPostTemplate
@@ -131,16 +131,16 @@ const VeranoPost = ({ data }) => {
             nivel={post.frontmatter.nivel}
             featuredimage={post.frontmatter.featuredimage}
         />
-    );
-};
+    )
+}
 
 VeranoPost.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
     }),
-};
+}
 
-export default VeranoPost;
+export default VeranoPost
 
 export const pageQuery = graphql`
     query VeranoPostByID($id: String!) {
@@ -167,4 +167,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

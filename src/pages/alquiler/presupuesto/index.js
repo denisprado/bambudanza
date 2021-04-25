@@ -1,36 +1,36 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { navigate } from "gatsby-link";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { Box, Button, Flex, Input, Label, Select, Textarea } from "theme-ui";
-import Alquiler from "../../alquiler";
+import { graphql, useStaticQuery } from 'gatsby'
+import { navigate } from 'gatsby-link'
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { Box, Button, Flex, Input, Label, Select, Textarea } from 'theme-ui'
+import Alquiler from '../../alquiler'
 
 function encode(data) {
-    console.log(data);
+    console.log(data)
     return Object.keys(data)
         .map(
             (key) =>
-                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
-        .join("&");
+        .join('&')
 }
 
 const Inscricion = ({ location }) => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, errors } = useForm()
 
     const onSubmit = (e) => {
-        console.log("FormData: ", e);
-        const form = e;
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        console.log('FormData: ', e)
+        const form = e
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
                 ...e,
             }),
         })
             .then(() => navigate(e.action))
-            .catch((error) => alert(error));
-    };
+            .catch((error) => alert(error))
+    }
 
     const data = useStaticQuery(graphql`
         query SalasQuery {
@@ -52,9 +52,9 @@ const Inscricion = ({ location }) => {
                 }
             }
         }
-    `);
+    `)
 
-    const { edges: salas } = data.allMarkdownRemark;
+    const { edges: salas } = data.allMarkdownRemark
 
     return (
         <Alquiler showImage={false} text={false}>
@@ -84,34 +84,34 @@ const Inscricion = ({ location }) => {
                         />
                         <div hidden>
                             <Label>
-                                Don’t fill this out:{" "}
+                                Don’t fill this out:{' '}
                                 <input name="bot-field" ref={register} />
                             </Label>
                         </div>
 
-                        <Label htmlFor={"name"}>Nombre</Label>
+                        <Label htmlFor={'name'}>Nombre</Label>
                         <Input
-                            type={"text"}
-                            name={"name"}
+                            type={'text'}
+                            name={'name'}
                             ref={register}
-                            id={"name"}
+                            id={'name'}
                             required={true}
                         />
 
-                        <Label htmlFor={"email"}>Email</Label>
+                        <Label htmlFor={'email'}>Email</Label>
                         <Input
-                            type={"email"}
-                            name={"email"}
+                            type={'email'}
+                            name={'email'}
                             ref={register}
-                            id={"email"}
+                            id={'email'}
                             required={true}
                         />
 
-                        <Label htmlFor={"message"}>Mesage</Label>
+                        <Label htmlFor={'message'}>Mesage</Label>
                         <Textarea
-                            name={"message"}
+                            name={'message'}
                             ref={register}
-                            id={"message"}
+                            id={'message'}
                             required={true}
                         />
                     </Box>
@@ -123,7 +123,7 @@ const Inscricion = ({ location }) => {
                             id="sala"
                             mb={3}
                             value={location.state && location.state.selected}
-                            defaultValue={"Elige una sala"}
+                            defaultValue={'Elige una sala'}
                         >
                             {salas &&
                                 salas.map(({ node: sala }) => (
@@ -142,7 +142,7 @@ const Inscricion = ({ location }) => {
                 </Flex>
             </Box>
         </Alquiler>
-    );
-};
+    )
+}
 
-export default Inscricion;
+export default Inscricion

@@ -4,9 +4,10 @@ import { Styled, jsx } from 'theme-ui'
 import { Link as GatsbyLink } from 'gatsby'
 
 const Link = (props) => {
-    const { children, onClick, sx } = props;
+    const { children, onClick, sx } = props
     return (
-        <Styled.a as={GatsbyLink}
+        <Styled.a
+            as={GatsbyLink}
             {...props}
             activeClassName={'active'}
             onClick={onClick}
@@ -16,4 +17,4 @@ const Link = (props) => {
     )
 }
 
-export default Link;
+export default Link

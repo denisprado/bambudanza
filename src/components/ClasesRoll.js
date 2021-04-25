@@ -1,8 +1,8 @@
-import { graphql, StaticQuery } from "gatsby";
-import _ from "lodash";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { BsFillCircleFill } from "react-icons/bs";
+import { graphql, StaticQuery } from 'gatsby'
+import _ from 'lodash'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import { BsFillCircleFill } from 'react-icons/bs'
 import {
     AspectRatio,
     Badge,
@@ -14,62 +14,62 @@ import {
     Heading,
     Link,
     Text,
-} from "theme-ui";
-import MyHr from "./MyHr";
+} from 'theme-ui'
+import MyHr from './MyHr'
 
 export const IconsNivel = (props) => {
-    const { nivel } = props;
-    const niveis = ["Iniciación", "Intermedio", "Avanzado"];
-    const colors = ["#919f79", "#768858", "#5e6c46"];
+    const { nivel } = props
+    const niveis = ['Iniciación', 'Intermedio', 'Avanzado']
+    const colors = ['#919f79', '#768858', '#5e6c46']
     return (
         <BsFillCircleFill
             mr={1}
             {...props}
             color={colors[niveis.indexOf(nivel)]}
         />
-    );
-};
+    )
+}
 
 const ProgramasRoll = ({ data }, location) => {
-    const { edges: programas } = data.allMarkdownRemark;
+    const { edges: programas } = data.allMarkdownRemark
 
-    const [filters, setFilters] = useState([]);
+    const [filters, setFilters] = useState([])
 
     const tipos = _.uniqWith(
         programas.map(({ node: prog }) => prog.frontmatter.tipo),
         _.isEqual
-    );
+    )
 
-    const niveis = ["Iniciación", "Intermedio", "Avanzado"];
+    const niveis = ['Iniciación', 'Intermedio', 'Avanzado']
     const horas = _.uniqWith(
         programas.map(({ node: prog }) => prog.frontmatter.horarios),
         _.isEqual
-    );
+    )
     const dias = _.uniqWith(
         programas.map(({ node: prog }) => prog.frontmatter.dias),
         _.isEqual
-    );
+    )
 
-    const clearFilters = () => setFilters([]);
+    const clearFilters = () => setFilters([])
 
     const clearFilter = (filter) => {
-        let newFilters = filters;
-        newFilters = newFilters.filter((f) => f !== filter);
-        setFilters(newFilters && newFilters);
-    };
+        let newFilters = filters
+        newFilters = newFilters.filter((f) => f !== filter)
+        setFilters(newFilters && newFilters)
+    }
 
     const addFilter = (newFilter) => {
-        const filtersIsEmpty = filters && filters.length === 0;
+        const filtersIsEmpty = filters && filters.length === 0
         const filterExist =
             filters &&
             !filtersIsEmpty &&
             filters.filter((f) => f === newFilter).length > 0 &&
-            true;
-        !filterExist && setFilters([...filters, newFilter]);
-    };
+            true
+        !filterExist && setFilters([...filters, newFilter])
+    }
 
     return (
-        <Flex p={4} sx={{ width: "100%" }}>
+        <Flex p={4} sx={{ width: '100%' }}>
             {/* Seletor de filtros
       <Box mt={3} sx={{ minWidth: '200px', '& > div': { mb: 4 } }}>
         <Box>
@@ -103,7 +103,7 @@ const ProgramasRoll = ({ data }, location) => {
         </Box>
       </Box>
       */}
-            <Box sx={{ minWidth: "100%" }}>
+            <Box sx={{ minWidth: '100%' }}>
                 {/* Filtros atuais
         {
           filters && filters.length > 0 &&
@@ -136,8 +136,8 @@ const ProgramasRoll = ({ data }, location) => {
         {/* Listagem de programas */}
                 <Flex
                     sx={{
-                        flexWrap: "wrap",
-                        alignContent: "flex-start",
+                        flexWrap: 'wrap',
+                        alignContent: 'flex-start',
                     }}
                 >
                     {programas &&
@@ -172,23 +172,23 @@ const ProgramasRoll = ({ data }, location) => {
                                     <Card
                                         as="article"
                                         sx={{
-                                            flex: "1 1 auto",
-                                            maxWidth: ["90%","33%"],
-                                            minWidth: ["100%","33%"],
-                                            width: ["100%","33%"],
+                                            flex: '1 1 auto',
+                                            maxWidth: ['90%', '33%'],
+                                            minWidth: ['100%', '33%'],
+                                            width: ['100%', '33%'],
                                         }}
                                         key={programa.id}
                                     >
-                                        <AspectRatio ratio={4 / 3} bg={"gray"}>
+                                        <AspectRatio ratio={4 / 3} bg={'gray'}>
                                             <Link href={programa.fields.slug}>
                                                 <Box
                                                     sx={{
-                                                        filter: "grayscale(1)",
-                                                        backgroundSize: "cover",
-                                                        height: "100%",
+                                                        filter: 'grayscale(1)',
+                                                        backgroundSize: 'cover',
+                                                        height: '100%',
                                                         backgroundImage: `url('${programa.frontmatter.featuredimage.childImageSharp.fluid.src}')`,
                                                         backgroundPosition:
-                                                            "top center",
+                                                            'top center',
                                                     }}
                                                 />
                                             </Link>
@@ -199,8 +199,8 @@ const ProgramasRoll = ({ data }, location) => {
                                                 mt={2}
                                                 sx={{
                                                     justifyContent:
-                                                        "space-between",
-                                                    alignItems: "flex-start",
+                                                        'space-between',
+                                                    alignItems: 'flex-start',
                                                 }}
                                             >
                                                 <Link
@@ -208,7 +208,7 @@ const ProgramasRoll = ({ data }, location) => {
                                                     sx={{ flex: 1 }}
                                                 >
                                                     <Heading
-                                                        as={"h3"}
+                                                        as={'h3'}
                                                         pr={2}
                                                         mr={2}
                                                     >
@@ -220,7 +220,7 @@ const ProgramasRoll = ({ data }, location) => {
                                                     <Text
                                                         sx={{
                                                             fontSize: 1,
-                                                            fontStyle: "italic",
+                                                            fontStyle: 'italic',
                                                         }}
                                                     >
                                                         {
@@ -230,9 +230,9 @@ const ProgramasRoll = ({ data }, location) => {
                                                     </Text>
                                                 </Link>
                                                 <Badge
-                                                    bg={"primary"}
+                                                    bg={'primary'}
                                                     px={2}
-                                                    sx={{ marginLeft: "auto" }}
+                                                    sx={{ marginLeft: 'auto' }}
                                                 >
                                                     {programa.frontmatter.tipo}
                                                 </Badge>
@@ -242,8 +242,8 @@ const ProgramasRoll = ({ data }, location) => {
                                                 mt={1}
                                                 sx={{
                                                     justifyContent:
-                                                        "flex-start",
-                                                    alignItems: "center",
+                                                        'flex-start',
+                                                    alignItems: 'center',
                                                 }}
                                             >
                                                 <Flex>
@@ -259,7 +259,7 @@ const ProgramasRoll = ({ data }, location) => {
                                                 </Flex>
                                                 <Flex
                                                     style={{
-                                                        flexDirection: "column",
+                                                        flexDirection: 'column',
                                                     }}
                                                 >
                                                     {programa.frontmatter.dias.map(
@@ -272,9 +272,9 @@ const ProgramasRoll = ({ data }, location) => {
                                                                 style={{
                                                                     borderBottomWidth: 1,
                                                                     borderBottomColor:
-                                                                        "grey",
+                                                                        'grey',
                                                                     borderBottomStyle:
-                                                                        "dotted",
+                                                                        'dotted',
                                                                 }}
                                                             >
                                                                 {d}
@@ -286,7 +286,7 @@ const ProgramasRoll = ({ data }, location) => {
                                                 <Text>»</Text>
                                                 <Flex
                                                     style={{
-                                                        flexDirection: "column",
+                                                        flexDirection: 'column',
                                                     }}
                                                 >
                                                     {programa.frontmatter.horarios.map(
@@ -299,9 +299,9 @@ const ProgramasRoll = ({ data }, location) => {
                                                                 style={{
                                                                     borderBottomWidth: 1,
                                                                     borderBottomColor:
-                                                                        "grey",
+                                                                        'grey',
                                                                     borderBottomStyle:
-                                                                        "dotted",
+                                                                        'dotted',
                                                                 }}
                                                             >
                                                                 {h}
@@ -317,8 +317,8 @@ const ProgramasRoll = ({ data }, location) => {
                 </Flex>
             </Box>
         </Flex>
-    );
-};
+    )
+}
 
 ProgramasRoll.propTypes = {
     data: PropTypes.shape({
@@ -326,7 +326,7 @@ ProgramasRoll.propTypes = {
             edges: PropTypes.array,
         }),
     }),
-};
+}
 
 export default () => (
     <StaticQuery
@@ -375,4 +375,4 @@ export default () => (
         `}
         render={(data, count) => <ProgramasRoll data={data} count={count} />}
     />
-);
+)

@@ -1,8 +1,8 @@
-import React, { Children } from 'react';
+import React, { Children } from 'react'
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import { jsx } from 'theme-ui'
 
-const Button = ({ children }) =>
+const Button = ({ children }) => (
     <button
         sx={{
             appearance: 'none',
@@ -18,9 +18,11 @@ const Button = ({ children }) =>
             border: 0,
             borderRadius: 4,
             variant: 'buttons.primary',
-            cursor: 'pointer'
-        }}>
+            cursor: 'pointer',
+        }}
+    >
         {children}
     </button>
+)
 
-export default Button;
+export default Button

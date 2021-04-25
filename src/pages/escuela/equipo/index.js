@@ -2,9 +2,10 @@ import React from 'react'
 import Escuela from '../index'
 import ProfesorasRoll from '../../../components/ProfesorasRoll'
 
-const ProgramasIndexPage = () =>
+const ProgramasIndexPage = () => (
     <Escuela showImage={false}>
         <ProfesorasRoll />
     </Escuela>
+)
 
-export default ProgramasIndexPage;
+export default ProgramasIndexPage

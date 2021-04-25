@@ -1,3 +1,3 @@
-import { bambudanza } from './bambudanza';
+import { bambudanza } from './bambudanza'
 
-export default bambudanza;
+export default bambudanza

@@ -1,39 +1,39 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { navigate } from "gatsby-link";
-import React, { useState } from "react";
-import { Box, Flex, Input, Label, Button, Select, Textarea } from "theme-ui";
-import { useForm } from "react-hook-form";
-import Escuela from "..";
+import { graphql, useStaticQuery } from 'gatsby'
+import { navigate } from 'gatsby-link'
+import React, { useState } from 'react'
+import { Box, Flex, Input, Label, Button, Select, Textarea } from 'theme-ui'
+import { useForm } from 'react-hook-form'
+import Escuela from '..'
 
 function encode(data) {
-    console.log(data);
+    console.log(data)
     return Object.keys(data)
         .map(
             (key) =>
-                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
         )
-        .join("&");
+        .join('&')
 }
 
 const Inscripcion = ({ location }) => {
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, errors } = useForm()
 
-    const [isValidated, setIsValidated] = useState(false);
-    const [formData, setFormData] = useState([]);
+    const [isValidated, setIsValidated] = useState(false)
+    const [formData, setFormData] = useState([])
 
     const onSubmit = (e) => {
-        console.log("FormData: ", e);
-        const form = e;
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        console.log('FormData: ', e)
+        const form = e
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
                 ...e,
             }),
         })
             .then(() => navigate(e.action))
-            .catch((error) => alert(error));
-    };
+            .catch((error) => alert(error))
+    }
 
     const data = useStaticQuery(graphql`
         query ProgramasQuery {
@@ -59,9 +59,9 @@ const Inscripcion = ({ location }) => {
                 }
             }
         }
-    `);
+    `)
 
-    const { edges: programas } = data.allMarkdownRemark;
+    const { edges: programas } = data.allMarkdownRemark
 
     return (
         <Escuela showImage={false}>
@@ -91,34 +91,34 @@ const Inscripcion = ({ location }) => {
                         />
                         <div hidden>
                             <Label>
-                                Don’t fill this out:{" "}
+                                Don’t fill this out:{' '}
                                 <input name="bot-field" ref={register} />
                             </Label>
                         </div>
 
-                        <Label htmlFor={"name"}>Nombre</Label>
+                        <Label htmlFor={'name'}>Nombre</Label>
                         <Input
-                            type={"text"}
-                            name={"name"}
+                            type={'text'}
+                            name={'name'}
                             ref={register}
-                            id={"name"}
+                            id={'name'}
                             required={true}
                         />
 
-                        <Label htmlFor={"email"}>Email</Label>
+                        <Label htmlFor={'email'}>Email</Label>
                         <Input
-                            type={"email"}
-                            name={"email"}
+                            type={'email'}
+                            name={'email'}
                             ref={register}
-                            id={"email"}
+                            id={'email'}
                             required={true}
                         />
 
-                        <Label htmlFor={"message"}>Mesage</Label>
+                        <Label htmlFor={'message'}>Mesage</Label>
                         <Textarea
-                            name={"message"}
+                            name={'message'}
                             ref={register}
-                            id={"message"}
+                            id={'message'}
                             required={true}
                         />
                         <Button mt={3} className="button is-link" type="submit">
@@ -137,7 +137,7 @@ const Inscripcion = ({ location }) => {
                 </Flex>
             </Box>
         </Escuela>
-    );
-};
+    )
+}
 
-export default Inscripcion;
+export default Inscripcion

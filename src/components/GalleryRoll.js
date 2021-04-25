@@ -1,8 +1,8 @@
-import { graphql, StaticQuery } from "gatsby";
-import _ from "lodash";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import { BsFillCircleFill } from "react-icons/bs";
+import { graphql, StaticQuery } from 'gatsby'
+import _ from 'lodash'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import { BsFillCircleFill } from 'react-icons/bs'
 import {
     AspectRatio,
     Badge,
@@ -14,19 +14,19 @@ import {
     Heading,
     Link,
     Text,
-} from "theme-ui";
-import MyHr from "./MyHr";
+} from 'theme-ui'
+import MyHr from './MyHr'
 
 const GalleryRoll = ({ data }, location) => {
-    const { edges: gallery } = data.allMarkdownRemark;
+    const { edges: gallery } = data.allMarkdownRemark
 
     return (
-        <Flex p={4} sx={{ width: "100%" }}>
-            <Box sx={{ minWidth: "100%" }}>
+        <Flex p={4} sx={{ width: '100%' }}>
+            <Box sx={{ minWidth: '100%' }}>
                 <Flex
                     sx={{
-                        flexWrap: "wrap",
-                        alignContent: "flex-start",
+                        flexWrap: 'wrap',
+                        alignContent: 'flex-start',
                     }}
                 >
                     {gallery &&
@@ -34,23 +34,23 @@ const GalleryRoll = ({ data }, location) => {
                             <Card
                                 as="article"
                                 sx={{
-                                    flex: "1 1 auto",
-                                    maxWidth: ["90%","33%"],
-                                            minWidth: ["100%","33%"],
-                                            width: ["100%","33%"],
+                                    flex: '1 1 auto',
+                                    maxWidth: ['90%', '33%'],
+                                    minWidth: ['100%', '33%'],
+                                    width: ['100%', '33%'],
                                 }}
                                 key={item.id}
                             >
-                                <AspectRatio ratio={4 / 3} bg={"gray"}>
+                                <AspectRatio ratio={4 / 3} bg={'gray'}>
                                     <Link href={item.fields.slug}>
                                         <Box
                                             sx={{
-                                                filter: "grayscale(1)",
-                                                backgroundSize: "cover",
-                                                height: "100%",
+                                                filter: 'grayscale(1)',
+                                                backgroundSize: 'cover',
+                                                height: '100%',
                                                 backgroundImage: `url('${item.frontmatter.image.childImageSharp.fluid.src}')`,
                                                 backgroundPosition:
-                                                    "top center",
+                                                    'top center',
                                             }}
                                         />
                                     </Link>
@@ -60,8 +60,8 @@ const GalleryRoll = ({ data }, location) => {
                                     <Flex
                                         mt={2}
                                         sx={{
-                                            justifyContent: "space-between",
-                                            alignItems: "flex-start",
+                                            justifyContent: 'space-between',
+                                            alignItems: 'flex-start',
                                         }}
                                     ></Flex>
                                 </Box>
@@ -70,8 +70,8 @@ const GalleryRoll = ({ data }, location) => {
                 </Flex>
             </Box>
         </Flex>
-    );
-};
+    )
+}
 
 GalleryRoll.propTypes = {
     data: PropTypes.shape({
@@ -79,7 +79,7 @@ GalleryRoll.propTypes = {
             edges: PropTypes.array,
         }),
     }),
-};
+}
 
 export default () => (
     <StaticQuery
@@ -120,4 +120,4 @@ export default () => (
         `}
         render={(data, count) => <GalleryRoll data={data} count={count} />}
     />
-);
+)
